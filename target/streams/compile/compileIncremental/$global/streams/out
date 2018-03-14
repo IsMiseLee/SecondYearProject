@@ -1,0 +1,18 @@
+[0m[[0m[0mdebug[0m] [0m[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0mInitial source changes: [0m
+[0m[[0m[0mdebug[0m] [0m[0m	removed:Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0m	added: Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0m	modified: Set(/home/wdd/webapps/SecondYearProject/app/models/products/Product.java, /home/wdd/webapps/SecondYearProject/app/models/users/Member.java, /home/wdd/webapps/SecondYearProject/app/controllers/ProductCtrl.java, /home/wdd/webapps/SecondYearProject/app/models/products/Artist.java)[0m
+[0m[[0m[0mdebug[0m] [0m[0mInvalidated products: Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0mExternal API changes: API Changes: Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0mModified binary dependencies: Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0mInitial directly invalidated classes: Set(controllers.ProductCtrl)[0m
+[0m[[0m[0mdebug[0m] [0m[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0mSources indirectly invalidated by:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	product: Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0m	binary dep: Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0m	external source: Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0mAll initially invalidated classes: Set(controllers.ProductCtrl)[0m
+[0m[[0m[0mdebug[0m] [0m[0mAll initially invalidated sources:Set(/home/wdd/webapps/SecondYearProject/app/models/products/Product.java, /home/wdd/webapps/SecondYearProject/app/models/users/Member.java, /home/wdd/webapps/SecondYearProject/app/controllers/ProductCtrl.java, /home/wdd/webapps/SecondYearProject/app/models/products/Artist.java)[0m
+[0m[[0m[0minfo[0m] [0m[0mCompiling 4 Java sources to /home/wdd/webapps/SecondYearProject/target/scala-2.12/classes ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mAttempting to call com.sun.tools.javac.api.JavacTool@3f57114b directly...[0m
