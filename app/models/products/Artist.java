@@ -7,6 +7,7 @@ import io.ebean.*;
 import play.data.format.*;
 import play.data.validation.*;
 
+
 @Entity
 public class Artist extends  Model{
     @Id

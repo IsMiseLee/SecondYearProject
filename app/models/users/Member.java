@@ -68,7 +68,7 @@ public class Member extends Model {
     public static Finder<String, Member> find = new Finder<String, Member>(Member.class);
 
     public static List<Member> findAll() {
-        return User.find.all();
+        return Member.find.all();
     }
 
    
