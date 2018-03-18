@@ -22,7 +22,7 @@ import play.mvc.Http.Context.Implicit._
 import play.data._
 import play.core.j.PlayFormsMagicForJava._
 
-object main extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template2[String,Html,play.twirl.api.HtmlFormat.Appendable] {
+object main extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template3[String,models.users.Member,Html,play.twirl.api.HtmlFormat.Appendable] {
 
   /*
  * This template is called from the `index` template. This template
@@ -30,12 +30,12 @@ object main extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlF
  * two arguments, a `String` for the title of the page and an `Html`
  * object to insert into the body of the page.
  */
-  def apply/*7.2*/(title: String)(content: Html):play.twirl.api.HtmlFormat.Appendable = {
+  def apply/*7.2*/(title: String,member: models.users.Member)(content: Html):play.twirl.api.HtmlFormat.Appendable = {
     _display_ {
       {
 
 
-Seq[Any](format.raw/*7.32*/("""
+Seq[Any](format.raw/*7.60*/("""
 
 """),format.raw/*9.1*/("""<!DOCTYPE html>
 <html lang="en">
@@ -61,7 +61,7 @@ Seq[Any](format.raw/*7.32*/("""
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a href="#" class="navbar-brand">Aural Soul</a>
+                <a href=""""),_display_(/*34.27*/routes/*34.33*/.ProductCtrl.index()),format.raw/*34.53*/("""" class="navbar-brand">Aural Soul</a>
             </div>
             <!-- Collection of nav links and other content for toggling -->
             <div id="navbarCollapse" class="collapse navbar-collapse">
@@ -72,13 +72,20 @@ Seq[Any](format.raw/*7.32*/("""
                     <li><a href=""""),_display_(/*42.35*/routes/*42.41*/.ProductCtrl.listProduct()),format.raw/*42.67*/("""">Products</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#">Login</a></li>
+                    <li """),_display_(/*45.26*/if(title=="Login")/*45.44*/{_display_(Seq[Any](format.raw/*45.45*/("""class="active"""")))}),format.raw/*45.60*/(""">
+                        """),_display_(/*46.26*/if(member != null)/*46.44*/{_display_(Seq[Any](format.raw/*46.45*/("""
+                            """),format.raw/*47.29*/("""<a href=""""),_display_(/*47.39*/controllers/*47.50*/.security.routes.LoginCtrl.logout()),format.raw/*47.85*/("""">Logout """),_display_(/*47.95*/member/*47.101*/.getName()),format.raw/*47.111*/("""</a>
+                        """)))}/*48.26*/else/*48.31*/{_display_(Seq[Any](format.raw/*48.32*/(""" 
+                            """),format.raw/*49.29*/("""<a href=""""),_display_(/*49.39*/controllers/*49.50*/.security.routes.LoginCtrl.login()),format.raw/*49.84*/("""">Login</a>       
+                        """)))}),format.raw/*50.26*/("""
+                    """),format.raw/*51.21*/("""</li>
+                    
                 </ul>
             </div>
         </nav>
-        """),_display_(/*49.10*/content),format.raw/*49.17*/("""
+        """),_display_(/*56.10*/content),format.raw/*56.17*/("""
 
-        """),format.raw/*51.9*/("""<script src=""""),_display_(/*51.23*/routes/*51.29*/.Assets.versioned("javascripts/main.js")),format.raw/*51.69*/("""" type="text/javascript"></script>
+        """),format.raw/*58.9*/("""<script src=""""),_display_(/*58.23*/routes/*58.29*/.Assets.versioned("javascripts/main.js")),format.raw/*58.69*/("""" type="text/javascript"></script>
     </body>
 </html>
 """))
@@ -86,9 +93,9 @@ Seq[Any](format.raw/*7.32*/("""
     }
   }
 
-  def render(title:String,content:Html): play.twirl.api.HtmlFormat.Appendable = apply(title)(content)
+  def render(title:String,member:models.users.Member,content:Html): play.twirl.api.HtmlFormat.Appendable = apply(title,member)(content)
 
-  def f:((String) => (Html) => play.twirl.api.HtmlFormat.Appendable) = (title) => (content) => apply(title)(content)
+  def f:((String,models.users.Member) => (Html) => play.twirl.api.HtmlFormat.Appendable) = (title,member) => (content) => apply(title,member)(content)
 
   def ref: this.type = this
 
@@ -97,11 +104,11 @@ Seq[Any](format.raw/*7.32*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Wed Mar 14 20:37:25 GMT 2018
+                  DATE: Sun Mar 18 14:15:52 GMT 2018
                   SOURCE: /home/wdd/webapps/SecondYearProject/app/views/main.scala.html
-                  HASH: dd663361ea348c7c86abe8e2d67626fbc0ecac70
-                  MATRIX: 1206->260|1331->290|1359->292|1439->397|1475->406|1510->414|1536->419|1625->481|1640->487|1703->528|1791->589|1806->595|1867->634|2244->1073|2283->1084|3195->1969|3210->1975|3253->1997|3334->2051|3349->2057|3394->2081|3474->2134|3489->2140|3536->2166|3778->2381|3806->2388|3843->2398|3884->2412|3899->2418|3960->2458
-                  LINES: 33->7|38->7|40->9|43->12|44->13|44->13|44->13|45->14|45->14|45->14|46->15|46->15|46->15|53->23|55->25|70->40|70->40|70->40|71->41|71->41|71->41|72->42|72->42|72->42|79->49|79->49|81->51|81->51|81->51|81->51
+                  HASH: 02dd739bae076a28b2174c43602f887b7d4a29ea
+                  MATRIX: 1226->260|1379->318|1407->320|1487->425|1523->434|1558->442|1584->447|1673->509|1688->515|1751->556|1839->617|1854->623|1915->662|2292->1101|2331->1112|2896->1650|2911->1656|2952->1676|3326->2023|3341->2029|3384->2051|3465->2105|3480->2111|3525->2135|3605->2188|3620->2194|3667->2220|3818->2344|3845->2362|3884->2363|3930->2378|3984->2405|4011->2423|4050->2424|4107->2453|4144->2463|4164->2474|4220->2509|4257->2519|4273->2525|4305->2535|4354->2565|4367->2570|4406->2571|4464->2601|4501->2611|4521->2622|4576->2656|4651->2700|4700->2721|4819->2813|4847->2820|4884->2830|4925->2844|4940->2850|5001->2890
+                  LINES: 33->7|38->7|40->9|43->12|44->13|44->13|44->13|45->14|45->14|45->14|46->15|46->15|46->15|53->23|55->25|64->34|64->34|64->34|70->40|70->40|70->40|71->41|71->41|71->41|72->42|72->42|72->42|75->45|75->45|75->45|75->45|76->46|76->46|76->46|77->47|77->47|77->47|77->47|77->47|77->47|77->47|78->48|78->48|78->48|79->49|79->49|79->49|79->49|80->50|81->51|86->56|86->56|88->58|88->58|88->58|88->58
                   -- GENERATED --
               */
           

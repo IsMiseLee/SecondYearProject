@@ -23,7 +23,7 @@ public class Member extends Model {
 
     public Member() {
     }
-        // Constructor to initialise object
+       
         public  Member(String email, String role, String name, String password) {
             this.email = email;
             this.role = role;
@@ -71,7 +71,25 @@ public class Member extends Model {
         return Member.find.all();
     }
 
-   
+    public static Member authenticate(String email, String password) {
+        return find.query().where().eq("email", email).eq("password", password).findUnique();
+    }
+
+    public static Member getLoggedIn(String id) {
+        if (id == null) {
+            return null;
+        }
+        else {
+            return find.byId(id);
+        }
+    }
+
+    public static Member getMemberById(String id){ 
+         if(id ==null)
+         return null;
+         else 
+         return find.byId(id);
+    }
 
     
 

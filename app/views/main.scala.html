@@ -4,7 +4,7 @@
  * two arguments, a `String` for the title of the page and an `Html`
  * object to insert into the body of the page.
  *@
-@(title: String)(content: Html)
+@(title: String,member: models.users.Member)(content: Html)
 
 <!DOCTYPE html>
 <html lang="en">
@@ -31,7 +31,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a href="#" class="navbar-brand">Aural Soul</a>
+                <a href="@routes.ProductCtrl.index()" class="navbar-brand">Aural Soul</a>
             </div>
             <!-- Collection of nav links and other content for toggling -->
             <div id="navbarCollapse" class="collapse navbar-collapse">
@@ -42,7 +42,14 @@
                     <li><a href="@routes.ProductCtrl.listProduct()">Products</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#">Login</a></li>
+                    <li @if(title=="Login"){class="active"}>
+                        @if(member != null){
+                            <a href="@controllers.security.routes.LoginCtrl.logout()">Logout @member.getName()</a>
+                        }else { 
+                            <a href="@controllers.security.routes.LoginCtrl.login()">Login</a>       
+                        }
+                    </li>
+                    
                 </ul>
             </div>
         </nav>

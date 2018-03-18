@@ -1,7 +1,55 @@
-@()
+@(products: List[models.products.Product],member: models.users.Member)
 
-@main("ListPRoducts") {
+@main("ListPRoducts",member) {
   <h1>Welcome to Aural Soul</h1>
 
-  
+  <table class="table table-bordered table-hover table-condensed">
+      
+      <thead>
+      
+      <!-- The header row-->
+      
+      <tr>
+      
+      <th>ID</th>
+      
+      <th>Album Name</th>
+      
+      <th>Year</th>
+      
+      <th>Type</th>
+      
+      <th>Price</th>
+
+      <th>Stock</th>
+
+      <th colspan="2"></th> 
+      </tr>
+      
+      </thead>
+      
+      <tbody>
+    
+      
+      @for(p<-products){
+        <tr>
+          <td>@p.getId</td>
+          <td>@p.getAlbum_name</td>
+          <td>@p.getYear</td>
+          <td>@p.getType</td>
+          <td>@p.getPrice</td>
+          <td>@p.getStock/td>
+         <td>
+        
+      }
+      
+      </tbody>
+      
+      </table>
+      <p>
+        <a href="@routes.AdminProductCtrl.addProduct()"> 
+          <button class="btn btn-primary">Add a project</button>
+        </a>
+      </p>
+    
 }

@@ -22,17 +22,17 @@ import play.mvc.Http.Context.Implicit._
 import play.data._
 import play.core.j.PlayFormsMagicForJava._
 
-object index extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template0[play.twirl.api.HtmlFormat.Appendable] {
+object index extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template1[models.users.Member,play.twirl.api.HtmlFormat.Appendable] {
 
   /**/
-  def apply/*1.2*/():play.twirl.api.HtmlFormat.Appendable = {
+  def apply/*1.2*/( member: models.users.Member):play.twirl.api.HtmlFormat.Appendable = {
     _display_ {
       {
 
 
-Seq[Any](format.raw/*1.4*/("""
+Seq[Any](format.raw/*1.32*/("""
 
-"""),_display_(/*3.2*/main("Welcome to Play")/*3.25*/ {_display_(Seq[Any](format.raw/*3.27*/("""
+"""),_display_(/*3.2*/main("Welcome to Play",member)/*3.32*/ {_display_(Seq[Any](format.raw/*3.34*/("""
   """),format.raw/*4.3*/("""<h1>Welcome to Aural Soul</h1>
 
   
@@ -42,9 +42,9 @@ Seq[Any](format.raw/*1.4*/("""
     }
   }
 
-  def render(): play.twirl.api.HtmlFormat.Appendable = apply()
+  def render(member:models.users.Member): play.twirl.api.HtmlFormat.Appendable = apply(member)
 
-  def f:(() => play.twirl.api.HtmlFormat.Appendable) = () => apply()
+  def f:((models.users.Member) => play.twirl.api.HtmlFormat.Appendable) = (member) => apply(member)
 
   def ref: this.type = this
 
@@ -53,10 +53,10 @@ Seq[Any](format.raw/*1.4*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Wed Mar 14 20:14:00 GMT 2018
+                  DATE: Sun Mar 18 14:17:09 GMT 2018
                   SOURCE: /home/wdd/webapps/SecondYearProject/app/views/index.scala.html
-                  HASH: 14122d1f6e655fa5fa912a5273552174f17b5554
-                  MATRIX: 941->1|1037->3|1065->6|1096->29|1135->31|1164->34|1229->70
+                  HASH: 2a5cc40c9727999e1a70ca6746d7f7f8942b69b9
+                  MATRIX: 961->1|1086->31|1114->34|1152->64|1191->66|1220->69|1285->105
                   LINES: 28->1|33->1|35->3|35->3|35->3|36->4|39->7
                   -- GENERATED --
               */

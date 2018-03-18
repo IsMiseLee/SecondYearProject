@@ -10,23 +10,25 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.inject.Inject;
 
-// import models.*;
-// import models.users.*;
-// import views.html.*;
+import models.*;
+import models.users.*;
+import models.products.*;
+import views.html.*;
 
 
 public class ProductCtrl extends Controller {
 
     public Result listProduct() {
-        return ok(views.html.listProduct.render());
+        List<Product> products = Product.findAll();
+        return ok(views.html.listProduct.render(products,Member.getLoggedIn(session().get("email"))));
     }
 
     public Result index() {
-        return ok(views.html.index.render());
+        return ok(views.html.index.render(Member.getLoggedIn(session().get("email"))));
     }
 
     public Result aboutUs() {
-        return ok(views.html.aboutUs.render());
+        return ok(views.html.aboutUs.render(Member.getLoggedIn(session().get("email"))));
     }
 
 }

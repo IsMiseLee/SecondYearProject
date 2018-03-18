@@ -1,0 +1,34 @@
+@(projectForm: Form[models.products.Product],member: models.users.Member)
+
+@import helper._
+
+@main("Add Project",member){ 
+    <p class="lead">Add Product</p>
+    
+    @form(action=routes.AdminProductCtrl.addProductSubmit(), 'class -> "form-horizontal", 'role -> "form"){
+      <div class="container">
+          
+        
+    @CSRF.formField
+    
+    @inputText(projectForm("album_name"),'_label -> "Album name", 'class -> "form-control")
+    @inputText(projectForm("year"),'_label -> "Year", 'class -> "form-control")
+    @inputText(projectForm("type"),'_label -> "Type", 'class -> "form-control")
+    @inputText(projectForm("price"),'_label -> "Price", 'class -> "form-control")
+    @inputText(projectForm("stock"),'_label -> "Stock", 'class -> "form-control")
+    
+  
+    
+    
+    <div class="action"> 
+      <input type="submit" value="Add Project" class="btn btn-primary">
+      <a href="@routes.ProductCtrl.index()"> 
+        <button type="button" class="btn btn-warning">Cancel</button>
+      </a>
+    </div>
+    </div>
+      </body>
+    
+    
+    }
+    }

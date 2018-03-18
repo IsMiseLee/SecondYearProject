@@ -4,10 +4,19 @@
 
 # An example controller showing a sample home page
 GET     /                           controllers.ProductCtrl.index
-GET     /aboutUs                           controllers.ProductCtrl.aboutUs
+GET     /aboutUs                    controllers.ProductCtrl.aboutUs
+
+
+GET		/login						        controllers.security.LoginCtrl.login()
+POST	/login						        controllers.security.LoginCtrl.loginSubmit()
+GET     /logout                             controllers.security.LoginCtrl.logout()
+
+
+GET		/Admin/addProduct					controllers.AdminProductCtrl.addProduct()
+POST	/Admin/addProductSubmit				controllers.AdminProductCtrl.addProductSubmit()
 
 
 GET     /listArtist                      controllers.ArtistCtrl.listArtist
-GET     /listProduct                 controllers.ProductCtrl.listProduct
+GET     /listProduct                     controllers.ProductCtrl.listProduct
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)

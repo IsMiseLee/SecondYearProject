@@ -1,2 +1,8 @@
-[0m[[0m[31merror[0m] [0m[0m/home/wdd/webapps/SecondYearProject/app/models/users/Member.java:71:1: package User does not exist[0m
-[0m[[0m[31merror[0m] [0m[0m        return User.find.all();[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wdd/webapps/SecondYearProject/app/controllers/ProductCtrl.java:21:1: cannot find symbol[0m
+[0m[[0m[31merror[0m] [0m[0m  symbol:   class Product[0m
+[0m[[0m[31merror[0m] [0m[0m  location: class controllers.ProductCtrl[0m
+[0m[[0m[31merror[0m] [0m[0m        List<Product> products = Product.findAll();[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wdd/webapps/SecondYearProject/app/controllers/ProductCtrl.java:21:1: cannot find symbol[0m
+[0m[[0m[31merror[0m] [0m[0m  symbol:   variable Product[0m
+[0m[[0m[31merror[0m] [0m[0m  location: class controllers.ProductCtrl[0m
+[0m[[0m[31merror[0m] [0m[0m        List<Product> products = Product.findAll();[0m
