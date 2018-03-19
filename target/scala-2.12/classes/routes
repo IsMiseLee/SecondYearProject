@@ -14,7 +14,9 @@ GET     /logout                             controllers.security.LoginCtrl.logou
 
 GET		/Admin/addProduct					controllers.AdminProductCtrl.addProduct()
 POST	/Admin/addProductSubmit				controllers.AdminProductCtrl.addProductSubmit()
-
+GET     /Admin/deleteProduct/:id               controllers.AdminProductCtrl.deleteProduct(id:Long)
+GET		/Admin/updateProduct/:id			controllers.AdminProductCtrl.updateProduct(id:Long)
+POST	/Admin/updateProductSubmit/:id		controllers.AdminProductCtrl.updateProductSubmit(id:Long)
 
 GET     /listArtist                      controllers.ArtistCtrl.listArtist
 GET     /listProduct                     controllers.ProductCtrl.listProduct

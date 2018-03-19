@@ -33,7 +33,7 @@ object listProduct extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.ap
 Seq[Any](format.raw/*1.71*/("""
 
 """),_display_(/*3.2*/main("ListPRoducts",member)/*3.29*/ {_display_(Seq[Any](format.raw/*3.31*/("""
-  """),format.raw/*4.3*/("""<h1>Welcome to Aural Soul</h1>
+  """),format.raw/*4.3*/("""<h1>List of Products</h1>
 
   <table class="table table-bordered table-hover table-condensed">
       
@@ -70,21 +70,32 @@ Seq[Any](format.raw/*1.71*/("""
           <td>"""),_display_(/*38.16*/p/*38.17*/.getYear),format.raw/*38.25*/("""</td>
           <td>"""),_display_(/*39.16*/p/*39.17*/.getType),format.raw/*39.25*/("""</td>
           <td>"""),_display_(/*40.16*/p/*40.17*/.getPrice),format.raw/*40.26*/("""</td>
-          <td>"""),_display_(/*41.16*/p/*41.17*/.getStock),format.raw/*41.26*/("""/td>
-         <td>
+          <td>"""),_display_(/*41.16*/p/*41.17*/.getStock),format.raw/*41.26*/("""</td>
+              
+
+          <td>
+                <a href=""""),_display_(/*45.27*/routes/*45.33*/.AdminProductCtrl.updateProduct(p.getId)),format.raw/*45.73*/("""" class="button-xs btn-danger" onclick="">
+                  <span class="glyphicon glyphicon-pencil"></span>
+                 </a>
+              <td>    
+                  <a href=""""),_display_(/*49.29*/routes/*49.35*/.AdminProductCtrl.deleteProduct(p.getId)),format.raw/*49.75*/("""" class="button-xs btn-danger" onclick="return confirmDel();">
+                      <span class="glyphicon glyphicon-trash"></span>
+                    </a>
+                  </td>
         
-      """)))}),format.raw/*44.8*/("""
+      """)))}),format.raw/*54.8*/("""
       
-      """),format.raw/*46.7*/("""</tbody>
+      """),format.raw/*56.7*/("""</tbody>
       
       </table>
+      
       <p>
-        <a href=""""),_display_(/*50.19*/routes/*50.25*/.AdminProductCtrl.addProduct()),format.raw/*50.55*/(""""> 
+        <a href=""""),_display_(/*61.19*/routes/*61.25*/.AdminProductCtrl.addProduct()),format.raw/*61.55*/(""""> 
           <button class="btn btn-primary">Add a project</button>
         </a>
       </p>
     
-""")))}),format.raw/*55.2*/("""
+""")))}),format.raw/*66.2*/("""
 """))
       }
     }
@@ -101,11 +112,11 @@ Seq[Any](format.raw/*1.71*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Sun Mar 18 16:03:11 GMT 2018
+                  DATE: Mon Mar 19 17:23:25 GMT 2018
                   SOURCE: /home/wdd/webapps/SecondYearProject/app/views/listProduct.scala.html
-                  HASH: 7ed2d62f07fe78024c554972102ac710b5e64782
-                  MATRIX: 997->1|1161->70|1189->73|1224->100|1263->102|1292->105|1758->545|1790->561|1829->562|1865->571|1912->591|1922->592|1949->598|1997->619|2007->620|2042->634|2090->655|2100->656|2129->664|2177->685|2187->686|2216->694|2264->715|2274->716|2304->725|2352->746|2362->747|2392->756|2457->791|2498->805|2584->864|2599->870|2650->900|2779->999
-                  LINES: 28->1|33->1|35->3|35->3|35->3|36->4|66->34|66->34|66->34|67->35|68->36|68->36|68->36|69->37|69->37|69->37|70->38|70->38|70->38|71->39|71->39|71->39|72->40|72->40|72->40|73->41|73->41|73->41|76->44|78->46|82->50|82->50|82->50|87->55
+                  HASH: d5364fe533b7aa73fde8c7fe01a0a33363bcd767
+                  MATRIX: 997->1|1161->70|1189->73|1224->100|1263->102|1292->105|1753->540|1785->556|1824->557|1860->566|1907->586|1917->587|1944->593|1992->614|2002->615|2037->629|2085->650|2095->651|2124->659|2172->680|2182->681|2211->689|2259->710|2269->711|2299->720|2347->741|2357->742|2387->751|2477->814|2492->820|2553->860|2763->1043|2778->1049|2839->1089|3067->1287|3108->1301|3201->1367|3216->1373|3267->1403|3396->1502
+                  LINES: 28->1|33->1|35->3|35->3|35->3|36->4|66->34|66->34|66->34|67->35|68->36|68->36|68->36|69->37|69->37|69->37|70->38|70->38|70->38|71->39|71->39|71->39|72->40|72->40|72->40|73->41|73->41|73->41|77->45|77->45|77->45|81->49|81->49|81->49|86->54|88->56|93->61|93->61|93->61|98->66
                   -- GENERATED --
               */
           

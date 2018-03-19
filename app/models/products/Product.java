@@ -84,7 +84,7 @@ public class Product extends  Model{
     }
     
   
-    public static Finder<String, Product> find = new Finder<String, Product>(Product.class);
+    public static Finder<Long, Product> find = new Finder<Long, Product>(Product.class);
     
         public static List<Product> findAll() {
             return Product.find.all();

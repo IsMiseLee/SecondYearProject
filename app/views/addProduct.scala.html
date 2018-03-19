@@ -1,4 +1,4 @@
-@(projectForm: Form[models.products.Product],member: models.users.Member)
+@(productForm: Form[models.products.Product],member: models.users.Member)
 
 @import helper._
 
@@ -11,18 +11,21 @@
         
     @CSRF.formField
     
-    @inputText(projectForm("album_name"),'_label -> "Album name", 'class -> "form-control")
-    @inputText(projectForm("year"),'_label -> "Year", 'class -> "form-control")
-    @inputText(projectForm("type"),'_label -> "Type", 'class -> "form-control")
-    @inputText(projectForm("price"),'_label -> "Price", 'class -> "form-control")
-    @inputText(projectForm("stock"),'_label -> "Stock", 'class -> "form-control")
+    @inputText(productForm("album_name"),'_label -> "Album name", 'class -> "form-control")
+    @inputText(productForm("year"),'_label -> "Year", 'class -> "form-control")
+    @inputText(productForm("type"),'_label -> "Type", 'class -> "form-control")
+    @inputText(productForm("price"),'_label -> "Price", 'class -> "form-control")
+    @inputText(productForm("stock"),'_label -> "Stock", 'class -> "form-control")
     
+    <label>Image Upload</label>
+    <input class="btn-sm btn-default" type="file" name="upload">
+    <br><br>
   
     
     
     <div class="action"> 
       <input type="submit" value="Add Project" class="btn btn-primary">
-      <a href="@routes.ProductCtrl.index()"> 
+      <a href="@routes.ProductCtrl.listProduct()"> 
         <button type="button" class="btn btn-warning">Cancel</button>
       </a>
     </div>

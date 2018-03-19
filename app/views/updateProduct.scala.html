@@ -1,0 +1,24 @@
+@(id: Long,productForm: Form[models.products.Product],member: models.users.Member)
+@import helper._
+@main("Update Product", member){
+<p class="lead"> Update Product</p>
+
+@form(action=routes.AdminProductCtrl.updateProductSubmit(id), 'class -> "form-horizontal", 
+'role -> "form",'enctype -> "multipart/form-data") {
+    @* CSRF attack prevention *@
+    @CSRF.formField
+    @inputText(productForm("album_name"),'_label -> "Album name", 'class -> "form-control")
+    @inputText(productForm("year"),'_label -> "Year", 'class -> "form-control")
+    @inputText(productForm("type"),'_label -> "Type", 'class -> "form-control")
+    @inputText(productForm("price"),'_label -> "Price", 'class -> "form-control")
+    @inputText(productForm("stock"),'_label -> "Stock", 'class -> "form-control")
+
+
+    <div class="actions">
+        <input type="submit" value="Update Project" class="btn btn-primary">
+        <a href="@routes.ProductCtrl.listProduct()">
+            <button type="button" class="btn btn-warning">Cancel</button>
+        </a>
+    </div>
+ }
+}

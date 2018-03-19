@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/home/wdd/webapps/SecondYearProject/conf/routes
-// @DATE:Sun Mar 18 16:29:57 GMT 2018
+// @DATE:Mon Mar 19 16:57:01 GMT 2018
 
 import play.api.routing.JavaScriptReverseRoute
 
@@ -20,16 +20,6 @@ package controllers.javascript {
     }
 
   
-    // @LINE:15
-    def addProduct: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.AdminProductCtrl.addProduct",
-      """
-        function() {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "Admin/addProduct"})
-        }
-      """
-    )
-  
     // @LINE:16
     def addProductSubmit: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.AdminProductCtrl.addProductSubmit",
@@ -40,9 +30,49 @@ package controllers.javascript {
       """
     )
   
+    // @LINE:17
+    def deleteProduct: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.AdminProductCtrl.deleteProduct",
+      """
+        function(id0) {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "Admin/deleteProduct/" + encodeURIComponent((""" + implicitly[play.api.mvc.PathBindable[Long]].javascriptUnbind + """)("id", id0))})
+        }
+      """
+    )
+  
+    // @LINE:18
+    def updateProduct: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.AdminProductCtrl.updateProduct",
+      """
+        function(id0) {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "Admin/updateProduct/" + encodeURIComponent((""" + implicitly[play.api.mvc.PathBindable[Long]].javascriptUnbind + """)("id", id0))})
+        }
+      """
+    )
+  
+    // @LINE:15
+    def addProduct: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.AdminProductCtrl.addProduct",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "Admin/addProduct"})
+        }
+      """
+    )
+  
+    // @LINE:19
+    def updateProductSubmit: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.AdminProductCtrl.updateProductSubmit",
+      """
+        function(id0) {
+          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "Admin/updateProductSubmit/" + encodeURIComponent((""" + implicitly[play.api.mvc.PathBindable[Long]].javascriptUnbind + """)("id", id0))})
+        }
+      """
+    )
+  
   }
 
-  // @LINE:19
+  // @LINE:21
   class ReverseArtistCtrl(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -50,7 +80,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:19
+    // @LINE:21
     def listArtist: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.ArtistCtrl.listArtist",
       """
@@ -62,7 +92,7 @@ package controllers.javascript {
   
   }
 
-  // @LINE:22
+  // @LINE:24
   class ReverseAssets(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -70,7 +100,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:22
+    // @LINE:24
     def versioned: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Assets.versioned",
       """
@@ -100,7 +130,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:20
+    // @LINE:22
     def listProduct: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.ProductCtrl.listProduct",
       """
