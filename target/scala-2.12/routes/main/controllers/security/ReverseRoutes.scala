@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/home/wdd/webapps/SecondYearProject/conf/routes
-// @DATE:Mon Mar 19 16:57:01 GMT 2018
+// @DATE:Wed Mar 21 22:13:11 GMT 2018
 
 import play.api.mvc.Call
 
@@ -22,7 +22,7 @@ package controllers.security {
     // @LINE:11
     def loginSubmit(): Call = {
       
-      Call("POST", _prefix + { _defaultPrefix } + "login")
+      Call("POST", _prefix + { _defaultPrefix } + "loginSubmit")
     }
   
     // @LINE:12

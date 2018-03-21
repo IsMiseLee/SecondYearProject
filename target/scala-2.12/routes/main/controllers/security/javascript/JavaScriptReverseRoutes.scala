@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/home/wdd/webapps/SecondYearProject/conf/routes
-// @DATE:Mon Mar 19 16:57:01 GMT 2018
+// @DATE:Wed Mar 21 22:13:11 GMT 2018
 
 import play.api.routing.JavaScriptReverseRoute
 
@@ -25,7 +25,7 @@ package controllers.security.javascript {
       "controllers.security.LoginCtrl.loginSubmit",
       """
         function() {
-          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "login"})
+          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "loginSubmit"})
         }
       """
     )

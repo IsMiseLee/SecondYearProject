@@ -6,7 +6,7 @@ public class Login {
 
 	
  public String validate() {
-	 	if (Member.authenticate(email, password) == null) {
+	 	if (Member.authenticate(getEmail(), getPassword()) == null) {
 	 	  return "Invalid user or password";
 	 	}
 	 	return null;

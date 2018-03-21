@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/home/wdd/webapps/SecondYearProject/conf/routes
-// @DATE:Mon Mar 19 16:57:01 GMT 2018
+// @DATE:Wed Mar 21 22:13:11 GMT 2018
 
 package router
 
@@ -55,7 +55,7 @@ class Routes(
     ("""GET""", this.prefix, """controllers.ProductCtrl.index"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """aboutUs""", """controllers.ProductCtrl.aboutUs"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """login""", """controllers.security.LoginCtrl.login()"""),
-    ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """login""", """controllers.security.LoginCtrl.loginSubmit()"""),
+    ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """loginSubmit""", """controllers.security.LoginCtrl.loginSubmit()"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """logout""", """controllers.security.LoginCtrl.logout()"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """Admin/addProduct""", """controllers.AdminProductCtrl.addProduct()"""),
     ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """Admin/addProductSubmit""", """controllers.AdminProductCtrl.addProductSubmit()"""),
@@ -128,7 +128,7 @@ class Routes(
 
   // @LINE:11
   private[this] lazy val controllers_security_LoginCtrl_loginSubmit3_route = Route("POST",
-    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("login")))
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("loginSubmit")))
   )
   private[this] lazy val controllers_security_LoginCtrl_loginSubmit3_invoker = createInvoker(
     LoginCtrl_3.loginSubmit(),
@@ -138,7 +138,7 @@ class Routes(
       "loginSubmit",
       Nil,
       "POST",
-      this.prefix + """login""",
+      this.prefix + """loginSubmit""",
       """""",
       Seq()
     )

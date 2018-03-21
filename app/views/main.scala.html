@@ -43,12 +43,13 @@
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li @if(title=="Login"){class="active"}>
-                        @if(member != null){
-                            <a href="@controllers.security.routes.LoginCtrl.logout()">Logout @member.getName()</a>
-                        }else { 
-                            <a href="@controllers.security.routes.LoginCtrl.login()">Login</a>       
-                        }
-                    </li>
+                    @if(member != null) {
+                        <a href="@controllers.security.routes.LoginCtrl.logout()">Logout @member.getName()</a>
+                    } else {
+                        <a href="@controllers.security.routes.LoginCtrl.login()">Login</a>
+                    }
+
+                </li>
                     
                 </ul>
             </div>

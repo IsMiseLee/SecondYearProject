@@ -29,30 +29,28 @@ public class LoginCtrl extends Controller {
     }
 
     public Result loginSubmit() {
-        // Bind form instance to the values submitted from the form  
+        
         Form<Login> loginForm = formFactory.form(Login.class).bindFromRequest();
 
-        // Check for errors
-        // Uses the validate method defined in the Login class
+        
         if (loginForm.hasErrors()) {
-            // If errors, show the form again
+          
             return badRequest(login.render(loginForm, Member.getLoggedIn(session().get("email"))));
         } 
         else {
-            // User Logged in successfully
-            // Clear the existing session
+           
             session().clear();
-            // Store the logged in email in the session
+            
             session("email", loginForm.get().getEmail());
             
-            // Check user type
-            Member m = Member.getLoggedIn(loginForm.get().getEmail());
-            // If admin - go to admin section
-            if (m != null && "admin".equals(m.getRole())) {
-                return redirect(controllers.routes.ProductCtrl.index());
-            }
+           
+            // Member m = Member.getLoggedIn(loginForm.get().getEmail());
+           
+            // if (m != null && "admin".equals(m.getRole())) {
+            //     return redirect(controllers.routes.ProductCtrl.listProduct());
+            // }
             
-            // Return to home page
+           
             return redirect(controllers.routes.ProductCtrl.index());
         }
     }

@@ -23,7 +23,8 @@ import java.io.File;
 import org.im4java.core.ConvertCmd;
 import org.im4java.core.IMOperation;
 
-
+@Security.Authenticated(Secured.class)
+@With(IfAdmin.class)
 public class AdminProductCtrl extends Controller {
 
     private FormFactory formFactory;
@@ -34,12 +35,13 @@ public class AdminProductCtrl extends Controller {
         this.formFactory = f;
         this.e = env;
     }
-
+    @Security.Authenticated(Secured.class)
     @Transactional
     public Result addProduct() {
         Form<Product> addProductForm = formFactory.form(Product.class);
         return ok(addProduct.render(addProductForm,Member.getLoggedIn(session().get("email"))));
     }
+    
     @Transactional
     public Result addProductSubmit(){ 
         String saveImageMsg;
@@ -54,13 +56,13 @@ public class AdminProductCtrl extends Controller {
             newProduct.save();
 
         }
-        MultipartFormData data = request().body().asMultipartFormData();
-        FilePart<File> image = data.getFile("upload");
+        // MultipartFormData data = request().body().asMultipartFormData();
+        // FilePart<File> image = data.getFile("upload");
 
-        saveImageMsg = saveFile(newProduct.getId(), image);
+        // saveImageMsg = saveFile(newProduct.getId(), image);
 
-        flash("success", "Prodcut " + newProduct.getAlbum_name() + " has been created/updated " + saveImageMsg);
-        saveImageMsg = saveFile(newProduct.getId(), image);
+        // flash("success", "Prodcut " + newProduct.getAlbum_name() + " has been created/updated " + saveImageMsg);
+        // saveImageMsg = saveFile(newProduct.getId(), image);
 
         return ok(views.html.index.render(Member.getLoggedIn(session().get("email"))));
     }

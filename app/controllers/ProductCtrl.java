@@ -17,10 +17,18 @@ import views.html.*;
 
 
 public class ProductCtrl extends Controller {
+    private FormFactory formFactory;
+    private Environment e;
+    
+    @Inject
+    public ProductCtrl(FormFactory f,Environment env) {
+        this.formFactory = f;
+        this.e = env;
+    }
 
     public Result listProduct() {
         List<Product> products = Product.findAll();
-        return ok(views.html.listProduct.render(products,Member.getLoggedIn(session().get("email"))));
+        return ok(views.html.listProduct.render(products,Member.getLoggedIn(session().get("email")),e));
     }
 
     public Result index() {

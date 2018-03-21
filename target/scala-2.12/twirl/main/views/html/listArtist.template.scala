@@ -53,7 +53,7 @@ Seq[Any](format.raw/*1.32*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Sun Mar 18 14:17:09 GMT 2018
+                  DATE: Wed Mar 21 22:13:11 GMT 2018
                   SOURCE: /home/wdd/webapps/SecondYearProject/app/views/listArtist.scala.html
                   HASH: 2a5cc40c9727999e1a70ca6746d7f7f8942b69b9
                   MATRIX: 966->1|1091->31|1119->34|1157->64|1196->66|1225->69|1290->105

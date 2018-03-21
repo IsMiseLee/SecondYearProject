@@ -8,7 +8,7 @@ GET     /aboutUs                    controllers.ProductCtrl.aboutUs
 
 
 GET		/login						        controllers.security.LoginCtrl.login()
-POST	/login						        controllers.security.LoginCtrl.loginSubmit()
+POST	/loginSubmit						        controllers.security.LoginCtrl.loginSubmit()
 GET     /logout                             controllers.security.LoginCtrl.logout()
 
 
