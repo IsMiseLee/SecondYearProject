@@ -56,13 +56,13 @@ public class AdminProductCtrl extends Controller {
             newProduct.save();
 
         }
-        // MultipartFormData data = request().body().asMultipartFormData();
-        // FilePart<File> image = data.getFile("upload");
+        MultipartFormData data = request().body().asMultipartFormData();
+        FilePart image = data.getFile("upload");
 
-        // saveImageMsg = saveFile(newProduct.getId(), image);
+        saveImageMsg = saveFile(newProduct.getId(), image);
 
-        // flash("success", "Prodcut " + newProduct.getAlbum_name() + " has been created/updated " + saveImageMsg);
-        // saveImageMsg = saveFile(newProduct.getId(), image);
+        flash("success", "Prodcut " + newProduct.getAlbum_name() + " has been created/updated " + saveImageMsg);
+        saveImageMsg = saveFile(newProduct.getId(), image);
 
         return ok(views.html.index.render(Member.getLoggedIn(session().get("email"))));
     }
@@ -110,7 +110,7 @@ public class AdminProductCtrl extends Controller {
            p.update();
               
            MultipartFormData data = request().body().asMultipartFormData();
-           FilePart<File> image = data.getFile("upload");
+           FilePart image = data.getFile("upload");
    
            saveImageMsg = saveFile(p.getId(), image);
    
@@ -122,42 +122,41 @@ public class AdminProductCtrl extends Controller {
         
        } 
 
-    public String saveFile(Long id, FilePart<File> uploaded){ 
-        if(uploaded !=null){ 
-           String mimeType = uploaded.getContentType();
-        
-        if(mimeType.startsWith("image/")){ 
-           String fileName =uploaded.getFilename();
-           File file=uploaded.getFile();
-        
-           IMOperation op=new IMOperation();
-           op.addImage("public/images/productImages/"+ id +" .jpg");
-        
-           IMOperation thumb = new IMOperation();
-           thumb.addImage(file.getAbsolutePath());
-           thumb.resize(20);
-           thumb.addImage("public/images/employeeImages/thumbnails/"+ id +" .png");
-        
-           File dir = new File("public/images/productImages/thumbnails/");
-        
-        // if(!dir.exist()){ 
-            //     dir.mkdir();
-            // }
-        
-            ConvertCmd cmd=new ConvertCmd();
-       try { 
-            cmd.run(op);
-            cmd.run(thumb);
-        } catch(Exception  e){ 
-            e.printStackTrace();
+       public String saveFile(Long id, FilePart<File> uploaded) {
+       
+        if (uploaded != null) {
+          
+            String mimeType = uploaded.getContentType(); 
+            if (mimeType.startsWith("image/")) {
+                String fileName = uploaded.getFilename();                
+                File file = uploaded.getFile();
+                IMOperation op = new IMOperation();
+               
+                op.addImage(file.getAbsolutePath());
+               
+                op.resize(300, 200);
+                op.addImage("public/images/productImages/" + id + ".png");
+                IMOperation thumb = new IMOperation();
+                thumb.addImage(file.getAbsolutePath());
+                thumb.resize(60);
+                thumb.addImage("public/images/productImages/thumbnails/" + id + ".png");
+              
+                File dir = new File("public/images/productImages/thumbnails/");
+                if (!dir.exists()) {
+                    dir.mkdirs();
+                }
+           
+                ConvertCmd cmd = new ConvertCmd();
+                try {
+                    cmd.run(op);
+                    cmd.run(thumb);
+                } catch(Exception e) {
+                    e.printStackTrace();
+                }
+                return " and image saved";
+            }
         }
-        
-          return " and image saved";
-                    
-                        
-        }
-        }
-          return "/ no file";
-        }
+        return "/ no file";
+    }
         
 }

@@ -37,7 +37,7 @@ Seq[Any](format.raw/*1.74*/("""
 """),_display_(/*5.2*/main("Add Project",member)/*5.28*/{_display_(Seq[Any](format.raw/*5.29*/(""" 
     """),format.raw/*6.5*/("""<p class="lead">Add Product</p>
     
-    """),_display_(/*8.6*/form(action=routes.AdminProductCtrl.addProductSubmit(), 'class -> "form-horizontal", 'role -> "form")/*8.107*/{_display_(Seq[Any](format.raw/*8.108*/("""
+    """),_display_(/*8.6*/form(action=routes.AdminProductCtrl.addProductSubmit(), 'class -> "form-horizontal", 'role -> "form",'enctype -> "multipart/form-data")/*8.141*/{_display_(Seq[Any](format.raw/*8.142*/("""
       """),format.raw/*9.7*/("""<div class="container">
           
         
@@ -82,10 +82,10 @@ Seq[Any](format.raw/*1.74*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Wed Mar 21 22:13:11 GMT 2018
+                  DATE: Sat Mar 24 14:03:39 GMT 2018
                   SOURCE: /home/wdd/webapps/SecondYearProject/app/views/addProduct.scala.html
-                  HASH: 5bb21f7162aeb08e44beb88d43886fb76bbaee86
-                  MATRIX: 996->1|1141->76|1186->73|1214->92|1241->94|1275->120|1313->121|1345->127|1412->169|1522->270|1561->271|1594->278|1669->327|1682->331|1713->341|1750->352|1857->438|1889->444|1984->518|2016->524|2111->598|2143->604|2240->680|2272->686|2369->762|2406->772|2666->1005|2681->1011|2728->1037|2894->1173
+                  HASH: dc3ae719a01ac1d6540a01b86e506112bf7240c5
+                  MATRIX: 996->1|1141->76|1186->73|1214->92|1241->94|1275->120|1313->121|1345->127|1412->169|1556->304|1595->305|1628->312|1703->361|1716->365|1747->375|1784->386|1891->472|1923->478|2018->552|2050->558|2145->632|2177->638|2274->714|2306->720|2403->796|2440->806|2700->1039|2715->1045|2762->1071|2928->1207
                   LINES: 28->1|31->3|34->1|36->4|37->5|37->5|37->5|38->6|40->8|40->8|40->8|41->9|44->12|44->12|44->12|46->14|46->14|47->15|47->15|48->16|48->16|49->17|49->17|50->18|50->18|52->20|60->28|60->28|60->28|68->36
                   -- GENERATED --
               */

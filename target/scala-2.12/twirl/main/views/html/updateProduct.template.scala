@@ -45,15 +45,19 @@ Seq[Any](format.raw/*1.83*/("""
     """),_display_(/*13.6*/inputText(productForm("price"),'_label -> "Price", 'class -> "form-control")),format.raw/*13.82*/("""
     """),_display_(/*14.6*/inputText(productForm("stock"),'_label -> "Stock", 'class -> "form-control")),format.raw/*14.82*/("""
 
+    """),format.raw/*16.5*/("""<label>Image Upload</label>
+    <input class="btn-sm btn-default" type="file" name="upload">
+    <br><br>
+  
 
-    """),format.raw/*17.5*/("""<div class="actions">
+    <div class="actions">
         <input type="submit" value="Update Project" class="btn btn-primary">
-        <a href=""""),_display_(/*19.19*/routes/*19.25*/.ProductCtrl.listProduct()),format.raw/*19.51*/("""">
+        <a href=""""),_display_(/*23.19*/routes/*23.25*/.ProductCtrl.listProduct()),format.raw/*23.51*/("""">
             <button type="button" class="btn btn-warning">Cancel</button>
         </a>
     </div>
- """)))}),format.raw/*23.3*/("""
-""")))}),format.raw/*24.2*/("""
+ """)))}),format.raw/*27.3*/("""
+""")))}),format.raw/*28.2*/("""
 """))
       }
     }
@@ -70,11 +74,11 @@ Seq[Any](format.raw/*1.83*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Wed Mar 21 22:13:11 GMT 2018
+                  DATE: Sat Mar 24 14:19:14 GMT 2018
                   SOURCE: /home/wdd/webapps/SecondYearProject/app/views/updateProduct.scala.html
-                  HASH: e6754e6a34976d5d7f661d0d2e2d725f2031afc5
-                  MATRIX: 1004->1|1158->84|1203->82|1230->101|1268->131|1306->132|1333->133|1396->171|1545->312|1584->314|1616->347|1647->353|1659->357|1689->367|1721->373|1828->459|1860->465|1955->539|1987->545|2082->619|2114->625|2211->701|2243->707|2340->783|2374->790|2518->907|2533->913|2580->939|2713->1042|2745->1044
-                  LINES: 28->1|31->2|34->1|35->3|35->3|35->3|36->4|38->6|39->7|39->7|40->8|41->9|41->9|41->9|42->10|42->10|43->11|43->11|44->12|44->12|45->13|45->13|46->14|46->14|49->17|51->19|51->19|51->19|55->23|56->24
+                  HASH: ef309cdc2c9d21c4574d5a8210262e954d11787a
+                  MATRIX: 1004->1|1158->84|1203->82|1230->101|1268->131|1306->132|1333->133|1396->171|1545->312|1584->314|1616->347|1647->353|1659->357|1689->367|1721->373|1828->459|1860->465|1955->539|1987->545|2082->619|2114->625|2211->701|2243->707|2340->783|2373->789|2631->1020|2646->1026|2693->1052|2826->1155|2858->1157
+                  LINES: 28->1|31->2|34->1|35->3|35->3|35->3|36->4|38->6|39->7|39->7|40->8|41->9|41->9|41->9|42->10|42->10|43->11|43->11|44->12|44->12|45->13|45->13|46->14|46->14|48->16|55->23|55->23|55->23|59->27|60->28
                   -- GENERATED --
               */
           

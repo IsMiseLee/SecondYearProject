@@ -5,7 +5,7 @@
 @main("Add Project",member){ 
     <p class="lead">Add Product</p>
     
-    @form(action=routes.AdminProductCtrl.addProductSubmit(), 'class -> "form-horizontal", 'role -> "form"){
+    @form(action=routes.AdminProductCtrl.addProductSubmit(), 'class -> "form-horizontal", 'role -> "form",'enctype -> "multipart/form-data"){
       <div class="container">
           
         
