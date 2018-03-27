@@ -1,3 +1,6 @@
+@import models.products.Product
+
+@import models.users.Member
 @(id: Long,productForm: Form[models.products.Product],member: models.users.Member)
 @import helper._
 @main("Update Product", member){
@@ -20,7 +23,7 @@
 
     <div class="actions">
         <input type="submit" value="Update Project" class="btn btn-primary">
-        <a href="@routes.ProductCtrl.listProduct()">
+        <a href="@routes.AdminProductCtrl.listProduct()">
             <button type="button" class="btn btn-warning">Cancel</button>
         </a>
     </div>

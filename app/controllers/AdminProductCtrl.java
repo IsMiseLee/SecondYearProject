@@ -15,7 +15,7 @@ import javax.inject.Inject;
 import models.users.*;
 import models.products.*;
 import views.html.*;
-
+import views.html.adminProduct.*;
 import play.mvc.Http.*;
 import play.mvc.Http.MultipartFormData.FilePart;
 import java.io.File;
@@ -35,6 +35,12 @@ public class AdminProductCtrl extends Controller {
         this.formFactory = f;
         this.e = env;
     }
+
+    public Result listProduct() {
+        List<Product> products = Product.findAll();
+        return ok(listProduct.render(products,Member.getLoggedIn(session().get("email")),e));
+    }
+
     @Security.Authenticated(Secured.class)
     @Transactional
     public Result addProduct() {
@@ -73,7 +79,7 @@ public class AdminProductCtrl extends Controller {
         Product.find.ref(id).delete();
         flash("success");
 
-        return redirect(controllers.routes.ProductCtrl.listProduct());
+        return redirect(controllers.routes.AdminProductCtrl.listProduct());
     }
     @Transactional
     public Result updateProduct(Long id){ 
@@ -117,7 +123,7 @@ public class AdminProductCtrl extends Controller {
            flash("success", "Prodcut " + p.getAlbum_name() + " has been created/updated " + saveImageMsg);
            saveImageMsg = saveFile(p.getId(), image);
                               
-            return redirect(controllers.routes.ProductCtrl.listProduct());
+            return redirect(controllers.routes.AdminProductCtrl.listProduct());
              }
         
        } 
@@ -138,7 +144,7 @@ public class AdminProductCtrl extends Controller {
                 op.addImage("public/images/productImages/" + id + ".png");
                 IMOperation thumb = new IMOperation();
                 thumb.addImage(file.getAbsolutePath());
-                thumb.resize(60);
+                thumb.resize(20);
                 thumb.addImage("public/images/productImages/thumbnails/" + id + ".png");
               
                 File dir = new File("public/images/productImages/thumbnails/");

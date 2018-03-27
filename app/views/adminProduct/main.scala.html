@@ -1,0 +1,63 @@
+@*
+ * This template is called from the `index` template. This template
+ * handles the rendering of the page header and body tags. It takes
+ * two arguments, a `String` for the title of the page and an `Html`
+ * object to insert into the body of the page.
+ *@
+@(title: String,member: models.users.Member)(content: Html)
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        @* Here's where we render the page title `String`. *@
+        <title>@title</title>
+        <link rel="stylesheet" media="screen" href="@routes.Assets.versioned("stylesheets/main.css")">
+        <link rel="shortcut icon" type="image/png" href="@routes.Assets.versioned("images/favicon.png")">
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        @* And here's where we render the `Html` object containing
+         * the page content. *@
+
+         <nav class="navbar navbar-default">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="@routes.ProductCtrl.index()" class="navbar-brand">Aural Soul</a>
+            </div>
+            <!-- Collection of nav links and other content for toggling -->
+            <div id="navbarCollapse" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="@routes.ProductCtrl.aboutUs()">About us</a></li>
+                    <li><a href="@routes.ArtistCtrl.listArtist()">Artists</a></li>
+                    <li><a href="@routes.AdminProductCtrl.listProduct()">Products</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li @if(title=="Login"){class="active"}>
+                    @if(member != null) {
+                        <a href="@controllers.security.routes.LoginCtrl.logout()">Logout @member.getName()</a>
+                    } else {
+                        <a href="@controllers.security.routes.LoginCtrl.login()">Login</a>
+                    }
+
+                </li>
+
+      
+                    
+                </ul>
+            </div>
+        </nav>
+        @content
+
+        <script src="@routes.Assets.versioned("javascripts/main.js")" type="text/javascript"></script>
+    </body>
+</html>

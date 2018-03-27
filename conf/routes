@@ -5,7 +5,8 @@
 # An example controller showing a sample home page
 GET     /                           controllers.ProductCtrl.index
 GET     /aboutUs                    controllers.ProductCtrl.aboutUs
-
+GET     /productDetails/:id                 controllers.ProductCtrl.productDetails(id:Long)
+GET     /listProducts                       controllers.ProductCtrl.listProducts(cat:Long ?= 0, filter?="")
 
 GET		/login						        controllers.security.LoginCtrl.login()
 POST	/loginSubmit						        controllers.security.LoginCtrl.loginSubmit()
@@ -29,6 +30,6 @@ GET     /removeOne/:itemId                  controllers.ShopCartCtrl.removeOne(i
 
 
 GET     /listArtist                      controllers.ArtistCtrl.listArtist
-GET     /listProduct                     controllers.ProductCtrl.listProduct
+GET     /listProduct                     controllers.AdminProductCtrl.listProduct
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)

@@ -44,11 +44,11 @@ public class LoginCtrl extends Controller {
             session("email", loginForm.get().getEmail());
             
            
-            // Member m = Member.getLoggedIn(loginForm.get().getEmail());
+            Member m = Member.getLoggedIn(loginForm.get().getEmail());
            
-            // if (m != null && "admin".equals(m.getRole())) {
-            //     return redirect(controllers.routes.ProductCtrl.listProduct());
-            // }
+            if (m != null && "admin".equals(m.getRole())) {
+                return redirect(controllers.routes.AdminProductCtrl.listProduct());
+            }
             
            
             return redirect(controllers.routes.ProductCtrl.index());

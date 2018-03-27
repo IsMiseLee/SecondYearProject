@@ -1,4 +1,8 @@
-@(products: List[models.products.Product],member: models.users.Member,env: play.api.Environment)
+
+@import models.products.Product
+@import models.users.Member
+@(products: List[Product], catId: Long, filter: String,member: Member,env: play.api.Environment)
+
 
 @main("ListPRoducts",member) {
   <h1>List of Products</h1>
@@ -43,24 +47,15 @@
               <td><img src="/assets/images/productImages/thumbnails/noImage.png"/></td>
           }   
           <td>@p.getId</td>
-          <td>@p.getAlbum_name</td>
+          
+          <td><a href="@routes.ProductCtrl.productDetails(p.getId)">
+            @p.getAlbum_name</td>
+           </a>    
           <td>@p.getYear</td>
           <td>@p.getType</td>
           <td>@p.getPrice</td>
           <td>@p.getStock</td>
-
           <td><a href="@routes.ShopCartCtrl.addToBasket(p.getId)"  class="btn btn-default btn-xs"><span class="glyphicon glyphicon-shopping-cart"></span></a></td>
-
-          <td>
-                <a href="@routes.AdminProductCtrl.updateProduct(p.getId)" class="button-xs btn-danger" onclick="">
-                  <span class="glyphicon glyphicon-pencil"></span>
-                 </a>
-              <td>    
-                  <a href="@routes.AdminProductCtrl.deleteProduct(p.getId)" class="button-xs btn-danger" onclick="return confirmDel();">
-                      <span class="glyphicon glyphicon-trash"></span>
-                    </a>
-                  </td>
-        
       }
       
       </tbody>
