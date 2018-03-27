@@ -6,8 +6,15 @@ import javax.persistence.*;
 import io.ebean.*;
 import play.data.format.*;
 import play.data.validation.*;
+import models.shopping.*;
+
+
 
 @Entity
+@Table(name = "member")
+@Inheritance(strategy=InheritanceType.SINGLE_TABLE)
+@DiscriminatorColumn(name="role")
+@DiscriminatorValue("member")
 public class Member extends Model {
     @Id
     private String email;
@@ -20,6 +27,24 @@ public class Member extends Model {
 
     @Constraints.Required
     private String password;
+
+  
+    // @OneToMany(mappedBy="member", cascade = CascadeType.ALL)
+    // private Basket basket;
+
+  
+    // @OneToMany(mappedBy="member", cascade = CascadeType.ALL)
+    // private List<ShopOrder> orders;
+
+    public static Finder<String, Member> find = new Finder<String, Member>(Member.class);
+    
+        public static List<Member> findAll() {
+            return Member.find.all();
+        }
+    
+        public static Member authenticate(String email, String password) {
+            return find.query().where().eq("email", email).eq("password", password).findUnique();
+        }
 
     public Member() {
     }
@@ -65,15 +90,7 @@ public class Member extends Model {
         this.password = password;
     }
 
-    public static Finder<String, Member> find = new Finder<String, Member>(Member.class);
-
-    public static List<Member> findAll() {
-        return Member.find.all();
-    }
-
-    public static Member authenticate(String email, String password) {
-        return find.query().where().eq("email", email).eq("password", password).findUnique();
-    }
+   
 
     public static Member getLoggedIn(String id) {
         if (id == null) {

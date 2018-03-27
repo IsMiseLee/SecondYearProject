@@ -18,6 +18,16 @@ GET     /Admin/deleteProduct/:id               controllers.AdminProductCtrl.dele
 GET		/Admin/updateProduct/:id			controllers.AdminProductCtrl.updateProduct(id:Long)
 POST	/Admin/updateProductSubmit/:id		controllers.AdminProductCtrl.updateProductSubmit(id:Long)
 
+
+GET     /showBasket                         controllers.ShopCartCtrl.showBasket()
+GET     /addToBasket/:id                    controllers.ShopCartCtrl.addToBasket(id: Long)
+GET     /emptyBasket                        controllers.ShopCartCtrl.emptyBasket()
+GET     /placeOrder                         controllers.ShopCartCtrl.placeOrder()
+GET     /viewOrder/:id                      controllers.ShopCartCtrl.viewOrder(id: Long)
+GET     /addOne/:itemId                     controllers.ShopCartCtrl.addOne(itemId: Long, pid: Long)
+GET     /removeOne/:itemId                  controllers.ShopCartCtrl.removeOne(itemId: Long)
+
+
 GET     /listArtist                      controllers.ArtistCtrl.listArtist
 GET     /listProduct                     controllers.ProductCtrl.listProduct
 # Map static resources from the /public folder to the /assets URL path

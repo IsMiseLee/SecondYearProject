@@ -12,14 +12,19 @@ import play.data.validation.*;
 public class Product extends  Model{
     @Id
     private long id ;
+
     @Constraints.Required
     private String album_name;
+
     @Constraints.Required
     private String year;
+
     @Constraints.Required
     private String type;
+
     @Constraints.Required
     private double price;
+    
     @Constraints.Required
     private int stock;
 
@@ -89,7 +94,20 @@ public class Product extends  Model{
         public static List<Product> findAll() {
             return Product.find.all();
         }
-    
+        
+        public boolean decrementStock(){
+            boolean allowed =true;
+            if ((stock-1) < 0){
+                allowed = false;
+            }else{
+                stock = stock-1;
+            }
+            return allowed;
+        }
+
+        public void incrementStock(int q){          
+            stock = stock +q;
+        }
     
     
 }

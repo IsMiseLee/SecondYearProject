@@ -35,6 +35,7 @@ public class ProductCtrl extends Controller {
         return ok(views.html.index.render(Member.getLoggedIn(session().get("email"))));
     }
 
+
     public Result aboutUs() {
         return ok(views.html.aboutUs.render(Member.getLoggedIn(session().get("email"))));
     }
