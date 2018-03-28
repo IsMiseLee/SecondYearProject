@@ -42,7 +42,7 @@ Seq[Any](format.raw/*7.60*/("""
     <head>
         """),format.raw/*12.62*/("""
         """),format.raw/*13.9*/("""<title>"""),_display_(/*13.17*/title),format.raw/*13.22*/("""</title>
-        <link rel="stylesheet" media="screen" href=""""),_display_(/*14.54*/routes/*14.60*/.Assets.versioned("stylesheets/main.css")),format.raw/*14.101*/("""">
+        <link rel="stylesheet" media="screen" href=""""),_display_(/*14.54*/routes/*14.60*/.Assets.versioned("stylesheets/style.css")),format.raw/*14.102*/("""">
         <link rel="shortcut icon" type="image/png" href=""""),_display_(/*15.59*/routes/*15.65*/.Assets.versioned("images/favicon.png")),format.raw/*15.104*/("""">
         
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -50,9 +50,12 @@ Seq[Any](format.raw/*7.60*/("""
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     </head>
     <body>
-        """),format.raw/*23.32*/("""
+          
+                    
+               
+        """),format.raw/*26.32*/("""
 
-         """),format.raw/*25.10*/("""<nav class="navbar navbar-default">
+         """),format.raw/*28.10*/("""<nav class="navbar navbar-default">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
                 <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
@@ -61,34 +64,36 @@ Seq[Any](format.raw/*7.60*/("""
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a href=""""),_display_(/*34.27*/routes/*34.33*/.ProductCtrl.index()),format.raw/*34.53*/("""" class="navbar-brand">Aural Soul</a>
+                <a href=""""),_display_(/*37.27*/routes/*37.33*/.ProductCtrl.index()),format.raw/*37.53*/("""" class="navbar-brand">Aural Soul</a>
             </div>
             <!-- Collection of nav links and other content for toggling -->
             <div id="navbarCollapse" class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Home</a></li>
-                    <li><a href=""""),_display_(/*40.35*/routes/*40.41*/.ProductCtrl.aboutUs()),format.raw/*40.63*/("""">About us</a></li>
-                    <li><a href=""""),_display_(/*41.35*/routes/*41.41*/.ArtistCtrl.listArtist()),format.raw/*41.65*/("""">Artists</a></li>
-                    <li><a href=""""),_display_(/*42.35*/routes/*42.41*/.ProductCtrl.listProducts(0,"")),format.raw/*42.72*/("""">Products</a></li>
+                    <li class="active"><a href=""""),_display_(/*42.50*/routes/*42.56*/.ProductCtrl.index()),format.raw/*42.76*/("""">Home</a></li>
+                    <li><a href=""""),_display_(/*43.35*/routes/*43.41*/.ProductCtrl.aboutUs()),format.raw/*43.63*/("""">About us</a></li>
+                    <li><a href=""""),_display_(/*44.35*/routes/*44.41*/.ProductCtrl.viewAlbums()),format.raw/*44.66*/("""">viewAlbums</a></li>
+                    <li><a href=""""),_display_(/*45.35*/routes/*45.41*/.ProductCtrl.listProducts(0,"")),format.raw/*45.72*/("""">Products</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li """),_display_(/*45.26*/if(title=="Login")/*45.44*/{_display_(Seq[Any](format.raw/*45.45*/("""class="active"""")))}),format.raw/*45.60*/(""">
-                    """),_display_(/*46.22*/if(member != null)/*46.40*/ {_display_(Seq[Any](format.raw/*46.42*/("""
-                        """),format.raw/*47.25*/("""<a href=""""),_display_(/*47.35*/controllers/*47.46*/.security.routes.LoginCtrl.logout()),format.raw/*47.81*/("""">Logout """),_display_(/*47.91*/member/*47.97*/.getName()),format.raw/*47.107*/("""</a>
-                    """)))}/*48.23*/else/*48.28*/{_display_(Seq[Any](format.raw/*48.29*/("""
-                        """),format.raw/*49.25*/("""<a href=""""),_display_(/*49.35*/controllers/*49.46*/.security.routes.LoginCtrl.login()),format.raw/*49.80*/("""">Login</a>
-                    """)))}),format.raw/*50.22*/("""
+                      
+                    <li """),_display_(/*49.26*/if(title=="Login")/*49.44*/{_display_(Seq[Any](format.raw/*49.45*/("""class="active"""")))}),format.raw/*49.60*/("""> 
+                    """),_display_(/*50.22*/if(member != null)/*50.40*/ {_display_(Seq[Any](format.raw/*50.42*/("""
+                        """),format.raw/*51.25*/("""<a href=""""),_display_(/*51.35*/controllers/*51.46*/.security.routes.LoginCtrl.logout()),format.raw/*51.81*/("""">Logout """),_display_(/*51.91*/member/*51.97*/.getName()),format.raw/*51.107*/("""</a>
+                    """)))}/*52.23*/else/*52.28*/{_display_(Seq[Any](format.raw/*52.29*/("""
+                        """),format.raw/*53.25*/("""<a href=""""),_display_(/*53.35*/controllers/*53.46*/.security.routes.LoginCtrl.login()),format.raw/*53.80*/(""""><span class="glyphicon glyphicon-log-in" id="logIcon"></span> Login</a>
+                    """)))}),format.raw/*54.22*/("""
 
-                """),format.raw/*52.17*/("""</li>
+                """),format.raw/*56.17*/("""</li>
 
       
                     
                 </ul>
             </div>
         </nav>
-        """),_display_(/*59.10*/content),format.raw/*59.17*/("""
-
-        """),format.raw/*61.9*/("""<script src=""""),_display_(/*61.23*/routes/*61.29*/.Assets.versioned("javascripts/main.js")),format.raw/*61.69*/("""" type="text/javascript"></script>
+        """),_display_(/*63.10*/content),format.raw/*63.17*/("""
+      
+         
+        """),format.raw/*66.9*/("""<script src=""""),_display_(/*66.23*/routes/*66.29*/.Assets.versioned("javascripts/main.js")),format.raw/*66.69*/("""" type="text/javascript"></script>
     </body>
 </html>
 """))
@@ -107,11 +112,11 @@ Seq[Any](format.raw/*7.60*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Tue Mar 27 19:28:17 IST 2018
+                  DATE: Wed Mar 28 17:15:28 IST 2018
                   SOURCE: /home/wdd/webapps/SecondYearProject/app/views/main.scala.html
-                  HASH: e043ece9752f8610f919e6c63cabf6f5a29ba07b
-                  MATRIX: 1226->260|1379->318|1407->320|1487->425|1523->434|1558->442|1584->447|1673->509|1688->515|1751->556|1839->617|1854->623|1915->662|2292->1101|2331->1112|2896->1650|2911->1656|2952->1676|3326->2023|3341->2029|3384->2051|3465->2105|3480->2111|3525->2135|3605->2188|3620->2194|3672->2225|3823->2349|3850->2367|3889->2368|3935->2383|3985->2406|4012->2424|4052->2426|4105->2451|4142->2461|4162->2472|4218->2507|4255->2517|4270->2523|4302->2533|4347->2560|4360->2565|4399->2566|4452->2591|4489->2601|4509->2612|4564->2646|4628->2679|4674->2697|4801->2797|4829->2804|4866->2814|4907->2828|4922->2834|4983->2874
-                  LINES: 33->7|38->7|40->9|43->12|44->13|44->13|44->13|45->14|45->14|45->14|46->15|46->15|46->15|53->23|55->25|64->34|64->34|64->34|70->40|70->40|70->40|71->41|71->41|71->41|72->42|72->42|72->42|75->45|75->45|75->45|75->45|76->46|76->46|76->46|77->47|77->47|77->47|77->47|77->47|77->47|77->47|78->48|78->48|78->48|79->49|79->49|79->49|79->49|80->50|82->52|89->59|89->59|91->61|91->61|91->61|91->61
+                  HASH: 65b668258cda661f523f893d5f3ed1959cb0a059
+                  MATRIX: 1226->260|1379->318|1407->320|1487->425|1523->434|1558->442|1584->447|1673->509|1688->515|1752->557|1840->618|1855->624|1916->663|2341->1150|2380->1161|2945->1699|2960->1705|3001->1725|3325->2022|3340->2028|3381->2048|3458->2098|3473->2104|3516->2126|3597->2180|3612->2186|3658->2211|3741->2267|3756->2273|3808->2304|3982->2451|4009->2469|4048->2470|4094->2485|4145->2509|4172->2527|4212->2529|4265->2554|4302->2564|4322->2575|4378->2610|4415->2620|4430->2626|4462->2636|4507->2663|4520->2668|4559->2669|4612->2694|4649->2704|4669->2715|4724->2749|4850->2844|4896->2862|5023->2962|5051->2969|5104->2995|5145->3009|5160->3015|5221->3055
+                  LINES: 33->7|38->7|40->9|43->12|44->13|44->13|44->13|45->14|45->14|45->14|46->15|46->15|46->15|56->26|58->28|67->37|67->37|67->37|72->42|72->42|72->42|73->43|73->43|73->43|74->44|74->44|74->44|75->45|75->45|75->45|79->49|79->49|79->49|79->49|80->50|80->50|80->50|81->51|81->51|81->51|81->51|81->51|81->51|81->51|82->52|82->52|82->52|83->53|83->53|83->53|83->53|84->54|86->56|93->63|93->63|96->66|96->66|96->66|96->66
                   -- GENERATED --
               */
           

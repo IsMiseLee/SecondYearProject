@@ -120,20 +120,15 @@ public class Product extends  Model{
 
         public static List<Product> findAll(String filter) {
             return Product.find.query().where()
-                            // name like filter value (surrounded by wildcards)
                             .ilike("album_name", "%" + filter + "%")
                             .orderBy("album_name asc")
                             .findList();
         }
         
-        // Find all Products for a category
-        // Filter product name 
+      
         public static List<Product> findFilter(Long catID, String filter) {
             return Product.find.query().where()
-                            // Only include products from the matching cat ID
-                            // In this case search the ManyToMany relation
                             .eq("categories.id", catID)
-                            // name like filter value (surrounded by wildcards)
                             .ilike("name", "%" + filter + "%")
                             .orderBy("name asc")
                             .findList();

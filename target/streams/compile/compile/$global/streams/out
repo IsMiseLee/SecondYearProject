@@ -1,6 +1,5 @@
-[0m[[0m[31merror[0m] [0m[0m/home/wdd/webapps/SecondYearProject/app/controllers/ProductCtrl.java:65:1: cannot find symbol[0m
-[0m[[0m[31merror[0m] [0m[0m  symbol:   method findFilter(java.lang.Long,java.lang.String)[0m
-[0m[[0m[31merror[0m] [0m[0m  location: class models.products.Product[0m
-[0m[[0m[31merror[0m] [0m[0m            products = Product.findFilter(cat, filter);[0m
-[0m[[0m[0minfo[0m] [0m[0m/home/wdd/webapps/SecondYearProject/app/controllers/AdminProductCtrl.java: /home/wdd/webapps/SecondYearProject/app/controllers/AdminProductCtrl.java uses unchecked or unsafe operations.[0m
-[0m[[0m[0minfo[0m] [0m[0m/home/wdd/webapps/SecondYearProject/app/controllers/AdminProductCtrl.java: Recompile with -Xlint:unchecked for details.[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wdd/webapps/SecondYearProject/app/controllers/ProductCtrl.java:66:1: method render in class views.html.viewAlbums cannot be applied to given types;[0m
+[0m[[0m[31merror[0m] [0m[0m  required: java.util.List<models.products.Product>,models.users.Member,play.api.Environment[0m
+[0m[[0m[31merror[0m] [0m[0m  found: models.users.Member[0m
+[0m[[0m[31merror[0m] [0m[0m  reason: actual and formal argument lists differ in length[0m
+[0m[[0m[31merror[0m] [0m[0m        return ok(views.html.viewAlbums.render(Member.getLoggedIn(session().get("email"))));[0m

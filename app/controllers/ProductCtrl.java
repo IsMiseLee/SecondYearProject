@@ -50,26 +50,22 @@ public class ProductCtrl extends Controller {
     }
     
     @Transactional
-    public Result listProducts(Long cat, String filter) {
-        // Get list of all categories in ascending order
-      
-        // Instantiate products, an Array list of products			
+    public Result listProducts(Long cat, String filter) {		
         List<Product> products = new ArrayList<Product>();
     
         if (cat == 0) {
-            // Get the list of ALL products with filter
             products = Product.findAll(filter);
         }
         else {
-            // Get products for the selected category and filter (search field)
             products = Product.findFilter(cat, filter);
         }
-        // Render the list products view, passing parameters
-        // categories and products lists
-        // category id - used for filtering
-        // the filter string - this will be displayed in the filter text input
-        // current user - if one is logged in
         return ok(listProducts.render(products, cat, filter, getCurrentUser(),e));
     }
+
+    public Result viewAlbums() {
+        List<Product> products = new ArrayList<Product>();
+        return ok(views.html.viewAlbums.render(products,Member.getLoggedIn(session().get("email")),e));
+    }
+
 
 }

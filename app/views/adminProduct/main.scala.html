@@ -38,7 +38,7 @@
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="#">Home</a></li>
                     <li><a href="@routes.ProductCtrl.aboutUs()">About us</a></li>
-                    <li><a href="@routes.ArtistCtrl.listArtist()">Artists</a></li>
+                    <li><a href="@routes.ProductCtrl.viewAlbums()">Artists</a></li>
                     <li><a href="@routes.AdminProductCtrl.listProduct()">Products</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
@@ -46,7 +46,7 @@
                     @if(member != null) {
                         <a href="@controllers.security.routes.LoginCtrl.logout()">Logout @member.getName()</a>
                     } else {
-                        <a href="@controllers.security.routes.LoginCtrl.login()">Login</a>
+                        <a href="@controllers.security.routes.LoginCtrl.login()"><span class="glyphicon glyphicon-log-in" id="logIcon"> Login</a>
                     }
 
                 </li>

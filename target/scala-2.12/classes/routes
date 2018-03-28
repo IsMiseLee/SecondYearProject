@@ -29,7 +29,7 @@ GET     /addOne/:itemId                     controllers.ShopCartCtrl.addOne(item
 GET     /removeOne/:itemId                  controllers.ShopCartCtrl.removeOne(itemId: Long)
 
 
-GET     /listArtist                      controllers.ArtistCtrl.listArtist
+GET     /viewAlbums                      controllers.ProductCtrl.viewAlbums
 GET     /listProduct                     controllers.AdminProductCtrl.listProduct
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)

@@ -33,8 +33,8 @@ object index extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.Html
 Seq[Any](format.raw/*1.32*/("""
 
 """),_display_(/*3.2*/main("Welcome to Play",member)/*3.32*/ {_display_(Seq[Any](format.raw/*3.34*/("""
-  """),format.raw/*4.3*/("""<h1>Welcome to Aural Soul</h1>
 
+  
   
 """)))}),format.raw/*7.2*/("""
 """))
@@ -53,11 +53,11 @@ Seq[Any](format.raw/*1.32*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Tue Mar 27 15:57:11 IST 2018
+                  DATE: Wed Mar 28 17:07:29 IST 2018
                   SOURCE: /home/wdd/webapps/SecondYearProject/app/views/index.scala.html
-                  HASH: 2a5cc40c9727999e1a70ca6746d7f7f8942b69b9
-                  MATRIX: 961->1|1086->31|1114->34|1152->64|1191->66|1220->69|1285->105
-                  LINES: 28->1|33->1|35->3|35->3|35->3|36->4|39->7
+                  HASH: 635e81c4e0626143b7952269e31d79c2a8d8f043
+                  MATRIX: 961->1|1086->31|1114->34|1152->64|1191->66|1229->75
+                  LINES: 28->1|33->1|35->3|35->3|35->3|39->7
                   -- GENERATED --
               */
           
