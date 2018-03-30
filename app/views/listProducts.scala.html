@@ -1,17 +1,46 @@
 
 @import models.products.Product
+@import models.products.Artist
 @import models.users.Member
-@(products: List[Product], catId: Long, filter: String,member: Member,env: play.api.Environment)
+@(products: List[Product],artists: List[Artist], artId: Long, filter: String,member: Member,env: play.api.Environment)
 
 
 @main("ListPRoducts",member) {
   <h1>List of Products</h1>
+  <br>
+  <div class="row">
+    <div class="col-sm-2">
+      <h4>Artist</h4>
+      <div class="list-group">
+        <a href="@routes.ProductCtrl.listProducts(0, filter)" class="list-group-item">All Artists</a>
+        @for(a <- artists) {
+          <a href="@routes.ProductCtrl.listProducts(a.getId, filter)" class="list-group-item">@a.getGenre
+            <span class="badge">@a.getProducts.size()</span>
+          </a>
+        }
+      </div>
+    </div>
+    <div class="col-sm-10">
+        @if(flash.containsKey("success")) {
+          <div class="alert alert-success">
+            @flash.get("success")
+          </div>
+        }
+  
+        
+        <div id="actions">
+          <form action="@routes.ProductCtrl.listProducts(artId)" method="GET">
+           <input type="search" id="searchbox" name="filter" value="@filter" placeholder="Filter by product name...">
+           <input type="submit" id="searchsubmit" value="Filter by name" class="btn-md btn-primary">
+          </form>
+         </div>
+
 
   <table class="table table-bordered table-hover table-condensed">
       
       <thead>
       
-      <!-- The header row-->
+   
       
       <tr>
 
@@ -23,7 +52,7 @@
       
       <th>Year</th>
       
-      <th>Type</th>
+      <th>Artist name</th>
       
       <th>Price</th>
 
@@ -52,7 +81,7 @@
               @p.getAlbum_name</td>
            </a>    
           <td>@p.getYear</td>
-          <td>@p.getType</td>
+          <td>@p.getArt_name</td>
           <td>@p.getPrice</td>
           <td>@p.getStock</td>
           <td><a href="@routes.ShopCartCtrl.addToBasket(p.getId)"  class="btn btn-default btn-xs"><span class="glyphicon glyphicon-shopping-cart"></span></a></td>

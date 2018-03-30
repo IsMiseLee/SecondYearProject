@@ -36,10 +36,19 @@ public class AdminProductCtrl extends Controller {
         this.e = env;
     }
 
-    public Result listProduct() {
-        List<Product> products = Product.findAll();
-        return ok(listProduct.render(products,Member.getLoggedIn(session().get("email")),e));
+    @Transactional
+    public Result listProduct(Long art) {
+        List<Artist> artists = Artist.findAll();		
+        List<Product> products = new ArrayList<Product>();
+    
+        if (art == 0) {
+            products = Product.findAll();
+        }else {
+            products = Artist.find.ref(art).getProducts();
+        }
+        return ok(listProduct.render(products, artists, Member.getLoggedIn(session().get("email")),e));
     }
+
 
     @Security.Authenticated(Secured.class)
     @Transactional
@@ -59,9 +68,13 @@ public class AdminProductCtrl extends Controller {
         }else { 
          newProduct =newProductForm.get();
 
-            newProduct.save();
-
+             newProduct.save();
+          
+           for (Long art : newProduct.getArtSelect()) {
+        newProduct.artists.add(Artist.find.byId(art));
         }
+           newProduct.update();
+}
         MultipartFormData data = request().body().asMultipartFormData();
         FilePart image = data.getFile("upload");
 
@@ -79,7 +92,7 @@ public class AdminProductCtrl extends Controller {
         Product.find.ref(id).delete();
         flash("success");
 
-        return redirect(controllers.routes.AdminProductCtrl.listProduct());
+        return redirect(controllers.routes.AdminProductCtrl.listProduct(0));
     }
     @Transactional
     public Result updateProduct(Long id){ 
@@ -112,7 +125,12 @@ public class AdminProductCtrl extends Controller {
                               
            Product p = updateProductForm.get();
            p.setId(id);
-               
+
+           List<Artist> newArts = new ArrayList<Artist>();
+           for (Long art : p.getArtSelect()) {
+            newArts.add(Artist.find.byId(art));
+           }
+           p.artists = newArts;
            p.update();
               
            MultipartFormData data = request().body().asMultipartFormData();
@@ -123,7 +141,7 @@ public class AdminProductCtrl extends Controller {
            flash("success", "Prodcut " + p.getAlbum_name() + " has been created/updated " + saveImageMsg);
            saveImageMsg = saveFile(p.getId(), image);
                               
-            return redirect(controllers.routes.AdminProductCtrl.listProduct());
+            return redirect(controllers.routes.AdminProductCtrl.listProduct(0));
              }
         
        } 

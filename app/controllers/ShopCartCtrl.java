@@ -108,6 +108,8 @@ public class ShopCartCtrl extends Controller {
     private Customer getCurrentUser() {
 		return (Customer)Member.getLoggedIn(session().get("email"));
     }
+
+    
     
     @Transactional
     public Result placeOrder() {

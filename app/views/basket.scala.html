@@ -21,7 +21,7 @@
                     <!-- The header row-->
                     <tr>
                         <th>Album Name</th>
-                        <th>Type</th>
+                        <th>Artist Name</th>
                         <th>Item Price</th>
                         <th>Total</th>
                         <th>Quantity</th>
@@ -35,7 +35,7 @@
                             @for(i <- customer.getBasket().getBasketItems()) {
                             <tr>
                                 <td>@i.getProduct.getAlbum_name</td>
-                                <td>@i.getProduct.getType</td>
+                                <td>@i.getProduct.getArt_name</td>
                                 <td>&euro; @("%.2f".format(i.getPrice))</td>
                                 <td>&euro; @("%.2f".format(i.getItemTotal))</td>
                                 <td>@i.getQuantity()</td>

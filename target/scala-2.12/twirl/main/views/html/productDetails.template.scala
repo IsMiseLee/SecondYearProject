@@ -48,21 +48,31 @@ Seq[Any](format.raw/*3.55*/("""
       """),format.raw/*16.7*/("""<thead>
         <tr>
           <th>Image</th> 
-          <th>ID</th> 
+          <th>ID</th>
+          <th>Test</th> 
         </tr>
       </thead>
 
       <tbody>
 
           <tr>
-              """),_display_(/*26.16*/if(env.resource("public/images/productImages/" + p.getId + ".jpg").isDefined)/*26.93*/ {_display_(Seq[Any](format.raw/*26.95*/("""
-                """),format.raw/*27.17*/("""<td><img src="/assets/images/productImages/"""),_display_(/*27.61*/(p.getId + ".jpg")),format.raw/*27.79*/(""""/></td>
-            """)))}/*28.15*/else/*28.20*/{_display_(Seq[Any](format.raw/*28.21*/("""
-                """),format.raw/*29.17*/("""<td><img src="/assets/images/productImages/noImage.jpg"/></td>
-            """)))}),format.raw/*30.14*/("""
-            """),format.raw/*31.13*/("""<td class="numeric">"""),_display_(/*31.34*/p/*31.35*/.getId),format.raw/*31.41*/("""</td>
+              """),_display_(/*27.16*/if(env.resource("public/images/productImages/thumbnails/"+ p.getId + ".png").isDefined)/*27.103*/{_display_(Seq[Any](format.raw/*27.104*/("""
+                """),format.raw/*28.17*/("""<td><img src="/assets/images/productImages/thumbnails/"""),_display_(/*28.72*/(p.getId + ".png ")),format.raw/*28.91*/(""""/></td>
+              """)))}/*29.17*/else/*29.22*/{_display_(Seq[Any](format.raw/*29.23*/("""
+                """),format.raw/*30.17*/("""<td><img src="/assets/images/productImages/thumbnails/noImage.png"/></td>
+            """)))}),format.raw/*31.14*/("""  
+            """),format.raw/*32.13*/("""<td class="numeric">"""),_display_(/*32.34*/p/*32.35*/.getId),format.raw/*32.41*/("""</td>
+
+            """),_display_(/*34.14*/if(env.resource("public/audio/"+ p.getId + ".mp3").isDefined)/*34.75*/{_display_(Seq[Any](format.raw/*34.76*/("""
+              """),format.raw/*35.15*/("""<td> <audio controls src="/assets/audio/"""),_display_(/*35.56*/(p.getId + ".mp3 ")),format.raw/*35.75*/("""" type="audio/mpeg"></audio></td>
+            """)))}/*36.15*/else/*36.20*/{_display_(Seq[Any](format.raw/*36.21*/("""
+              """),format.raw/*37.15*/("""<td><h2>Not avalibale</h2></td>
+          """)))}),format.raw/*38.12*/("""   
             
-          </tr>
+            
+             
+            
+          """),format.raw/*43.11*/("""</tr>
         
       </tbody>
 
@@ -87,11 +97,11 @@ Seq[Any](format.raw/*3.55*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Tue Mar 27 18:43:32 IST 2018
+                  DATE: Fri Mar 30 20:58:38 IST 2018
                   SOURCE: /home/wdd/webapps/SecondYearProject/app/views/productDetails.scala.html
-                  HASH: c653e0be47037d7bf836eca06076534600774516
-                  MATRIX: 651->1|689->33|1058->61|1206->114|1235->118|1269->144|1308->146|1339->151|1465->251|1506->283|1546->285|1582->294|1654->339|1668->344|1704->359|1740->368|1784->382|1818->389|1990->534|2076->611|2116->613|2161->630|2232->674|2271->692|2312->715|2325->720|2364->721|2409->738|2516->814|2557->827|2605->848|2615->849|2642->855
-                  LINES: 24->1|25->2|30->3|35->3|38->6|38->6|38->6|41->9|43->11|43->11|43->11|44->12|45->13|45->13|45->13|46->14|47->15|48->16|58->26|58->26|58->26|59->27|59->27|59->27|60->28|60->28|60->28|61->29|62->30|63->31|63->31|63->31|63->31
+                  HASH: fa70c70d7e0d2e696833814bbd20205272679e4b
+                  MATRIX: 651->1|689->33|1058->61|1206->114|1235->118|1269->144|1308->146|1339->151|1465->251|1506->283|1546->285|1582->294|1654->339|1668->344|1704->359|1740->368|1784->382|1818->389|2014->558|2111->645|2151->646|2196->663|2278->718|2318->737|2361->762|2374->767|2413->768|2458->785|2576->872|2619->887|2667->908|2677->909|2704->915|2751->935|2821->996|2860->997|2903->1012|2971->1053|3011->1072|3077->1120|3090->1125|3129->1126|3172->1141|3246->1184|3341->1251
+                  LINES: 24->1|25->2|30->3|35->3|38->6|38->6|38->6|41->9|43->11|43->11|43->11|44->12|45->13|45->13|45->13|46->14|47->15|48->16|59->27|59->27|59->27|60->28|60->28|60->28|61->29|61->29|61->29|62->30|63->31|64->32|64->32|64->32|64->32|66->34|66->34|66->34|67->35|67->35|67->35|68->36|68->36|68->36|69->37|70->38|75->43
                   -- GENERATED --
               */
           

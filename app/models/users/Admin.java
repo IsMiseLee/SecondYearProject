@@ -8,10 +8,10 @@ import play.data.format.*;
 import play.data.validation.*;
 
 @Entity
-// This is a User of type admin
+
 @DiscriminatorValue("admin")
 
-// Administrator inherits from the User class
+
 public class Admin extends Member{
 
 	public Admin() {

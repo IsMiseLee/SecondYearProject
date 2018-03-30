@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/home/wdd/webapps/SecondYearProject/conf/routes
-// @DATE:Wed Mar 28 17:15:04 IST 2018
+// @DATE:Fri Mar 30 20:58:38 IST 2018
 
 import play.api.routing.JavaScriptReverseRoute
 
@@ -12,7 +12,7 @@ import _root_.play.libs.F
 // @LINE:6
 package controllers.javascript {
 
-  // @LINE:16
+  // @LINE:17
   class ReverseAdminProductCtrl(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -20,7 +20,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:17
+    // @LINE:18
     def addProductSubmit: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.AdminProductCtrl.addProductSubmit",
       """
@@ -30,7 +30,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:18
+    // @LINE:19
     def deleteProduct: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.AdminProductCtrl.deleteProduct",
       """
@@ -40,7 +40,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:19
+    // @LINE:20
     def updateProduct: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.AdminProductCtrl.updateProduct",
       """
@@ -50,17 +50,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:33
-    def listProduct: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.AdminProductCtrl.listProduct",
-      """
-        function() {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "listProduct"})
-        }
-      """
-    )
-  
-    // @LINE:16
+    // @LINE:17
     def addProduct: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.AdminProductCtrl.addProduct",
       """
@@ -70,7 +60,17 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:20
+    // @LINE:34
+    def listProduct: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.AdminProductCtrl.listProduct",
+      """
+        function(id0) {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "listProduct" + _qS([(""" + implicitly[play.api.mvc.QueryStringBindable[Long]].javascriptUnbind + """)("id", id0)])})
+        }
+      """
+    )
+  
+    // @LINE:21
     def updateProductSubmit: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.AdminProductCtrl.updateProductSubmit",
       """
@@ -82,7 +82,7 @@ package controllers.javascript {
   
   }
 
-  // @LINE:23
+  // @LINE:24
   class ReverseShopCartCtrl(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -90,7 +90,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:24
+    // @LINE:25
     def addToBasket: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.ShopCartCtrl.addToBasket",
       """
@@ -100,7 +100,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:28
+    // @LINE:29
     def addOne: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.ShopCartCtrl.addOne",
       """
@@ -110,7 +110,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:27
+    // @LINE:28
     def viewOrder: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.ShopCartCtrl.viewOrder",
       """
@@ -120,7 +120,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:26
+    // @LINE:27
     def placeOrder: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.ShopCartCtrl.placeOrder",
       """
@@ -130,7 +130,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:29
+    // @LINE:30
     def removeOne: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.ShopCartCtrl.removeOne",
       """
@@ -140,7 +140,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:23
+    // @LINE:24
     def showBasket: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.ShopCartCtrl.showBasket",
       """
@@ -150,7 +150,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:25
+    // @LINE:26
     def emptyBasket: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.ShopCartCtrl.emptyBasket",
       """
@@ -162,7 +162,7 @@ package controllers.javascript {
   
   }
 
-  // @LINE:35
+  // @LINE:36
   class ReverseAssets(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -170,7 +170,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:35
+    // @LINE:36
     def versioned: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Assets.versioned",
       """
@@ -190,12 +190,32 @@ package controllers.javascript {
     }
 
   
-    // @LINE:32
+    // @LINE:33
     def viewAlbums: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.ProductCtrl.viewAlbums",
       """
         function() {
           return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "viewAlbums"})
+        }
+      """
+    )
+  
+    // @LINE:14
+    def register: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.ProductCtrl.register",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "register"})
+        }
+      """
+    )
+  
+    // @LINE:32
+    def viewOrder: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.ProductCtrl.viewOrder",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "viewOrder"})
         }
       """
     )
@@ -206,6 +226,16 @@ package controllers.javascript {
       """
         function(id0) {
           return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "productDetails/" + encodeURIComponent((""" + implicitly[play.api.mvc.PathBindable[Long]].javascriptUnbind + """)("id", id0))})
+        }
+      """
+    )
+  
+    // @LINE:15
+    def registerSubmit: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.ProductCtrl.registerSubmit",
+      """
+        function() {
+          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "registerSubmit"})
         }
       """
     )

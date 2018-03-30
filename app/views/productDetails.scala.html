@@ -16,19 +16,29 @@
       <thead>
         <tr>
           <th>Image</th> 
-          <th>ID</th> 
+          <th>ID</th>
+          <th>Test</th> 
         </tr>
       </thead>
 
       <tbody>
 
           <tr>
-              @if(env.resource("public/images/productImages/" + p.getId + ".jpg").isDefined) {
-                <td><img src="/assets/images/productImages/@(p.getId + ".jpg")"/></td>
-            } else {
-                <td><img src="/assets/images/productImages/noImage.jpg"/></td>
-            }
+              @if(env.resource("public/images/productImages/thumbnails/"+ p.getId + ".png").isDefined){
+                <td><img src="/assets/images/productImages/thumbnails/@(p.getId + ".png ")"/></td>
+              } else {
+                <td><img src="/assets/images/productImages/thumbnails/noImage.png"/></td>
+            }  
             <td class="numeric">@p.getId</td>
+
+            @if(env.resource("public/audio/"+ p.getId + ".mp3").isDefined){
+              <td> <audio controls src="/assets/audio/@(p.getId + ".mp3 ")" type="audio/mpeg"></audio></td>
+            } else {
+              <td><h2>Not avalibale</h2></td>
+          }   
+            
+            
+             
             
           </tr>
         

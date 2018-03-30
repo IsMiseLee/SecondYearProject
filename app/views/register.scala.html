@@ -1,0 +1,34 @@
+@(registerForm: Form[models.users.Member],member: models.users.Member)
+
+@import helper._
+
+@main("Register",member){ 
+    <p class="lead">Add Product</p>
+    
+    @form(action=routes.ProductCtrl.registerSubmit(), 'class -> "form-horizontal", 'role -> "form",'enctype -> "multipart/form-data"){
+      <div class="container">
+          
+        
+    @CSRF.formField
+    
+    @inputText(registerForm("email"),'_label -> "Email", 'class -> "form-control")
+    @inputText(registerForm("role"),'_label -> "Role", 'class -> "form-control")
+    @inputText(registerForm("name"),'_label -> "Name", 'class -> "form-control")  
+    @inputText(registerForm("password"),'_label -> "Password", 'class -> "form-control")
+
+   
+  
+    
+    
+    <div class="action"> 
+      <input type="submit" value="Register" class="btn btn-primary">
+      <a href="@routes.AdminProductCtrl.listProduct(0)"> 
+        <button type="button" class="btn btn-warning">Cancel</button>
+      </a>
+    </div>
+    </div>
+      </body>
+    
+    
+    }
+    }

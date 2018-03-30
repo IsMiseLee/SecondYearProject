@@ -35,18 +35,8 @@ object viewAlbums extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api
 Seq[Any](format.raw/*3.82*/("""
 
 """),_display_(/*5.2*/main("Welcome to Play",member)/*5.32*/ {_display_(Seq[Any](format.raw/*5.34*/("""
-  """),format.raw/*6.3*/("""<!DOCTYPE html>
-  <html lang="en">
-  <head>
-    <title>Main Page</title>
-    <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  </head>
-  <body>
+ 
+  """),format.raw/*7.3*/("""<body>
           <div class="jumbotron">
               <div class="container text-center">
                 <h1>Albums Avaliabe</h1>      
@@ -55,18 +45,18 @@ Seq[Any](format.raw/*3.82*/("""
             
             <div class="container">
               
-                """),_display_(/*26.18*/for(p<-products) yield /*26.34*/{_display_(Seq[Any](format.raw/*26.35*/("""
-            """),format.raw/*27.13*/("""<div class="container-fluid bg-3 text-center">    
+                """),_display_(/*16.18*/for(p<-products) yield /*16.34*/{_display_(Seq[Any](format.raw/*16.35*/("""
+            """),format.raw/*17.13*/("""<div class="container-fluid bg-3 text-center">    
               <div class="row">
                 <div class="col-sm-3">
-                    """),_display_(/*30.22*/if(env.resource("public/images/productImages/thumbnails/"+ p.getId + ".png").isDefined)/*30.109*/{_display_(Seq[Any](format.raw/*30.110*/("""
-                      """),format.raw/*31.23*/("""<img src="public/images/productImages/thumbnails/" + id + ".png" class="img-responsive" style="width:100%" alt="Image">
-                    """)))}/*32.23*/else/*32.28*/{_display_(Seq[Any](format.raw/*32.29*/("""
-                     """),format.raw/*33.22*/("""<img src="/assets/images/productImages/thumbnails/noImage.png"/>
-                  """)))}),format.raw/*34.20*/("""   
+                    """),_display_(/*20.22*/if(env.resource("public/images/productImages/thumbnails/"+ p.getId + ".png").isDefined)/*20.109*/{_display_(Seq[Any](format.raw/*20.110*/("""
+                      """),format.raw/*21.23*/("""<img src="public/images/productImages/thumbnails/" + id + ".png" class="img-responsive" style="width:100%" alt="Image">
+                    """)))}/*22.23*/else/*22.28*/{_display_(Seq[Any](format.raw/*22.29*/("""
+                     """),format.raw/*23.22*/("""<img src="/assets/images/productImages/thumbnails/noImage.png"/>
+                  """)))}),format.raw/*24.20*/("""   
              
-                """),format.raw/*36.17*/("""<a href=""""),_display_(/*36.27*/routes/*36.33*/.ProductCtrl.productDetails(p.getId)),format.raw/*36.69*/("""">
-                      """),_display_(/*37.24*/p/*37.25*/.getAlbum_name),format.raw/*37.39*/("""</a>
+                """),format.raw/*26.17*/("""<a href=""""),_display_(/*26.27*/routes/*26.33*/.ProductCtrl.productDetails(p.getId)),format.raw/*26.69*/("""">
+                      """),_display_(/*27.24*/p/*27.25*/.getAlbum_name),format.raw/*27.39*/("""</a>
               </div>
                
       
@@ -74,9 +64,9 @@ Seq[Any](format.raw/*3.82*/("""
           </div>
             </div><br><br>
             
-          """)))}),format.raw/*45.12*/("""
+          """)))}),format.raw/*35.12*/("""
   
-""")))}),format.raw/*47.2*/("""
+""")))}),format.raw/*37.2*/("""
 """))
       }
     }
@@ -93,11 +83,11 @@ Seq[Any](format.raw/*3.82*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Wed Mar 28 17:33:11 IST 2018
+                  DATE: Fri Mar 30 20:58:38 IST 2018
                   SOURCE: /home/wdd/webapps/SecondYearProject/app/views/viewAlbums.scala.html
-                  HASH: 5c7fe8dac49a95ac9e4367a64c3f11d11bd973f3
-                  MATRIX: 651->1|689->33|1073->61|1248->141|1276->144|1314->174|1353->176|1382->179|2208->978|2240->994|2279->995|2320->1008|2490->1151|2587->1238|2627->1239|2678->1262|2838->1404|2851->1409|2890->1410|2940->1432|3055->1516|3117->1550|3154->1560|3169->1566|3226->1602|3279->1628|3289->1629|3324->1643|3492->1780|3527->1785
-                  LINES: 24->1|25->2|30->3|35->3|37->5|37->5|37->5|38->6|58->26|58->26|58->26|59->27|62->30|62->30|62->30|63->31|64->32|64->32|64->32|65->33|66->34|68->36|68->36|68->36|68->36|69->37|69->37|69->37|77->45|79->47
+                  HASH: 6914a04419d8560fd5eb18ee0a466308cad920c5
+                  MATRIX: 651->1|689->33|1073->61|1248->141|1276->144|1314->174|1353->176|1384->181|1670->440|1702->456|1741->457|1782->470|1952->613|2049->700|2089->701|2140->724|2300->866|2313->871|2352->872|2402->894|2517->978|2579->1012|2616->1022|2631->1028|2688->1064|2741->1090|2751->1091|2786->1105|2954->1242|2989->1247
+                  LINES: 24->1|25->2|30->3|35->3|37->5|37->5|37->5|39->7|48->16|48->16|48->16|49->17|52->20|52->20|52->20|53->21|54->22|54->22|54->22|55->23|56->24|58->26|58->26|58->26|58->26|59->27|59->27|59->27|67->35|69->37
                   -- GENERATED --
               */
           

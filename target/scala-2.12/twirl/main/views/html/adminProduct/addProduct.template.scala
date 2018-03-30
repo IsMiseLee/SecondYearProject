@@ -21,6 +21,7 @@ import play.api.data.Field
 import play.mvc.Http.Context.Implicit._
 import play.data._
 import play.core.j.PlayFormsMagicForJava._
+/*1.2*/import models.products.Artist
 /*2.2*/import models.products.Product
 /*3.2*/import models.users.Member
 
@@ -46,20 +47,26 @@ Seq[Any](format.raw/*4.74*/("""
     """),_display_(/*15.6*/CSRF/*15.10*/.formField),format.raw/*15.20*/("""
     
     """),_display_(/*17.6*/inputText(productForm("album_name"),'_label -> "Album name", 'class -> "form-control")),format.raw/*17.92*/("""
-    """),_display_(/*18.6*/inputText(productForm("year"),'_label -> "Year", 'class -> "form-control")),format.raw/*18.80*/("""
-    """),_display_(/*19.6*/inputText(productForm("type"),'_label -> "Type", 'class -> "form-control")),format.raw/*19.80*/("""
-    """),_display_(/*20.6*/inputText(productForm("price"),'_label -> "Price", 'class -> "form-control")),format.raw/*20.82*/("""
-    """),_display_(/*21.6*/inputText(productForm("stock"),'_label -> "Stock", 'class -> "form-control")),format.raw/*21.82*/("""
+
+    """),_display_(/*19.6*/for((value, genre) <- Artist.options) yield /*19.43*/ {_display_(Seq[Any](format.raw/*19.45*/("""
+      """),format.raw/*20.7*/("""<input type="checkbox" name="artSelect[]" value=""""),_display_(/*20.57*/value),format.raw/*20.62*/(""""
+      
+      />"""),_display_(/*22.10*/genre),format.raw/*22.15*/("""<br>        
+  """)))}),format.raw/*23.4*/("""
+    """),_display_(/*24.6*/inputText(productForm("year"),'_label -> "Year", 'class -> "form-control")),format.raw/*24.80*/("""
+    """),_display_(/*25.6*/inputText(productForm("art_name"),'_label -> "Artist", 'class -> "form-control")),format.raw/*25.86*/("""
+    """),_display_(/*26.6*/inputText(productForm("price"),'_label -> "Price", 'class -> "form-control")),format.raw/*26.82*/("""
+    """),_display_(/*27.6*/inputText(productForm("stock"),'_label -> "Stock", 'class -> "form-control")),format.raw/*27.82*/("""
     
-    """),format.raw/*23.5*/("""<label>Image Upload</label>
+    """),format.raw/*29.5*/("""<label>Image Upload</label>
     <input class="btn-sm btn-default" type="file" name="upload">
     <br><br>
   
     
     
     <div class="action"> 
-      <input type="submit" value="Add Project" class="btn btn-primary">
-      <a href=""""),_display_(/*31.17*/routes/*31.23*/.AdminProductCtrl.listProduct()),format.raw/*31.54*/(""""> 
+      <input type="submit" value="Add Product" class="btn btn-primary">
+      <a href=""""),_display_(/*37.17*/routes/*37.23*/.AdminProductCtrl.listProduct(0)),format.raw/*37.55*/(""""> 
         <button type="button" class="btn btn-warning">Cancel</button>
       </a>
     </div>
@@ -67,7 +74,7 @@ Seq[Any](format.raw/*4.74*/("""
       </body>
     
     
-    """)))}),format.raw/*39.6*/("""
+    """)))}),format.raw/*45.6*/("""
     """)))}))
       }
     }
@@ -84,11 +91,11 @@ Seq[Any](format.raw/*4.74*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Tue Mar 27 19:23:12 IST 2018
+                  DATE: Fri Mar 30 20:58:39 IST 2018
                   SOURCE: /home/wdd/webapps/SecondYearProject/app/views/adminProduct/addProduct.scala.html
-                  HASH: 1a4cdfea62d5ac865232e05660b61c1f9a0b5034
-                  MATRIX: 664->2|702->34|1081->62|1226->137|1271->134|1299->153|1326->155|1360->181|1398->182|1430->188|1498->230|1643->365|1683->366|1717->373|1792->422|1805->426|1836->436|1873->447|1980->533|2012->539|2107->613|2139->619|2234->693|2266->699|2363->775|2395->781|2492->857|2529->867|2789->1100|2804->1106|2856->1137|3022->1273
-                  LINES: 24->2|25->3|30->4|33->6|36->4|38->7|39->8|39->8|39->8|40->9|42->11|42->11|42->11|43->12|46->15|46->15|46->15|48->17|48->17|49->18|49->18|50->19|50->19|51->20|51->20|52->21|52->21|54->23|62->31|62->31|62->31|70->39
+                  HASH: 555be2c5dd48758252b5e888d8b6702c6c64dcfa
+                  MATRIX: 664->1|701->32|739->64|1118->92|1263->167|1308->164|1336->183|1363->185|1397->211|1435->212|1467->218|1535->260|1680->395|1720->396|1754->403|1829->452|1842->456|1873->466|1910->477|2017->563|2050->570|2103->607|2143->609|2177->616|2254->666|2280->671|2325->689|2351->694|2397->710|2429->716|2524->790|2556->796|2657->876|2689->882|2786->958|2818->964|2915->1040|2952->1050|3212->1283|3227->1289|3280->1321|3446->1457
+                  LINES: 24->1|25->2|26->3|31->4|34->6|37->4|39->7|40->8|40->8|40->8|41->9|43->11|43->11|43->11|44->12|47->15|47->15|47->15|49->17|49->17|51->19|51->19|51->19|52->20|52->20|52->20|54->22|54->22|55->23|56->24|56->24|57->25|57->25|58->26|58->26|59->27|59->27|61->29|69->37|69->37|69->37|77->45
                   -- GENERATED --
               */
           

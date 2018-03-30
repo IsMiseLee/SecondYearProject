@@ -11,6 +11,7 @@ import javax.inject.Inject;
 
 
 import models.users.*;
+import models.shopping.*;
 import models.products.*;
 import views.html.*;
 
@@ -36,6 +37,10 @@ public class ProductCtrl extends Controller {
         return ok(views.html.index.render(Member.getLoggedIn(session().get("email"))));
     }
 
+    public Result viewOrder() {
+      
+        return redirect(routes.ProductCtrl.viewOrder());
+    }
 
     public Result aboutUs() {
         return ok(views.html.aboutUs.render(Member.getLoggedIn(session().get("email"))));
@@ -50,22 +55,46 @@ public class ProductCtrl extends Controller {
     }
     
     @Transactional
-    public Result listProducts(Long cat, String filter) {		
+    public Result listProducts(Long art, String filter) {		
         List<Product> products = new ArrayList<Product>();
-    
-        if (cat == 0) {
+        List<Artist> categories = Artist.findAll();
+        if (art == 0) {
             products = Product.findAll(filter);
         }
         else {
-            products = Product.findFilter(cat, filter);
+            products = Product.findFilter(art, filter);
         }
-        return ok(listProducts.render(products, cat, filter, getCurrentUser(),e));
+        return ok(listProducts.render(products,categories, art, filter, getCurrentUser(),e));
     }
 
     public Result viewAlbums() {
         List<Product> products = new ArrayList<Product>();
         return ok(views.html.viewAlbums.render(products,Member.getLoggedIn(session().get("email")),e));
     }
+
+    public Result register() {
+        Form<Member> registerForm = formFactory.form(Member.class);
+        return ok(register.render(registerForm,Member.getLoggedIn(session().get("email"))));
+    }
+    
+    public Result registerSubmit(){ 
+       
+        Member newMember;
+        Form<Member> registerForm =formFactory.form(Member.class).bindFromRequest();
+        if(registerForm.hasErrors()){ 
+    
+            return badRequest(register.render(registerForm,Member.getLoggedIn(session().get("email"))));
+        }else { 
+            newMember =registerForm.get();
+
+            newMember.save();
+
+        }
+       
+
+        return ok(views.html.index.render(Member.getLoggedIn(session().get("email"))));
+    }
+  
 
 
 }

@@ -69,26 +69,27 @@ Seq[Any](format.raw/*7.60*/("""
                     <li class="active"><a href="#">Home</a></li>
                     <li><a href=""""),_display_(/*40.35*/routes/*40.41*/.ProductCtrl.aboutUs()),format.raw/*40.63*/("""">About us</a></li>
                     <li><a href=""""),_display_(/*41.35*/routes/*41.41*/.ProductCtrl.viewAlbums()),format.raw/*41.66*/("""">Artists</a></li>
-                    <li><a href=""""),_display_(/*42.35*/routes/*42.41*/.AdminProductCtrl.listProduct()),format.raw/*42.72*/("""">Products</a></li>
+                    <li><a href=""""),_display_(/*42.35*/routes/*42.41*/.AdminProductCtrl.listProduct(0)),format.raw/*42.73*/("""">Products</a></li>
+                    <li><a href=""""),_display_(/*43.35*/routes/*43.41*/.ShopCartCtrl.viewOrder(0)),format.raw/*43.67*/("""">view Orders</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li """),_display_(/*45.26*/if(title=="Login")/*45.44*/{_display_(Seq[Any](format.raw/*45.45*/("""class="active"""")))}),format.raw/*45.60*/(""">
-                    """),_display_(/*46.22*/if(member != null)/*46.40*/ {_display_(Seq[Any](format.raw/*46.42*/("""
-                        """),format.raw/*47.25*/("""<a href=""""),_display_(/*47.35*/controllers/*47.46*/.security.routes.LoginCtrl.logout()),format.raw/*47.81*/("""">Logout """),_display_(/*47.91*/member/*47.97*/.getName()),format.raw/*47.107*/("""</a>
-                    """)))}/*48.23*/else/*48.28*/{_display_(Seq[Any](format.raw/*48.29*/("""
-                        """),format.raw/*49.25*/("""<a href=""""),_display_(/*49.35*/controllers/*49.46*/.security.routes.LoginCtrl.login()),format.raw/*49.80*/(""""><span class="glyphicon glyphicon-log-in" id="logIcon"> Login</a>
-                    """)))}),format.raw/*50.22*/("""
+                    <li """),_display_(/*46.26*/if(title=="Login")/*46.44*/{_display_(Seq[Any](format.raw/*46.45*/("""class="active"""")))}),format.raw/*46.60*/(""">
+                    """),_display_(/*47.22*/if(member != null)/*47.40*/ {_display_(Seq[Any](format.raw/*47.42*/("""
+                        """),format.raw/*48.25*/("""<a href=""""),_display_(/*48.35*/controllers/*48.46*/.security.routes.LoginCtrl.logout()),format.raw/*48.81*/("""">Logout """),_display_(/*48.91*/member/*48.97*/.getName()),format.raw/*48.107*/("""</a>
+                    """)))}/*49.23*/else/*49.28*/{_display_(Seq[Any](format.raw/*49.29*/("""
+                        """),format.raw/*50.25*/("""<a href=""""),_display_(/*50.35*/controllers/*50.46*/.security.routes.LoginCtrl.login()),format.raw/*50.80*/(""""><span class="glyphicon glyphicon-log-in" id="logIcon"> Login</a>
+                    """)))}),format.raw/*51.22*/("""
 
-                """),format.raw/*52.17*/("""</li>
+                """),format.raw/*53.17*/("""</li>
 
       
                     
                 </ul>
             </div>
         </nav>
-        """),_display_(/*59.10*/content),format.raw/*59.17*/("""
+        """),_display_(/*60.10*/content),format.raw/*60.17*/("""
 
-        """),format.raw/*61.9*/("""<script src=""""),_display_(/*61.23*/routes/*61.29*/.Assets.versioned("javascripts/main.js")),format.raw/*61.69*/("""" type="text/javascript"></script>
+        """),format.raw/*62.9*/("""<script src=""""),_display_(/*62.23*/routes/*62.29*/.Assets.versioned("javascripts/main.js")),format.raw/*62.69*/("""" type="text/javascript"></script>
     </body>
 </html>
 """))
@@ -107,11 +108,11 @@ Seq[Any](format.raw/*7.60*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Wed Mar 28 17:17:23 IST 2018
+                  DATE: Fri Mar 30 20:58:39 IST 2018
                   SOURCE: /home/wdd/webapps/SecondYearProject/app/views/adminProduct/main.scala.html
-                  HASH: cfc4daf43d43d321c542c4cb41162cfde270811b
-                  MATRIX: 1239->260|1392->318|1420->320|1500->425|1536->434|1571->442|1597->447|1686->509|1701->515|1764->556|1852->617|1867->623|1928->662|2305->1101|2344->1112|2909->1650|2924->1656|2965->1676|3339->2023|3354->2029|3397->2051|3478->2105|3493->2111|3539->2136|3619->2189|3634->2195|3686->2226|3837->2350|3864->2368|3903->2369|3949->2384|3999->2407|4026->2425|4066->2427|4119->2452|4156->2462|4176->2473|4232->2508|4269->2518|4284->2524|4316->2534|4361->2561|4374->2566|4413->2567|4466->2592|4503->2602|4523->2613|4578->2647|4697->2735|4743->2753|4870->2853|4898->2860|4935->2870|4976->2884|4991->2890|5052->2930
-                  LINES: 33->7|38->7|40->9|43->12|44->13|44->13|44->13|45->14|45->14|45->14|46->15|46->15|46->15|53->23|55->25|64->34|64->34|64->34|70->40|70->40|70->40|71->41|71->41|71->41|72->42|72->42|72->42|75->45|75->45|75->45|75->45|76->46|76->46|76->46|77->47|77->47|77->47|77->47|77->47|77->47|77->47|78->48|78->48|78->48|79->49|79->49|79->49|79->49|80->50|82->52|89->59|89->59|91->61|91->61|91->61|91->61
+                  HASH: 4dc470a9cdda90c7720fe226eef397c1c0dfcdb3
+                  MATRIX: 1239->260|1392->318|1420->320|1500->425|1536->434|1571->442|1597->447|1686->509|1701->515|1764->556|1852->617|1867->623|1928->662|2305->1101|2344->1112|2909->1650|2924->1656|2965->1676|3339->2023|3354->2029|3397->2051|3478->2105|3493->2111|3539->2136|3619->2189|3634->2195|3687->2227|3768->2281|3783->2287|3830->2313|3984->2440|4011->2458|4050->2459|4096->2474|4146->2497|4173->2515|4213->2517|4266->2542|4303->2552|4323->2563|4379->2598|4416->2608|4431->2614|4463->2624|4508->2651|4521->2656|4560->2657|4613->2682|4650->2692|4670->2703|4725->2737|4844->2825|4890->2843|5017->2943|5045->2950|5082->2960|5123->2974|5138->2980|5199->3020
+                  LINES: 33->7|38->7|40->9|43->12|44->13|44->13|44->13|45->14|45->14|45->14|46->15|46->15|46->15|53->23|55->25|64->34|64->34|64->34|70->40|70->40|70->40|71->41|71->41|71->41|72->42|72->42|72->42|73->43|73->43|73->43|76->46|76->46|76->46|76->46|77->47|77->47|77->47|78->48|78->48|78->48|78->48|78->48|78->48|78->48|79->49|79->49|79->49|80->50|80->50|80->50|80->50|81->51|83->53|90->60|90->60|92->62|92->62|92->62|92->62
                   -- GENERATED --
               */
           

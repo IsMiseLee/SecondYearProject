@@ -5,17 +5,18 @@
 # An example controller showing a sample home page
 GET     /                           controllers.ProductCtrl.index
 GET     /aboutUs                    controllers.ProductCtrl.aboutUs
-GET     /productDetails/:id                 controllers.ProductCtrl.productDetails(id:Long)
-GET     /listProducts                       controllers.ProductCtrl.listProducts(cat:Long ?= 0, filter?="")
+GET     /productDetails/:id         controllers.ProductCtrl.productDetails(id:Long)
+GET     /listProducts               controllers.ProductCtrl.listProducts(cat:Long ?= 0, filter?="")
 
 GET		/login						        controllers.security.LoginCtrl.login()
-POST	/loginSubmit						        controllers.security.LoginCtrl.loginSubmit()
+POST	/loginSubmit						controllers.security.LoginCtrl.loginSubmit()
 GET     /logout                             controllers.security.LoginCtrl.logout()
-
+GET		/register						    controllers.ProductCtrl.register()
+POST	/registerSubmit						controllers.ProductCtrl.registerSubmit()
 
 GET		/Admin/addProduct					controllers.AdminProductCtrl.addProduct()
 POST	/Admin/addProductSubmit				controllers.AdminProductCtrl.addProductSubmit()
-GET     /Admin/deleteProduct/:id               controllers.AdminProductCtrl.deleteProduct(id:Long)
+GET     /Admin/deleteProduct/:id            controllers.AdminProductCtrl.deleteProduct(id:Long)
 GET		/Admin/updateProduct/:id			controllers.AdminProductCtrl.updateProduct(id:Long)
 POST	/Admin/updateProductSubmit/:id		controllers.AdminProductCtrl.updateProductSubmit(id:Long)
 
@@ -28,8 +29,8 @@ GET     /viewOrder/:id                      controllers.ShopCartCtrl.viewOrder(i
 GET     /addOne/:itemId                     controllers.ShopCartCtrl.addOne(itemId: Long, pid: Long)
 GET     /removeOne/:itemId                  controllers.ShopCartCtrl.removeOne(itemId: Long)
 
-
+GET     /viewOrder                  controllers.ProductCtrl.viewOrder
 GET     /viewAlbums                      controllers.ProductCtrl.viewAlbums
-GET     /listProduct                     controllers.AdminProductCtrl.listProduct
+GET     /listProduct                     controllers.AdminProductCtrl.listProduct(id:Long)
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)

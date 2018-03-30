@@ -11,7 +11,7 @@ import play.data.validation.*;
 @Entity
 public class Artist extends  Model{
     @Id
-    private long id;
+    private Long id;
     @Constraints.Required
     private String name;
     @Constraints.Required
@@ -20,6 +20,10 @@ public class Artist extends  Model{
     private String city;
     @Constraints.Required
     private String country;
+
+    @ManyToMany(cascade = CascadeType.ALL)
+    private List<Product> products;
+
 
     public Artist() {
     }
@@ -31,7 +35,15 @@ public class Artist extends  Model{
         this.country = country;
     }
 
-    public long getId() { 
+    public List<Product> getProducts() {
+        return products;
+    }
+
+    public void setProducts(List<Product> products) {
+        this.products = products;
+    }
+
+    public Long getId() { 
         return id;
     } 
 
@@ -51,7 +63,7 @@ public class Artist extends  Model{
         return country;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -70,11 +82,30 @@ public class Artist extends  Model{
     public void setCountry(String country) {
         this.country = country;
     }
-    public static Finder<String, Artist> find = new Finder<String, Artist>(Artist.class);
+    public static Finder<Long, Artist> find = new Finder<Long, Artist>(Artist.class);
     
-        public static List<Artist> findAll() {
-            return Artist.find.all();
+    public static List<Artist> findAll() {
+        return Artist.find.query().where().orderBy("name asc").findList();
+    }
+        
+
+    public static Map<String, String> options() {
+        LinkedHashMap<String, String> options = new LinkedHashMap();
+
+        for (Artist a: Artist.findAll()) {
+            options.put(a.getId().toString(), a.getGenre());
         }
+        
+        return options;
+    }
+               
+                public static boolean inArtist(Long artist, Long product) {
+                    return find.query().where()
+                        .eq("products.id", product)
+                        .eq("id", artist)
+                        .findCount() > 0;
+                }
+    
     
     
 }

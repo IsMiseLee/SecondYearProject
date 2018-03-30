@@ -1,17 +1,30 @@
 
 @import models.products.Product
+@import models.products.Artist
 @import models.users.Member
-@(products: List[models.products.Product],member: models.users.Member,env: play.api.Environment)
+@(products: List[Product], artists: List[Artist], member: Member,env: play.api.Environment)
 
 @main("ListPRoducts",member) {
   <h1>List of Products</h1>
-
+  <br>
+  <div class="row">
+    <div class="col-sm-3">
+      <h4>Categories</h4>
+      <div class="list-group">
+        <a href="@routes.AdminProductCtrl.listProduct(0)" class="list-group-item">All Artists</a>
+        @for(a <- artists) {
+          <a href="@routes.AdminProductCtrl.listProduct(a.getId)" class="list-group-item">@a.getGenre
+            <span class="badge">@a.getProducts.size()</span>
+          </a>
+        }
+      </div>
+    </div>
+    <div class="col-sm-9">
   <table class="table table-bordered table-hover table-condensed">
       
       <thead>
       
-      <!-- The header row-->
-      
+   
       <tr>
 
      <th>Images</th>
@@ -22,7 +35,7 @@
       
       <th>Year</th>
       
-      <th>Type</th>
+      <th>Artist name</th>
       
       <th>Price</th>
 
@@ -48,7 +61,7 @@
           <td>@p.getId</td>
           <td>@p.getAlbum_name</td>
           <td>@p.getYear</td>
-          <td>@p.getType</td>
+          <td>@p.getArt_name</td>
           <td>@p.getPrice</td>
           <td>@p.getStock</td>
 

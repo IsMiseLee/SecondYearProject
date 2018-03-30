@@ -47,7 +47,7 @@ public class LoginCtrl extends Controller {
             Member m = Member.getLoggedIn(loginForm.get().getEmail());
            
             if (m != null && "admin".equals(m.getRole())) {
-                return redirect(controllers.routes.AdminProductCtrl.listProduct());
+                return redirect(controllers.routes.AdminProductCtrl.listProduct(0));
             }
             
            

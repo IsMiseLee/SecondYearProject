@@ -43,9 +43,11 @@
                     <li><a href="@routes.ProductCtrl.aboutUs()">About us</a></li>
                     <li><a href="@routes.ProductCtrl.viewAlbums()">viewAlbums</a></li>
                     <li><a href="@routes.ProductCtrl.listProducts(0,"")">Products</a></li>
+                    <li><a href="@routes.ShopCartCtrl.viewOrder(0)">view Orders</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                       
+                    <li><a href="@routes.ProductCtrl.register()">Register</a></li>
                     <li @if(title=="Login"){class="active"}> 
                     @if(member != null) {
                         <a href="@controllers.security.routes.LoginCtrl.logout()">Logout @member.getName()</a>

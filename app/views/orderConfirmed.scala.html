@@ -23,7 +23,7 @@
 			<!-- The header row-->
 			<tr>
 				<th>Album name</th>
-				<th>Type</th>
+				<th>Artist name</th>
 				<th>Item Price</th>
 				<th>Quantity</th>
                 <th>Total</th>
@@ -35,7 +35,7 @@
                     @for(i <- order.getItems) {
                     <tr>
                         <td>@i.getProduct.getAlbum_name</td>
-                        <td>@i.getProduct.getType</td>
+                        <td>@i.getProduct.getArt_name</td>
                         <td>&euro; @("%.2f".format(i.getPrice))</td>
                         <td>@i.getQuantity()</td>
                         <td>&euro; @("%.2f".format(i.getItemTotal))</td>
@@ -48,6 +48,7 @@
             <div class="col-md-12">
                 <p class="text-right"><strong>Order Total: &euro; @("%.2f".format(order.getOrderTotal))</strong></p>
             </div>  
+            <button class="btn btn-primary">Pay with card</button>
         </div>
         </div>
 </div>

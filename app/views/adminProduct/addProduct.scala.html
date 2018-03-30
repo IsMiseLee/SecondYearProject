@@ -1,4 +1,4 @@
-
+@import models.products.Artist
 @import models.products.Product
 @import models.users.Member
 @(productForm: Form[models.products.Product],member: models.users.Member)
@@ -15,8 +15,14 @@
     @CSRF.formField
     
     @inputText(productForm("album_name"),'_label -> "Album name", 'class -> "form-control")
+
+    @for((value, genre) <- Artist.options) {
+      <input type="checkbox" name="artSelect[]" value="@value"
+      
+      />@genre<br>        
+  }
     @inputText(productForm("year"),'_label -> "Year", 'class -> "form-control")
-    @inputText(productForm("type"),'_label -> "Type", 'class -> "form-control")
+    @inputText(productForm("art_name"),'_label -> "Artist", 'class -> "form-control")
     @inputText(productForm("price"),'_label -> "Price", 'class -> "form-control")
     @inputText(productForm("stock"),'_label -> "Stock", 'class -> "form-control")
     
@@ -27,8 +33,8 @@
     
     
     <div class="action"> 
-      <input type="submit" value="Add Project" class="btn btn-primary">
-      <a href="@routes.AdminProductCtrl.listProduct()"> 
+      <input type="submit" value="Add Product" class="btn btn-primary">
+      <a href="@routes.AdminProductCtrl.listProduct(0)"> 
         <button type="button" class="btn btn-warning">Cancel</button>
       </a>
     </div>

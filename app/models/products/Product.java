@@ -20,7 +20,7 @@ public class Product extends  Model{
     private String year;
 
     @Constraints.Required
-    private String type;
+    private String art_name;
 
     @Constraints.Required
     private double price;
@@ -28,14 +28,19 @@ public class Product extends  Model{
     @Constraints.Required
     private int stock;
 
+
+   
+    @ManyToMany(cascade = CascadeType.ALL,mappedBy="products")
+    public List<Artist> artists;
+
     public Product() {
     }
 
-    public Product(long id, String album_name, String year, String type, double price, int stock) {
+    public Product(long id, String album_name, String year, String art_name, double price, int stock) {
         this.id = id;
         this.album_name = album_name;
         this.year = year;
-        this.type = type;
+        this.art_name = art_name;
         this.price = price;
         this.stock = stock;
     }
@@ -52,8 +57,8 @@ public class Product extends  Model{
         return year;
     }
 
-    public String getType() {
-        return type;
+    public String getArt_name() {
+        return art_name;
     }
 
     public double getPrice() {
@@ -76,8 +81,8 @@ public class Product extends  Model{
         this.year = year;
     }
 
-    public void setType(String type) {
-        this.type = type;
+    public void setArt_name(String art_name) {
+        this.art_name = art_name;
     }
 
     public void setPrice(double price) {
@@ -91,7 +96,7 @@ public class Product extends  Model{
   
     public static Finder<Long, Product> find = new Finder<Long, Product>(Product.class);
     
-    private List<Long> catSelect = new ArrayList<Long>();
+    private List<Long> artSelect = new ArrayList<Long>();
 
         public static List<Product> findAll() {
             return Product.find.all();
@@ -111,11 +116,12 @@ public class Product extends  Model{
             stock = stock +q;
         }
 
-        public List<Long> getCatSelect(){
-            return catSelect;
+       
+        public List<Long> getArtSelect(){
+            return artSelect;
         }
-        public void setCatSelect(List<Long> catSelect){
-            this.catSelect = catSelect;
+        public void setArtSelect(List<Long> artSelect){
+            this.artSelect = artSelect;
         }
 
         public static List<Product> findAll(String filter) {
@@ -126,13 +132,13 @@ public class Product extends  Model{
         }
         
       
-        public static List<Product> findFilter(Long catID, String filter) {
+        public static List<Product> findFilter(Long artID, String filter) {
             return Product.find.query().where()
-                            .eq("categories.id", catID)
-                            .ilike("name", "%" + filter + "%")
-                            .orderBy("name asc")
+                            .eq("artists.id", artID)
+                            .ilike("genre", "%" + filter + "%")
+                            .orderBy("genre asc")
                             .findList();
         }
-    
+
     
 }
