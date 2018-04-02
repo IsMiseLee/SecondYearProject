@@ -7,7 +7,8 @@
         <thead>
           <tr>
             <th>ID</th>
-            <th>Name</th>         
+            <th>Album name</th>         
+            <th>Artist name</th>
             <th>Quantity</th>
             <th>Price</th>
             <th>Total</th>   
@@ -17,11 +18,12 @@
         <tbody>
           @for(o<-orderItem) {
               <td class="numeric">@o.getId</td>
-             
-                   
+              <td>@o.getProduct.getAlbum_name</td>
+              <td>@o.getProduct.getArt_name</td>     
               <td>@o.getQuantity</td>
-              <td  class="numeric">@o.getPrice</td>
-         
+
+              <td  class="numeric">@("%.2f".format(o.getPrice))</td>
+              <td>&euro; @("%.2f".format(o.getItemTotal))</td>
               
   
             </tr>

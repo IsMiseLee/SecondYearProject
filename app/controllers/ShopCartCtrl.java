@@ -7,7 +7,7 @@ import javax.inject.Inject;
 import views.html.*;
 import play.db.ebean.Transactional;
 import play.api.Environment;
-
+import java.util.List;
 
 import models.users.*;
 import models.products.*;
@@ -100,9 +100,9 @@ public class ShopCartCtrl extends Controller {
 
 
     @Transactional
-    public Result viewOrder(long id) {
-        ShopOrder order = ShopOrder.find.byId(id);
-        return ok(orderConfirmed.render(getCurrentUser(), order));
+    public Result viewOrder() {
+        List<OrderItem> order = OrderItem.findAll();	
+        return ok(viewOrder.render(order,getCurrentUser(),env));
     }
 
     private Customer getCurrentUser() {

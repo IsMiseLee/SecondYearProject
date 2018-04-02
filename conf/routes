@@ -25,7 +25,7 @@ GET     /showBasket                         controllers.ShopCartCtrl.showBasket(
 GET     /addToBasket/:id                    controllers.ShopCartCtrl.addToBasket(id: Long)
 GET     /emptyBasket                        controllers.ShopCartCtrl.emptyBasket()
 GET     /placeOrder                         controllers.ShopCartCtrl.placeOrder()
-GET     /viewOrder/:id                      controllers.ShopCartCtrl.viewOrder(id: Long)
+GET     /viewOrder                     controllers.ShopCartCtrl.viewOrder
 GET     /addOne/:itemId                     controllers.ShopCartCtrl.addOne(itemId: Long, pid: Long)
 GET     /removeOne/:itemId                  controllers.ShopCartCtrl.removeOne(itemId: Long)
 

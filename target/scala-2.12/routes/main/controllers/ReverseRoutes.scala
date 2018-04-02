@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/home/wdd/webapps/SecondYearProject/conf/routes
-// @DATE:Fri Mar 30 20:58:38 IST 2018
+// @DATE:Mon Apr 02 16:16:45 IST 2018
 
 import play.api.mvc.Call
 
@@ -77,9 +77,9 @@ package controllers {
     }
   
     // @LINE:28
-    def viewOrder(id:Long): Call = {
+    def viewOrder(): Call = {
       
-      Call("GET", _prefix + { _defaultPrefix } + "viewOrder/" + play.core.routing.dynamicString(implicitly[play.api.mvc.PathBindable[Long]].unbind("id", id)))
+      Call("GET", _prefix + { _defaultPrefix } + "viewOrder")
     }
   
     // @LINE:27

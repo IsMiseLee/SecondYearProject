@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/home/wdd/webapps/SecondYearProject/conf/routes
-// @DATE:Fri Mar 30 20:58:38 IST 2018
+// @DATE:Mon Apr 02 16:16:45 IST 2018
 
 package router
 
@@ -70,7 +70,7 @@ class Routes(
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """addToBasket/""" + "$" + """id<[^/]+>""", """controllers.ShopCartCtrl.addToBasket(id:Long)"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """emptyBasket""", """controllers.ShopCartCtrl.emptyBasket()"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """placeOrder""", """controllers.ShopCartCtrl.placeOrder()"""),
-    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """viewOrder/""" + "$" + """id<[^/]+>""", """controllers.ShopCartCtrl.viewOrder(id:Long)"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """viewOrder""", """controllers.ShopCartCtrl.viewOrder"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """addOne/""" + "$" + """itemId<[^/]+>""", """controllers.ShopCartCtrl.addOne(itemId:Long, pid:Long)"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """removeOne/""" + "$" + """itemId<[^/]+>""", """controllers.ShopCartCtrl.removeOne(itemId:Long)"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """viewOrder""", """controllers.ProductCtrl.viewOrder"""),
@@ -410,17 +410,17 @@ class Routes(
 
   // @LINE:28
   private[this] lazy val controllers_ShopCartCtrl_viewOrder18_route = Route("GET",
-    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("viewOrder/"), DynamicPart("id", """[^/]+""",true)))
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("viewOrder")))
   )
   private[this] lazy val controllers_ShopCartCtrl_viewOrder18_invoker = createInvoker(
-    ShopCartCtrl_0.viewOrder(fakeValue[Long]),
+    ShopCartCtrl_0.viewOrder,
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
       "controllers.ShopCartCtrl",
       "viewOrder",
-      Seq(classOf[Long]),
+      Nil,
       "GET",
-      this.prefix + """viewOrder/""" + "$" + """id<[^/]+>""",
+      this.prefix + """viewOrder""",
       """""",
       Seq()
     )
@@ -647,8 +647,8 @@ class Routes(
   
     // @LINE:28
     case controllers_ShopCartCtrl_viewOrder18_route(params@_) =>
-      call(params.fromPath[Long]("id", None)) { (id) =>
-        controllers_ShopCartCtrl_viewOrder18_invoker.call(ShopCartCtrl_0.viewOrder(id))
+      call { 
+        controllers_ShopCartCtrl_viewOrder18_invoker.call(ShopCartCtrl_0.viewOrder)
       }
   
     // @LINE:29

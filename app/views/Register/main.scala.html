@@ -4,7 +4,7 @@
  * two arguments, a `String` for the title of the page and an `Html`
  * object to insert into the body of the page.
  *@
-@(title: String,member: models.users.Member)(content: Html)
+@(title: String)(content: Html)
 
 <!DOCTYPE html>
 <html lang="en">
@@ -49,11 +49,7 @@
                       
                     <li><a href="@routes.ProductCtrl.register()">Register</a></li>
                     <li @if(title=="Login"){class="active"}> 
-                    @if(member != null) {
-                        <a href="@controllers.security.routes.LoginCtrl.logout()">Logout @member.getName()</a>
-                    } else {
-                        <a href="@controllers.security.routes.LoginCtrl.login()"><span class="glyphicon glyphicon-log-in" id="logIcon"></span> Login</a>
-                    }
+                
 
                 </li>
 

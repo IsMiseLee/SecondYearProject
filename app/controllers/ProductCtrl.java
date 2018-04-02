@@ -14,7 +14,7 @@ import models.users.*;
 import models.shopping.*;
 import models.products.*;
 import views.html.*;
-
+import views.html.Register.*;
 
 
 public class ProductCtrl extends Controller {
@@ -74,20 +74,22 @@ public class ProductCtrl extends Controller {
 
     public Result register() {
         Form<Member> registerForm = formFactory.form(Member.class);
-        return ok(register.render(registerForm,Member.getLoggedIn(session().get("email"))));
+        return ok(register.render(registerForm));
     }
     
     public Result registerSubmit(){ 
        
-        Member newMember;
+      
         Form<Member> registerForm =formFactory.form(Member.class).bindFromRequest();
         if(registerForm.hasErrors()){ 
     
-            return badRequest(register.render(registerForm,Member.getLoggedIn(session().get("email"))));
+            return badRequest(register.render(registerForm));
         }else { 
-            newMember =registerForm.get();
-
+            Member newMember =registerForm.get();
+            
             newMember.save();
+
+           
 
         }
        

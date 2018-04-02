@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/home/wdd/webapps/SecondYearProject/conf/routes
-// @DATE:Fri Mar 30 20:58:38 IST 2018
+// @DATE:Mon Apr 02 16:16:45 IST 2018
 
 import play.api.routing.JavaScriptReverseRoute
 
@@ -114,8 +114,8 @@ package controllers.javascript {
     def viewOrder: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.ShopCartCtrl.viewOrder",
       """
-        function(id0) {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "viewOrder/" + encodeURIComponent((""" + implicitly[play.api.mvc.PathBindable[Long]].javascriptUnbind + """)("id", id0))})
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "viewOrder"})
         }
       """
     )

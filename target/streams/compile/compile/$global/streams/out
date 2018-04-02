@@ -1,6 +1,7 @@
-[0m[[0m[33mwarn[0m] [0m[0m/home/wdd/webapps/SecondYearProject/app/views/login.scala.html:10:28: method globalError in class Form is deprecated: see corresponding Javadoc for more information.[0m
-[0m[[0m[33mwarn[0m] [0m[0m                @loginForm.globalError.message;[0m
-[0m[[0m[33mwarn[0m] [0m[0m                           ^[0m
-[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m
-[0m[[0m[0minfo[0m] [0m[0m/home/wdd/webapps/SecondYearProject/app/controllers/AdminProductCtrl.java: Some input files use unchecked or unsafe operations.[0m
-[0m[[0m[0minfo[0m] [0m[0m/home/wdd/webapps/SecondYearProject/app/controllers/AdminProductCtrl.java: Recompile with -Xlint:unchecked for details.[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wdd/webapps/SecondYearProject/app/views/Register/main.scala.html:46:65: no arguments allowed for nullary method viewOrder: ()play.api.mvc.Call[0m
+[0m[[0m[31merror[0m] [0m[0m                    <li><a href="@routes.ShopCartCtrl.viewOrder(0)">view Orders</a></li>[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wdd/webapps/SecondYearProject/app/views/adminProduct/main.scala.html:43:65: no arguments allowed for nullary method viewOrder: ()play.api.mvc.Call[0m
+[0m[[0m[31merror[0m] [0m[0m                    <li><a href="@routes.ShopCartCtrl.viewOrder(0)">view Orders</a></li>[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                ^[0m
+[0m[[0m[31merror[0m] [0m[0mtwo errors found[0m

@@ -1,5 +1,5 @@
 
-package views.html
+package views.html.Register
 
 import _root_.play.twirl.api.TwirlFeatureImports._
 import _root_.play.twirl.api.TwirlHelperImports._
@@ -22,7 +22,7 @@ import play.mvc.Http.Context.Implicit._
 import play.data._
 import play.core.j.PlayFormsMagicForJava._
 
-object main extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template3[String,models.users.Member,Html,play.twirl.api.HtmlFormat.Appendable] {
+object main extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template2[String,Html,play.twirl.api.HtmlFormat.Appendable] {
 
   /*
  * This template is called from the `index` template. This template
@@ -30,12 +30,12 @@ object main extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlF
  * two arguments, a `String` for the title of the page and an `Html`
  * object to insert into the body of the page.
  */
-  def apply/*7.2*/(title: String,member: models.users.Member)(content: Html):play.twirl.api.HtmlFormat.Appendable = {
+  def apply/*7.2*/(title: String)(content: Html):play.twirl.api.HtmlFormat.Appendable = {
     _display_ {
       {
 
 
-Seq[Any](format.raw/*7.60*/("""
+Seq[Any](format.raw/*7.32*/("""
 
 """),format.raw/*9.1*/("""<!DOCTYPE html>
 <html lang="en">
@@ -79,23 +79,19 @@ Seq[Any](format.raw/*7.60*/("""
                       
                     <li><a href=""""),_display_(/*50.35*/routes/*50.41*/.ProductCtrl.register()),format.raw/*50.64*/("""">Register</a></li>
                     <li """),_display_(/*51.26*/if(title=="Login")/*51.44*/{_display_(Seq[Any](format.raw/*51.45*/("""class="active"""")))}),format.raw/*51.60*/("""> 
-                    """),_display_(/*52.22*/if(member != null)/*52.40*/ {_display_(Seq[Any](format.raw/*52.42*/("""
-                        """),format.raw/*53.25*/("""<a href=""""),_display_(/*53.35*/controllers/*53.46*/.security.routes.LoginCtrl.logout()),format.raw/*53.81*/("""">Logout """),_display_(/*53.91*/member/*53.97*/.getName()),format.raw/*53.107*/("""</a>
-                    """)))}/*54.23*/else/*54.28*/{_display_(Seq[Any](format.raw/*54.29*/("""
-                        """),format.raw/*55.25*/("""<a href=""""),_display_(/*55.35*/controllers/*55.46*/.security.routes.LoginCtrl.login()),format.raw/*55.80*/(""""><span class="glyphicon glyphicon-log-in" id="logIcon"></span> Login</a>
-                    """)))}),format.raw/*56.22*/("""
+                
 
-                """),format.raw/*58.17*/("""</li>
+                </li>
 
       
                     
                 </ul>
             </div>
         </nav>
-        """),_display_(/*65.10*/content),format.raw/*65.17*/("""
+        """),_display_(/*61.10*/content),format.raw/*61.17*/("""
       
          
-        """),format.raw/*68.9*/("""<script src=""""),_display_(/*68.23*/routes/*68.29*/.Assets.versioned("javascripts/main.js")),format.raw/*68.69*/("""" type="text/javascript"></script>
+        """),format.raw/*64.9*/("""<script src=""""),_display_(/*64.23*/routes/*64.29*/.Assets.versioned("javascripts/main.js")),format.raw/*64.69*/("""" type="text/javascript"></script>
     </body>
 </html>
 """))
@@ -103,9 +99,9 @@ Seq[Any](format.raw/*7.60*/("""
     }
   }
 
-  def render(title:String,member:models.users.Member,content:Html): play.twirl.api.HtmlFormat.Appendable = apply(title,member)(content)
+  def render(title:String,content:Html): play.twirl.api.HtmlFormat.Appendable = apply(title)(content)
 
-  def f:((String,models.users.Member) => (Html) => play.twirl.api.HtmlFormat.Appendable) = (title,member) => (content) => apply(title,member)(content)
+  def f:((String) => (Html) => play.twirl.api.HtmlFormat.Appendable) = (title) => (content) => apply(title)(content)
 
   def ref: this.type = this
 
@@ -114,11 +110,11 @@ Seq[Any](format.raw/*7.60*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Mon Apr 02 16:16:17 IST 2018
-                  SOURCE: /home/wdd/webapps/SecondYearProject/app/views/main.scala.html
-                  HASH: 81de847427cb4c4b673dd9a952ebfea9d5252e65
-                  MATRIX: 1226->260|1379->318|1407->320|1487->425|1523->434|1558->442|1584->447|1673->509|1688->515|1752->557|1840->618|1855->624|1916->663|2341->1150|2380->1161|2945->1699|2960->1705|3001->1725|3325->2022|3340->2028|3381->2048|3458->2098|3473->2104|3516->2126|3597->2180|3612->2186|3658->2211|3741->2267|3756->2273|3808->2304|3889->2358|3904->2364|3950->2389|4136->2548|4151->2554|4195->2577|4267->2622|4294->2640|4333->2641|4379->2656|4430->2680|4457->2698|4497->2700|4550->2725|4587->2735|4607->2746|4663->2781|4700->2791|4715->2797|4747->2807|4792->2834|4805->2839|4844->2840|4897->2865|4934->2875|4954->2886|5009->2920|5135->3015|5181->3033|5308->3133|5336->3140|5389->3166|5430->3180|5445->3186|5506->3226
-                  LINES: 33->7|38->7|40->9|43->12|44->13|44->13|44->13|45->14|45->14|45->14|46->15|46->15|46->15|56->26|58->28|67->37|67->37|67->37|72->42|72->42|72->42|73->43|73->43|73->43|74->44|74->44|74->44|75->45|75->45|75->45|76->46|76->46|76->46|80->50|80->50|80->50|81->51|81->51|81->51|81->51|82->52|82->52|82->52|83->53|83->53|83->53|83->53|83->53|83->53|83->53|84->54|84->54|84->54|85->55|85->55|85->55|85->55|86->56|88->58|95->65|95->65|98->68|98->68|98->68|98->68
+                  DATE: Mon Apr 02 16:24:59 IST 2018
+                  SOURCE: /home/wdd/webapps/SecondYearProject/app/views/Register/main.scala.html
+                  HASH: 5fd2a03e3a87d9102df614c49a57fbf1183fdc12
+                  MATRIX: 1215->260|1340->290|1368->292|1448->397|1484->406|1519->414|1545->419|1634->481|1649->487|1713->529|1801->590|1816->596|1877->635|2302->1122|2341->1133|2906->1671|2921->1677|2962->1697|3286->1994|3301->2000|3342->2020|3419->2070|3434->2076|3477->2098|3558->2152|3573->2158|3619->2183|3702->2239|3717->2245|3769->2276|3850->2330|3865->2336|3911->2361|4097->2520|4112->2526|4156->2549|4228->2594|4255->2612|4294->2613|4340->2628|4504->2765|4532->2772|4585->2798|4626->2812|4641->2818|4702->2858
+                  LINES: 33->7|38->7|40->9|43->12|44->13|44->13|44->13|45->14|45->14|45->14|46->15|46->15|46->15|56->26|58->28|67->37|67->37|67->37|72->42|72->42|72->42|73->43|73->43|73->43|74->44|74->44|74->44|75->45|75->45|75->45|76->46|76->46|76->46|80->50|80->50|80->50|81->51|81->51|81->51|81->51|91->61|91->61|94->64|94->64|94->64|94->64
                   -- GENERATED --
               */
           
