@@ -6,12 +6,20 @@
 @main("Update Product", member){
 <p class="lead"> Update Product</p>
 
-@form(action=routes.AdminProductCtrl.updateProductSubmit(id), 'class -> "form-horizontal", 
+@form(action=routes.AdminProductCtrl.updateProductSubmit(id), 'class -> "form-vertical", 
 'role -> "form",'enctype -> "multipart/form-data") {
     @* CSRF attack prevention *@
     @CSRF.formField
-    @inputText(productForm("album_name"),'_label -> "Album name", 'class -> "form-control")
-    @inputText(productForm("year"),'_label -> "Year", 'class -> "form-control")
+
+    <div class="form-group">
+            @inputText(productForm("album_name"), '_label -> "", 
+            'class -> "form-control input-xs", 'placeholder -> "Album name")
+        </div>
+
+    <div class="form-group">
+            @inputText(productForm("year"), '_label -> "", 
+            'class -> "form-control input-xs", 'placeholder -> "Year")
+       </div>
 
     @for((value, genre) <- Artist.options) {
         <input type="checkbox" genre="artSelect[]" value="@value"
@@ -20,9 +28,22 @@
         }
         />@genre<br>        
     }  
-    @inputText(productForm("art_name"),'_label -> "Artist", 'class -> "form-control")
-    @inputText(productForm("price"),'_label -> "Price", 'class -> "form-control")
-    @inputText(productForm("stock"),'_label -> "Stock", 'class -> "form-control")
+
+    <div class="form-group">
+            @inputText(productForm("art_name"), '_label -> "", 
+            'class -> "form-control input-xs", 'placeholder -> "Artist")
+        </div>
+
+
+    <div class="form-group">
+                @inputText(productForm("price"), '_label -> "", 
+                'class -> "form-control input-xs", 'placeholder -> "Price")
+            </div>
+        
+    <div class="form-group">
+                @inputText(productForm("stock"), '_label -> "", 
+                'class -> "form-control input-xs", 'placeholder -> "Stock")
+            </div>
 
     <label>Image Upload</label>
     <input class="btn-sm btn-default" type="file" name="upload">

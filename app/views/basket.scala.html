@@ -16,9 +16,9 @@
                       </div>
                 } 
         
-                <table class="table table-bordered table-hover table-condensed">
+                <table class="table ">
                     <thead>
-                    <!-- The header row-->
+                   
                     <tr>
                         <th>Album Name</th>
                         <th>Artist Name</th>
@@ -31,7 +31,7 @@
                     </thead>
                     <tbody>
                         @if(customer.getBasket() != null) {
-                            <!-- Start of For loop - For each p in products add a row -->
+                          
                             @for(i <- customer.getBasket().getBasketItems()) {
                             <tr>
                                 <td>@i.getProduct.getAlbum_name</td>
@@ -42,7 +42,7 @@
                                 <td><a href="@routes.ShopCartCtrl.removeOne(i.getId)"><span class="glyphicon glyphicon-minus-sign"></span></a></td>
                                 <td><a href="@routes.ShopCartCtrl.addOne(i.getId,i.getProduct.getId())"><span class="glyphicon glyphicon-plus-sign"></span></a></td>
                             </tr>
-                            }<!-- End of For loop -->
+                            }
                       }
                     </tbody>
                 </table>

@@ -38,37 +38,58 @@ Seq[Any](format.raw/*4.83*/("""
 """),_display_(/*6.2*/main("Update Product", member)/*6.32*/{_display_(Seq[Any](format.raw/*6.33*/("""
 """),format.raw/*7.1*/("""<p class="lead"> Update Product</p>
 
-"""),_display_(/*9.2*/form(action=routes.AdminProductCtrl.updateProductSubmit(id), 'class -> "form-horizontal", 
+"""),_display_(/*9.2*/form(action=routes.AdminProductCtrl.updateProductSubmit(id), 'class -> "form-vertical", 
 'role -> "form",'enctype -> "multipart/form-data")/*10.51*/ {_display_(Seq[Any](format.raw/*10.53*/("""
-    """),format.raw/*11.33*/("""
+   
     """),_display_(/*12.6*/CSRF/*12.10*/.formField),format.raw/*12.20*/("""
-    """),_display_(/*13.6*/inputText(productForm("album_name"),'_label -> "Album name", 'class -> "form-control")),format.raw/*13.92*/("""
-    """),_display_(/*14.6*/inputText(productForm("year"),'_label -> "Year", 'class -> "form-control")),format.raw/*14.80*/("""
 
-    """),_display_(/*16.6*/for((value, genre) <- Artist.options) yield /*16.43*/ {_display_(Seq[Any](format.raw/*16.45*/("""
-        """),format.raw/*17.9*/("""<input type="checkbox" genre="artSelect[]" value=""""),_display_(/*17.60*/value),format.raw/*17.65*/(""""
-        """),_display_(/*18.10*/if(Artist.inArtist(value.toLong, id))/*18.47*/ {_display_(Seq[Any](format.raw/*18.49*/("""
-            """),format.raw/*19.13*/("""checked
-        """)))}),format.raw/*20.10*/("""
-        """),format.raw/*21.9*/("""/>"""),_display_(/*21.12*/genre),format.raw/*21.17*/("""<br>        
-    """)))}),format.raw/*22.6*/("""  
-    """),_display_(/*23.6*/inputText(productForm("art_name"),'_label -> "Artist", 'class -> "form-control")),format.raw/*23.86*/("""
-    """),_display_(/*24.6*/inputText(productForm("price"),'_label -> "Price", 'class -> "form-control")),format.raw/*24.82*/("""
-    """),_display_(/*25.6*/inputText(productForm("stock"),'_label -> "Stock", 'class -> "form-control")),format.raw/*25.82*/("""
+    """),format.raw/*14.5*/("""<div class="form-group">
+            """),_display_(/*15.14*/inputText(productForm("album_name"), '_label -> "", 
+            'class -> "form-control input-xs", 'placeholder -> "Album name")),format.raw/*16.77*/("""
+        """),format.raw/*17.9*/("""</div>
 
-    """),format.raw/*27.5*/("""<label>Image Upload</label>
+    <div class="form-group">
+            """),_display_(/*20.14*/inputText(productForm("year"), '_label -> "", 
+            'class -> "form-control input-xs", 'placeholder -> "Year")),format.raw/*21.71*/("""
+       """),format.raw/*22.8*/("""</div>
+
+    """),_display_(/*24.6*/for((value, genre) <- Artist.options) yield /*24.43*/ {_display_(Seq[Any](format.raw/*24.45*/("""
+        """),format.raw/*25.9*/("""<input type="checkbox" genre="artSelect[]" value=""""),_display_(/*25.60*/value),format.raw/*25.65*/(""""
+        """),_display_(/*26.10*/if(Artist.inArtist(value.toLong, id))/*26.47*/ {_display_(Seq[Any](format.raw/*26.49*/("""
+            """),format.raw/*27.13*/("""checked
+        """)))}),format.raw/*28.10*/("""
+        """),format.raw/*29.9*/("""/>"""),_display_(/*29.12*/genre),format.raw/*29.17*/("""<br>        
+    """)))}),format.raw/*30.6*/("""  
+
+    """),format.raw/*32.5*/("""<div class="form-group">
+            """),_display_(/*33.14*/inputText(productForm("art_name"), '_label -> "", 
+            'class -> "form-control input-xs", 'placeholder -> "Artist")),format.raw/*34.73*/("""
+        """),format.raw/*35.9*/("""</div>
+
+
+    <div class="form-group">
+                """),_display_(/*39.18*/inputText(productForm("price"), '_label -> "", 
+                'class -> "form-control input-xs", 'placeholder -> "Price")),format.raw/*40.76*/("""
+            """),format.raw/*41.13*/("""</div>
+        
+    <div class="form-group">
+                """),_display_(/*44.18*/inputText(productForm("stock"), '_label -> "", 
+                'class -> "form-control input-xs", 'placeholder -> "Stock")),format.raw/*45.76*/("""
+            """),format.raw/*46.13*/("""</div>
+
+    <label>Image Upload</label>
     <input class="btn-sm btn-default" type="file" name="upload">
     <br><br>
   
 
     <div class="actions">
         <input type="submit" value="Update Product" class="btn btn-primary">
-        <a href=""""),_display_(/*34.19*/routes/*34.25*/.AdminProductCtrl.listProduct(0)),format.raw/*34.57*/("""">
+        <a href=""""),_display_(/*55.19*/routes/*55.25*/.AdminProductCtrl.listProduct(0)),format.raw/*55.57*/("""">
             <button type="button" class="btn btn-warning">Cancel</button>
         </a>
     </div>
- """)))}),format.raw/*38.3*/("""
-""")))}),format.raw/*39.2*/("""
+ """)))}),format.raw/*59.3*/("""
+""")))}),format.raw/*60.2*/("""
 """))
       }
     }
@@ -85,11 +106,11 @@ Seq[Any](format.raw/*4.83*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Fri Mar 30 20:58:39 IST 2018
+                  DATE: Tue Apr 03 18:15:53 IST 2018
                   SOURCE: /home/wdd/webapps/SecondYearProject/app/views/adminProduct/updateProduct.scala.html
-                  HASH: 3438b92775a243e60be081d3c2403b63fb083d8d
-                  MATRIX: 664->1|702->33|739->64|1126->92|1280->175|1325->173|1352->192|1390->222|1428->223|1455->224|1518->262|1668->403|1708->405|1741->438|1773->444|1786->448|1817->458|1849->464|1956->550|1988->556|2083->630|2116->637|2169->674|2209->676|2245->685|2323->736|2349->741|2387->752|2433->789|2473->791|2514->804|2562->821|2598->830|2628->833|2654->838|2702->856|2736->864|2837->944|2869->950|2966->1026|2998->1032|3095->1108|3128->1114|3386->1345|3401->1351|3454->1383|3587->1486|3619->1488
-                  LINES: 24->1|25->2|26->3|31->4|34->5|37->4|38->6|38->6|38->6|39->7|41->9|42->10|42->10|43->11|44->12|44->12|44->12|45->13|45->13|46->14|46->14|48->16|48->16|48->16|49->17|49->17|49->17|50->18|50->18|50->18|51->19|52->20|53->21|53->21|53->21|54->22|55->23|55->23|56->24|56->24|57->25|57->25|59->27|66->34|66->34|66->34|70->38|71->39
+                  HASH: a06b2b99478db872180fbff9f37b9f755f6f9d7b
+                  MATRIX: 664->1|702->33|739->64|1126->92|1280->175|1325->173|1352->192|1390->222|1428->223|1455->224|1518->262|1666->401|1706->403|1742->413|1755->417|1786->427|1819->433|1884->471|2034->600|2070->609|2147->659|2285->776|2320->784|2359->797|2412->834|2452->836|2488->845|2566->896|2592->901|2630->912|2676->949|2716->951|2757->964|2805->981|2841->990|2871->993|2897->998|2945->1016|2980->1024|3045->1062|3189->1185|3225->1194|3307->1249|3451->1372|3492->1385|3581->1447|3725->1570|3766->1583|4036->1826|4051->1832|4104->1864|4237->1967|4269->1969
+                  LINES: 24->1|25->2|26->3|31->4|34->5|37->4|38->6|38->6|38->6|39->7|41->9|42->10|42->10|44->12|44->12|44->12|46->14|47->15|48->16|49->17|52->20|53->21|54->22|56->24|56->24|56->24|57->25|57->25|57->25|58->26|58->26|58->26|59->27|60->28|61->29|61->29|61->29|62->30|64->32|65->33|66->34|67->35|71->39|72->40|73->41|76->44|77->45|78->46|87->55|87->55|87->55|91->59|92->60
                   -- GENERATED --
               */
           

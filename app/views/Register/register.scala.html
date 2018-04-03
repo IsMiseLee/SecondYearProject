@@ -3,18 +3,37 @@
 @import helper._
 
 @main("Register"){ 
-    <p class="lead">Add Product</p>
+    <p class="lead">Want to sign up ? </p>
     
     @form(action=routes.ProductCtrl.registerSubmit(), 'class -> "form-horizontal", 'role -> "form"){
       <div class="container">
           
         
-    @CSRF.formField
-    
-    @inputText(registerForm("email"),'_label -> "Email", 'class -> "form-control")
-    @inputText(registerForm("role"),'_label -> "Role", 'class -> "form-control")    
-    @inputText(registerForm("password"),'_label -> "Password", 'class -> "form-control")
-    @inputText(registerForm("name"),'_label -> "Name", 'class -> "form-control")     
+          @helper.form(controllers.security.routes.LoginCtrl.loginSubmit()) {
+            @CSRF.formField
+
+            <div class="form-group">
+                @inputText(registerForm("email"), '_label -> "", 
+                'class -> "form-control input-xs", 'placeholder -> "Email")
+            </div>
+            <div class="form-group">
+                @inputPassword(registerForm("password"), '_label -> "", 
+                'class -> "form-control input-xs", 'placeholder -> "Password")
+            </div>
+
+            <div class="form-group">
+                @inputText(registerForm("role"), '_label -> "", 
+                'class -> "form-control input-xs", 'placeholder -> "role")
+            </div>
+
+            <div class="form-group">
+                @inputText(registerForm("name"), '_label -> "", 
+                'class -> "form-control input-xs", 'placeholder -> "name")
+            </div>
+            
+          
+        }
+  
    
   
     

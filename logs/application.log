@@ -1,932 +1,193 @@
-2018-04-02 15:39:07,713 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-12 - Creating Pool for datasource 'default'
-2018-04-02 15:39:08,168 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-12 - Database [default] connected at jdbc:h2:file:./data/productsDB
-2018-04-02 15:39:09,620 [WARN] from org.hibernate.validator.messageinterpolation.ParameterMessageInterpolator in play-dev-mode-akka.actor.default-dispatcher-12 - HV000184: ParameterMessageInterpolator has been chosen, EL interpolation will not be supported
-2018-04-02 15:39:09,863 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-12 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+2018-04-03 16:46:51,495 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-10 - Creating Pool for datasource 'default'
+2018-04-03 16:46:51,940 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-10 - Database [default] connected at jdbc:h2:file:./data/productsDB
+2018-04-03 16:46:53,692 [WARN] from org.hibernate.validator.messageinterpolation.ParameterMessageInterpolator in play-dev-mode-akka.actor.default-dispatcher-10 - HV000184: ParameterMessageInterpolator has been chosen, EL interpolation will not be supported
+2018-04-03 16:46:54,018 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-10 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
 
     play.filters.csrf.CSRFFilter
     play.filters.headers.SecurityHeadersFilter
     play.filters.hosts.AllowedHostsFilter
 
-2018-04-02 15:39:09,870 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-12 - Application started (Dev)
-2018-04-02 15:39:10,096 [WARN] from play.api.mvc.DefaultJWTCookieDataCodec in application-akka.actor.default-dispatcher-7 - decode: cookie has invalid signature! message = JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
-2018-04-02 15:39:10,102 [INFO] from play.api.mvc.DefaultJWTCookieDataCodec in application-akka.actor.default-dispatcher-7 - The JWT signature in the cookie does not match the locally computed signature with the server.
-This usually indicates the browser has a leftover cookie from another Play application,
-so clearing cookies may resolve this error message.
-2018-04-02 15:39:10,516 [WARN] from play.api.mvc.DefaultJWTCookieDataCodec in application-akka.actor.default-dispatcher-7 - decode: cookie has invalid signature! message = JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
-2018-04-02 15:39:10,523 [WARN] from play.api.mvc.DefaultJWTCookieDataCodec in application-akka.actor.default-dispatcher-4 - decode: cookie has invalid signature! message = JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
-2018-04-02 15:39:10,523 [INFO] from play.api.mvc.DefaultJWTCookieDataCodec in application-akka.actor.default-dispatcher-4 - The JWT signature in the cookie does not match the locally computed signature with the server.
-This usually indicates the browser has a leftover cookie from another Play application,
-so clearing cookies may resolve this error message.
-2018-04-02 15:39:10,525 [INFO] from play.api.mvc.DefaultJWTCookieDataCodec in application-akka.actor.default-dispatcher-7 - The JWT signature in the cookie does not match the locally computed signature with the server.
-This usually indicates the browser has a leftover cookie from another Play application,
-so clearing cookies may resolve this error message.
-2018-04-02 15:39:10,741 [WARN] from play.api.mvc.DefaultJWTCookieDataCodec in application-akka.actor.default-dispatcher-7 - decode: cookie has invalid signature! message = JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
-2018-04-02 15:39:10,744 [INFO] from play.api.mvc.DefaultJWTCookieDataCodec in application-akka.actor.default-dispatcher-7 - The JWT signature in the cookie does not match the locally computed signature with the server.
-This usually indicates the browser has a leftover cookie from another Play application,
-so clearing cookies may resolve this error message.
-2018-04-02 15:39:10,785 [WARN] from play.api.mvc.DefaultJWTCookieDataCodec in application-akka.actor.default-dispatcher-7 - decode: cookie has invalid signature! message = JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
-2018-04-02 15:39:10,785 [INFO] from play.api.mvc.DefaultJWTCookieDataCodec in application-akka.actor.default-dispatcher-7 - The JWT signature in the cookie does not match the locally computed signature with the server.
-This usually indicates the browser has a leftover cookie from another Play application,
-so clearing cookies may resolve this error message.
-2018-04-02 15:39:10,838 [WARN] from play.api.mvc.DefaultJWTCookieDataCodec in application-akka.actor.default-dispatcher-7 - decode: cookie has invalid signature! message = JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
-2018-04-02 15:39:10,839 [INFO] from play.api.mvc.DefaultJWTCookieDataCodec in application-akka.actor.default-dispatcher-7 - The JWT signature in the cookie does not match the locally computed signature with the server.
-This usually indicates the browser has a leftover cookie from another Play application,
-so clearing cookies may resolve this error message.
-2018-04-02 15:39:10,890 [WARN] from play.api.mvc.DefaultJWTCookieDataCodec in application-akka.actor.default-dispatcher-4 - decode: cookie has invalid signature! message = JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
-2018-04-02 15:39:10,890 [INFO] from play.api.mvc.DefaultJWTCookieDataCodec in application-akka.actor.default-dispatcher-4 - The JWT signature in the cookie does not match the locally computed signature with the server.
-This usually indicates the browser has a leftover cookie from another Play application,
-so clearing cookies may resolve this error message.
-2018-04-02 15:39:10,905 [WARN] from play.api.mvc.DefaultJWTCookieDataCodec in application-akka.actor.default-dispatcher-7 - decode: cookie has invalid signature! message = JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
-2018-04-02 15:39:10,905 [INFO] from play.api.mvc.DefaultJWTCookieDataCodec in application-akka.actor.default-dispatcher-7 - The JWT signature in the cookie does not match the locally computed signature with the server.
-This usually indicates the browser has a leftover cookie from another Play application,
-so clearing cookies may resolve this error message.
-2018-04-02 15:40:53,991 [WARN] from application in application-akka.actor.default-dispatcher-9 - The "validate" method in class "models.users.Login" is deprecated since Play 2.6. To migrate to class-level constraints see https://www.playframework.com/documentation/2.6.x/Migration26#java-form-changes and https://www.playframework.com/documentation/2.6.x/JavaForms#Advanced-validation
-2018-04-02 15:41:00,315 [WARN] from application in application-akka.actor.default-dispatcher-9 - The "validate" method in class "models.users.Login" is deprecated since Play 2.6. To migrate to class-level constraints see https://www.playframework.com/documentation/2.6.x/Migration26#java-form-changes and https://www.playframework.com/documentation/2.6.x/JavaForms#Advanced-validation
-2018-04-02 15:41:14,739 [WARN] from application in application-akka.actor.default-dispatcher-12 - The "validate" method in class "models.users.Login" is deprecated since Play 2.6. To migrate to class-level constraints see https://www.playframework.com/documentation/2.6.x/Migration26#java-form-changes and https://www.playframework.com/documentation/2.6.x/JavaForms#Advanced-validation
-2018-04-02 15:41:16,904 [ERROR] from application in application-akka.actor.default-dispatcher-8 - 
-
-! @77f2mmkmc - Internal server error, for (GET) [/viewOrder/0] ->
- 
-play.api.http.HttpErrorHandlerExceptions$$anon$1: Execution exception[[NullPointerException: null]]
-	at play.api.http.HttpErrorHandlerExceptions$.throwableToUsefulException(HttpErrorHandler.scala:255)
-	at play.api.http.DefaultHttpErrorHandler.onServerError(HttpErrorHandler.scala:182)
-	at play.core.server.AkkaHttpServer$$anonfun$2.applyOrElse(AkkaHttpServer.scala:310)
-	at play.core.server.AkkaHttpServer$$anonfun$2.applyOrElse(AkkaHttpServer.scala:308)
-	at scala.concurrent.Future.$anonfun$recoverWith$1(Future.scala:414)
-	at scala.concurrent.impl.Promise.$anonfun$transformWith$1(Promise.scala:37)
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:60)
-	at akka.dispatch.BatchingExecutor$AbstractBatch.processBatch(BatchingExecutor.scala:55)
-	at akka.dispatch.BatchingExecutor$BlockableBatch.$anonfun$run$1(BatchingExecutor.scala:91)
-	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:12)
-	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:81)
-	at akka.dispatch.BatchingExecutor$BlockableBatch.run(BatchingExecutor.scala:91)
-	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:40)
-	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(ForkJoinExecutorConfigurator.scala:43)
-	at akka.dispatch.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
-	at akka.dispatch.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
-	at akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
-	at akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
-Caused by: java.lang.NullPointerException: null
-	at views.html.orderConfirmed$.apply(orderConfirmed.template.scala:81)
-	at views.html.orderConfirmed$.render(orderConfirmed.template.scala:92)
-	at views.html.orderConfirmed.render(orderConfirmed.template.scala)
-	at controllers.ShopCartCtrl.viewOrder(ShopCartCtrl.java:105)
-	at router.Routes$$anonfun$routes$1.$anonfun$applyOrElse$38(Routes.scala:651)
-	at play.core.routing.HandlerInvokerFactory$$anon$3.resultCall(HandlerInvoker.scala:134)
-	at play.core.routing.HandlerInvokerFactory$$anon$3.resultCall(HandlerInvoker.scala:133)
-	at play.core.routing.HandlerInvokerFactory$JavaActionInvokerFactory$$anon$8$$anon$2$$anon$1.invocation(HandlerInvoker.scala:108)
-	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:88)
-	at play.http.DefaultActionCreator$1.call(DefaultActionCreator.java:31)
-	at controllers.security.IfCustomer.call(IfCustomer.java:17)
-	at play.mvc.Security$AuthenticatedAction.call(Security.java:69)
-	at play.db.ebean.TransactionalAction.lambda$call$6(TransactionalAction.java:18)
-	at io.ebeaninternal.server.core.DefaultServer.execute(DefaultServer.java:670)
-	at io.ebeaninternal.server.core.DefaultServer.execute(DefaultServer.java:663)
-	at io.ebean.Ebean.execute(Ebean.java:1270)
-	at play.db.ebean.TransactionalAction.call(TransactionalAction.java:18)
-	at play.core.j.JavaAction.$anonfun$apply$8(JavaAction.scala:138)
-	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:655)
-	at scala.util.Success.$anonfun$map$1(Try.scala:251)
-	at scala.util.Success.map(Try.scala:209)
-	at scala.concurrent.Future.$anonfun$map$1(Future.scala:289)
-	at scala.concurrent.impl.Promise.liftedTree1$1(Promise.scala:29)
-	at scala.concurrent.impl.Promise.$anonfun$transform$1(Promise.scala:29)
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:60)
-	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:56)
-	at play.api.libs.streams.Execution$trampoline$.execute(Execution.scala:70)
-	at play.core.j.HttpExecutionContext.execute(HttpExecutionContext.scala:48)
-	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:68)
-	at scala.concurrent.impl.Promise$KeptPromise$Kept.onComplete(Promise.scala:368)
-	at scala.concurrent.impl.Promise$KeptPromise$Kept.onComplete$(Promise.scala:367)
-	at scala.concurrent.impl.Promise$KeptPromise$Successful.onComplete(Promise.scala:375)
-	at scala.concurrent.impl.Promise.transform(Promise.scala:29)
-	at scala.concurrent.impl.Promise.transform$(Promise.scala:27)
-	at scala.concurrent.impl.Promise$KeptPromise$Successful.transform(Promise.scala:375)
-	at scala.concurrent.Future.map(Future.scala:289)
-	at scala.concurrent.Future.map$(Future.scala:289)
-	at scala.concurrent.impl.Promise$KeptPromise$Successful.map(Promise.scala:375)
-	at scala.concurrent.Future$.apply(Future.scala:655)
-	at play.core.j.JavaAction.apply(JavaAction.scala:138)
-	at play.api.mvc.Action.$anonfun$apply$2(Action.scala:96)
-	at play.api.libs.streams.StrictAccumulator.$anonfun$mapFuture$4(Accumulator.scala:174)
-	at scala.util.Try$.apply(Try.scala:209)
-	at play.api.libs.streams.StrictAccumulator.$anonfun$mapFuture$3(Accumulator.scala:174)
-	at scala.Function1.$anonfun$andThen$1(Function1.scala:52)
-	at scala.Function1.$anonfun$andThen$1(Function1.scala:52)
-	at scala.Function1.$anonfun$andThen$1(Function1.scala:52)
-	at play.api.libs.streams.StrictAccumulator.run(Accumulator.scala:207)
-	at play.core.server.AkkaHttpServer.$anonfun$runAction$4(AkkaHttpServer.scala:304)
-	at akka.http.scaladsl.util.FastFuture$.strictTransform$1(FastFuture.scala:41)
-	at akka.http.scaladsl.util.FastFuture$.$anonfun$transformWith$3(FastFuture.scala:51)
-	... 12 common frames omitted
-2018-04-02 15:41:37,237 [ERROR] from application in application-akka.actor.default-dispatcher-8 - 
-
-! @77f2mnood - Internal server error, for (GET) [/viewOrder/0] ->
- 
-play.api.http.HttpErrorHandlerExceptions$$anon$1: Execution exception[[NullPointerException: null]]
-	at play.api.http.HttpErrorHandlerExceptions$.throwableToUsefulException(HttpErrorHandler.scala:255)
-	at play.api.http.DefaultHttpErrorHandler.onServerError(HttpErrorHandler.scala:182)
-	at play.core.server.AkkaHttpServer$$anonfun$2.applyOrElse(AkkaHttpServer.scala:310)
-	at play.core.server.AkkaHttpServer$$anonfun$2.applyOrElse(AkkaHttpServer.scala:308)
-	at scala.concurrent.Future.$anonfun$recoverWith$1(Future.scala:414)
-	at scala.concurrent.impl.Promise.$anonfun$transformWith$1(Promise.scala:37)
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:60)
-	at akka.dispatch.BatchingExecutor$AbstractBatch.processBatch(BatchingExecutor.scala:55)
-	at akka.dispatch.BatchingExecutor$BlockableBatch.$anonfun$run$1(BatchingExecutor.scala:91)
-	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:12)
-	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:81)
-	at akka.dispatch.BatchingExecutor$BlockableBatch.run(BatchingExecutor.scala:91)
-	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:40)
-	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(ForkJoinExecutorConfigurator.scala:43)
-	at akka.dispatch.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
-	at akka.dispatch.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
-	at akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
-	at akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
-Caused by: java.lang.NullPointerException: null
-	at views.html.orderConfirmed$.apply(orderConfirmed.template.scala:81)
-	at views.html.orderConfirmed$.render(orderConfirmed.template.scala:92)
-	at views.html.orderConfirmed.render(orderConfirmed.template.scala)
-	at controllers.ShopCartCtrl.viewOrder(ShopCartCtrl.java:105)
-	at router.Routes$$anonfun$routes$1.$anonfun$applyOrElse$38(Routes.scala:651)
-	at play.core.routing.HandlerInvokerFactory$$anon$3.resultCall(HandlerInvoker.scala:134)
-	at play.core.routing.HandlerInvokerFactory$$anon$3.resultCall(HandlerInvoker.scala:133)
-	at play.core.routing.HandlerInvokerFactory$JavaActionInvokerFactory$$anon$8$$anon$2$$anon$1.invocation(HandlerInvoker.scala:108)
-	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:88)
-	at play.http.DefaultActionCreator$1.call(DefaultActionCreator.java:31)
-	at controllers.security.IfCustomer.call(IfCustomer.java:17)
-	at play.mvc.Security$AuthenticatedAction.call(Security.java:69)
-	at play.db.ebean.TransactionalAction.lambda$call$6(TransactionalAction.java:18)
-	at io.ebeaninternal.server.core.DefaultServer.execute(DefaultServer.java:670)
-	at io.ebeaninternal.server.core.DefaultServer.execute(DefaultServer.java:663)
-	at io.ebean.Ebean.execute(Ebean.java:1270)
-	at play.db.ebean.TransactionalAction.call(TransactionalAction.java:18)
-	at play.core.j.JavaAction.$anonfun$apply$8(JavaAction.scala:138)
-	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:655)
-	at scala.util.Success.$anonfun$map$1(Try.scala:251)
-	at scala.util.Success.map(Try.scala:209)
-	at scala.concurrent.Future.$anonfun$map$1(Future.scala:289)
-	at scala.concurrent.impl.Promise.liftedTree1$1(Promise.scala:29)
-	at scala.concurrent.impl.Promise.$anonfun$transform$1(Promise.scala:29)
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:60)
-	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:56)
-	at play.api.libs.streams.Execution$trampoline$.execute(Execution.scala:70)
-	at play.core.j.HttpExecutionContext.execute(HttpExecutionContext.scala:48)
-	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:68)
-	at scala.concurrent.impl.Promise$KeptPromise$Kept.onComplete(Promise.scala:368)
-	at scala.concurrent.impl.Promise$KeptPromise$Kept.onComplete$(Promise.scala:367)
-	at scala.concurrent.impl.Promise$KeptPromise$Successful.onComplete(Promise.scala:375)
-	at scala.concurrent.impl.Promise.transform(Promise.scala:29)
-	at scala.concurrent.impl.Promise.transform$(Promise.scala:27)
-	at scala.concurrent.impl.Promise$KeptPromise$Successful.transform(Promise.scala:375)
-	at scala.concurrent.Future.map(Future.scala:289)
-	at scala.concurrent.Future.map$(Future.scala:289)
-	at scala.concurrent.impl.Promise$KeptPromise$Successful.map(Promise.scala:375)
-	at scala.concurrent.Future$.apply(Future.scala:655)
-	at play.core.j.JavaAction.apply(JavaAction.scala:138)
-	at play.api.mvc.Action.$anonfun$apply$2(Action.scala:96)
-	at play.api.libs.streams.StrictAccumulator.$anonfun$mapFuture$4(Accumulator.scala:174)
-	at scala.util.Try$.apply(Try.scala:209)
-	at play.api.libs.streams.StrictAccumulator.$anonfun$mapFuture$3(Accumulator.scala:174)
-	at scala.Function1.$anonfun$andThen$1(Function1.scala:52)
-	at scala.Function1.$anonfun$andThen$1(Function1.scala:52)
-	at scala.Function1.$anonfun$andThen$1(Function1.scala:52)
-	at play.api.libs.streams.StrictAccumulator.run(Accumulator.scala:207)
-	at play.core.server.AkkaHttpServer.$anonfun$runAction$4(AkkaHttpServer.scala:304)
-	at akka.http.scaladsl.util.FastFuture$.strictTransform$1(FastFuture.scala:41)
-	at akka.http.scaladsl.util.FastFuture$.$anonfun$transformWith$3(FastFuture.scala:51)
-	... 12 common frames omitted
-2018-04-02 15:42:45,178 [INFO] from application in application-akka.actor.default-dispatcher-16 - Shutting down connection pool.
-2018-04-02 15:42:45,495 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-2 - Creating Pool for datasource 'default'
-2018-04-02 15:42:45,533 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-2 - Database [default] connected at jdbc:h2:file:./data/productsDB
-2018-04-02 15:42:45,798 [WARN] from org.hibernate.validator.messageinterpolation.ParameterMessageInterpolator in play-dev-mode-akka.actor.default-dispatcher-2 - HV000184: ParameterMessageInterpolator has been chosen, EL interpolation will not be supported
-2018-04-02 15:42:45,928 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-2 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+2018-04-03 16:46:54,025 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-10 - Application started (Dev)
+2018-04-03 16:48:24,574 [INFO] from application in application-akka.actor.default-dispatcher-8 - Shutting down connection pool.
+2018-04-03 16:48:24,844 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-10 - Creating Pool for datasource 'default'
+2018-04-03 16:48:24,905 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-10 - Database [default] connected at jdbc:h2:file:./data/productsDB
+2018-04-03 16:48:25,098 [WARN] from org.hibernate.validator.messageinterpolation.ParameterMessageInterpolator in play-dev-mode-akka.actor.default-dispatcher-10 - HV000184: ParameterMessageInterpolator has been chosen, EL interpolation will not be supported
+2018-04-03 16:48:25,212 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-10 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
 
     play.filters.csrf.CSRFFilter
     play.filters.headers.SecurityHeadersFilter
     play.filters.hosts.AllowedHostsFilter
 
-2018-04-02 15:42:45,934 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-2 - Application started (Dev)
-2018-04-02 15:50:17,858 [ERROR] from application in play-dev-mode-akka.actor.default-dispatcher-30 - 
-
-! @77f2o1f2b - Internal server error, for (POST) [/registerSubmit] ->
- 
-play.sbt.PlayExceptions$CompilationException: Compilation error[ play.data.Form<models.users.Customer> cannot be converted to play.data.Form<models.users.Member>]
-	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:34)
-	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:34)
-	at scala.Option.map(Option.scala:146)
-	at play.sbt.run.PlayReload$.$anonfun$taskFailureHandler$1(PlayReload.scala:33)
-	at scala.Option.map(Option.scala:146)
-	at play.sbt.run.PlayReload$.taskFailureHandler(PlayReload.scala:28)
-	at play.sbt.run.PlayReload$.compileFailure(PlayReload.scala:24)
-	at play.sbt.run.PlayReload$.$anonfun$compile$3(PlayReload.scala:51)
-	at scala.util.Either$LeftProjection.map(Either.scala:573)
-	at play.sbt.run.PlayReload$.compile(PlayReload.scala:51)
-	at play.sbt.run.PlayRun$.$anonfun$playRunTask$4(PlayRun.scala:76)
-	at play.runsupport.Reloader.$anonfun$reload$1(Reloader.scala:413)
-	at play.runsupport.Reloader$$anon$5.run(Reloader.scala:51)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at play.runsupport.Reloader$.play$runsupport$Reloader$$withReloaderContextClassLoader(Reloader.scala:56)
-	at play.runsupport.Reloader.reload(Reloader.scala:413)
-	at play.core.server.DevServerStart$$anon$1.get(DevServerStart.scala:123)
-	at play.core.server.Server.getHandlerFor(Server.scala:63)
-	at play.core.server.Server.getHandlerFor$(Server.scala:48)
-	at play.core.server.AkkaHttpServer.getHandlerFor(AkkaHttpServer.scala:41)
-	at play.core.server.AkkaHttpServer.getHandler(AkkaHttpServer.scala:214)
-	at play.core.server.AkkaHttpServer.handleRequest(AkkaHttpServer.scala:194)
-	at play.core.server.AkkaHttpServer.$anonfun$createServerBinding$1(AkkaHttpServer.scala:106)
-	at akka.stream.impl.fusing.MapAsync$$anon$24.onPush(Ops.scala:1191)
-	at akka.stream.impl.fusing.GraphInterpreter.processPush(GraphInterpreter.scala:512)
-	at akka.stream.impl.fusing.GraphInterpreter.processEvent(GraphInterpreter.scala:475)
-	at akka.stream.impl.fusing.GraphInterpreter.execute(GraphInterpreter.scala:371)
-	at akka.stream.impl.fusing.GraphInterpreterShell.runBatch(ActorGraphInterpreter.scala:584)
-	at akka.stream.impl.fusing.GraphInterpreterShell$AsyncInput.execute(ActorGraphInterpreter.scala:468)
-	at akka.stream.impl.fusing.GraphInterpreterShell.processEvent(ActorGraphInterpreter.scala:559)
-	at akka.stream.impl.fusing.ActorGraphInterpreter.akka$stream$impl$fusing$ActorGraphInterpreter$$processEvent(ActorGraphInterpreter.scala:741)
-	at akka.stream.impl.fusing.ActorGraphInterpreter$$anonfun$receive$1.applyOrElse(ActorGraphInterpreter.scala:756)
-	at akka.actor.Actor.aroundReceive(Actor.scala:517)
-	at akka.actor.Actor.aroundReceive$(Actor.scala:515)
-	at akka.stream.impl.fusing.ActorGraphInterpreter.aroundReceive(ActorGraphInterpreter.scala:666)
-	at akka.actor.ActorCell.receiveMessage(ActorCell.scala:527)
-	at akka.actor.ActorCell.invoke(ActorCell.scala:496)
-	at akka.dispatch.Mailbox.processMailbox(Mailbox.scala:257)
-	at akka.dispatch.Mailbox.run(Mailbox.scala:224)
-	at akka.dispatch.Mailbox.exec(Mailbox.scala:234)
-	at akka.dispatch.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
-	at akka.dispatch.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
-	at akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
-	at akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
-2018-04-02 15:50:32,581 [ERROR] from application in play-dev-mode-akka.actor.default-dispatcher-31 - 
-
-! @77f2o2ami - Internal server error, for (POST) [/registerSubmit] ->
- 
-play.sbt.PlayExceptions$CompilationException: Compilation error[ play.data.Form<models.users.Customer> cannot be converted to play.data.Form<models.users.Member>]
-	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:34)
-	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:34)
-	at scala.Option.map(Option.scala:146)
-	at play.sbt.run.PlayReload$.$anonfun$taskFailureHandler$1(PlayReload.scala:33)
-	at scala.Option.map(Option.scala:146)
-	at play.sbt.run.PlayReload$.taskFailureHandler(PlayReload.scala:28)
-	at play.sbt.run.PlayReload$.compileFailure(PlayReload.scala:24)
-	at play.sbt.run.PlayReload$.$anonfun$compile$3(PlayReload.scala:51)
-	at scala.util.Either$LeftProjection.map(Either.scala:573)
-	at play.sbt.run.PlayReload$.compile(PlayReload.scala:51)
-	at play.sbt.run.PlayRun$.$anonfun$playRunTask$4(PlayRun.scala:76)
-	at play.runsupport.Reloader.$anonfun$reload$1(Reloader.scala:413)
-	at play.runsupport.Reloader$$anon$5.run(Reloader.scala:51)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at play.runsupport.Reloader$.play$runsupport$Reloader$$withReloaderContextClassLoader(Reloader.scala:56)
-	at play.runsupport.Reloader.reload(Reloader.scala:413)
-	at play.core.server.DevServerStart$$anon$1.get(DevServerStart.scala:123)
-	at play.core.server.Server.getHandlerFor(Server.scala:63)
-	at play.core.server.Server.getHandlerFor$(Server.scala:48)
-	at play.core.server.AkkaHttpServer.getHandlerFor(AkkaHttpServer.scala:41)
-	at play.core.server.AkkaHttpServer.getHandler(AkkaHttpServer.scala:214)
-	at play.core.server.AkkaHttpServer.handleRequest(AkkaHttpServer.scala:194)
-	at play.core.server.AkkaHttpServer.$anonfun$createServerBinding$1(AkkaHttpServer.scala:106)
-	at akka.stream.impl.fusing.MapAsync$$anon$24.onPush(Ops.scala:1191)
-	at akka.stream.impl.fusing.GraphInterpreter.processPush(GraphInterpreter.scala:512)
-	at akka.stream.impl.fusing.GraphInterpreter.processEvent(GraphInterpreter.scala:475)
-	at akka.stream.impl.fusing.GraphInterpreter.execute(GraphInterpreter.scala:371)
-	at akka.stream.impl.fusing.GraphInterpreterShell.runBatch(ActorGraphInterpreter.scala:584)
-	at akka.stream.impl.fusing.GraphInterpreterShell$AsyncInput.execute(ActorGraphInterpreter.scala:468)
-	at akka.stream.impl.fusing.GraphInterpreterShell.processEvent(ActorGraphInterpreter.scala:559)
-	at akka.stream.impl.fusing.ActorGraphInterpreter.akka$stream$impl$fusing$ActorGraphInterpreter$$processEvent(ActorGraphInterpreter.scala:741)
-	at akka.stream.impl.fusing.ActorGraphInterpreter$$anonfun$receive$1.applyOrElse(ActorGraphInterpreter.scala:756)
-	at akka.actor.Actor.aroundReceive(Actor.scala:517)
-	at akka.actor.Actor.aroundReceive$(Actor.scala:515)
-	at akka.stream.impl.fusing.ActorGraphInterpreter.aroundReceive(ActorGraphInterpreter.scala:666)
-	at akka.actor.ActorCell.receiveMessage(ActorCell.scala:527)
-	at akka.actor.ActorCell.invoke(ActorCell.scala:496)
-	at akka.dispatch.Mailbox.processMailbox(Mailbox.scala:257)
-	at akka.dispatch.Mailbox.run(Mailbox.scala:224)
-	at akka.dispatch.Mailbox.exec(Mailbox.scala:234)
-	at akka.dispatch.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
-	at akka.dispatch.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
-	at akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
-	at akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
-2018-04-02 15:51:05,275 [ERROR] from application in play-dev-mode-akka.actor.default-dispatcher-33 - 
-
-! @77f2o4763 - Internal server error, for (POST) [/registerSubmit] ->
- 
-play.sbt.PlayExceptions$CompilationException: Compilation error[ play.data.Form<models.users.Customer> cannot be converted to play.data.Form<models.users.Member>]
-	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:34)
-	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:34)
-	at scala.Option.map(Option.scala:146)
-	at play.sbt.run.PlayReload$.$anonfun$taskFailureHandler$1(PlayReload.scala:33)
-	at scala.Option.map(Option.scala:146)
-	at play.sbt.run.PlayReload$.taskFailureHandler(PlayReload.scala:28)
-	at play.sbt.run.PlayReload$.compileFailure(PlayReload.scala:24)
-	at play.sbt.run.PlayReload$.$anonfun$compile$3(PlayReload.scala:51)
-	at scala.util.Either$LeftProjection.map(Either.scala:573)
-	at play.sbt.run.PlayReload$.compile(PlayReload.scala:51)
-	at play.sbt.run.PlayRun$.$anonfun$playRunTask$4(PlayRun.scala:76)
-	at play.runsupport.Reloader.$anonfun$reload$1(Reloader.scala:413)
-	at play.runsupport.Reloader$$anon$5.run(Reloader.scala:51)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at play.runsupport.Reloader$.play$runsupport$Reloader$$withReloaderContextClassLoader(Reloader.scala:56)
-	at play.runsupport.Reloader.reload(Reloader.scala:413)
-	at play.core.server.DevServerStart$$anon$1.get(DevServerStart.scala:123)
-	at play.core.server.Server.getHandlerFor(Server.scala:63)
-	at play.core.server.Server.getHandlerFor$(Server.scala:48)
-	at play.core.server.AkkaHttpServer.getHandlerFor(AkkaHttpServer.scala:41)
-	at play.core.server.AkkaHttpServer.getHandler(AkkaHttpServer.scala:214)
-	at play.core.server.AkkaHttpServer.handleRequest(AkkaHttpServer.scala:194)
-	at play.core.server.AkkaHttpServer.$anonfun$createServerBinding$1(AkkaHttpServer.scala:106)
-	at akka.stream.impl.fusing.MapAsync$$anon$24.onPush(Ops.scala:1191)
-	at akka.stream.impl.fusing.GraphInterpreter.processPush(GraphInterpreter.scala:512)
-	at akka.stream.impl.fusing.GraphInterpreter.processEvent(GraphInterpreter.scala:475)
-	at akka.stream.impl.fusing.GraphInterpreter.execute(GraphInterpreter.scala:371)
-	at akka.stream.impl.fusing.GraphInterpreterShell.runBatch(ActorGraphInterpreter.scala:584)
-	at akka.stream.impl.fusing.GraphInterpreterShell$AsyncInput.execute(ActorGraphInterpreter.scala:468)
-	at akka.stream.impl.fusing.GraphInterpreterShell.processEvent(ActorGraphInterpreter.scala:559)
-	at akka.stream.impl.fusing.ActorGraphInterpreter.akka$stream$impl$fusing$ActorGraphInterpreter$$processEvent(ActorGraphInterpreter.scala:741)
-	at akka.stream.impl.fusing.ActorGraphInterpreter$$anonfun$receive$1.applyOrElse(ActorGraphInterpreter.scala:756)
-	at akka.actor.Actor.aroundReceive(Actor.scala:517)
-	at akka.actor.Actor.aroundReceive$(Actor.scala:515)
-	at akka.stream.impl.fusing.ActorGraphInterpreter.aroundReceive(ActorGraphInterpreter.scala:666)
-	at akka.actor.ActorCell.receiveMessage(ActorCell.scala:527)
-	at akka.actor.ActorCell.invoke(ActorCell.scala:496)
-	at akka.dispatch.Mailbox.processMailbox(Mailbox.scala:257)
-	at akka.dispatch.Mailbox.run(Mailbox.scala:224)
-	at akka.dispatch.Mailbox.exec(Mailbox.scala:234)
-	at akka.dispatch.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
-	at akka.dispatch.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
-	at akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
-	at akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
-2018-04-02 15:51:34,495 [ERROR] from application in play-dev-mode-akka.actor.default-dispatcher-2 - 
-
-! @77f2o5oc0 - Internal server error, for (POST) [/registerSubmit] ->
- 
-play.sbt.PlayExceptions$CompilationException: Compilation error[ models.users.Member cannot be converted to models.users.Customer]
-	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:34)
-	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:34)
-	at scala.Option.map(Option.scala:146)
-	at play.sbt.run.PlayReload$.$anonfun$taskFailureHandler$1(PlayReload.scala:33)
-	at scala.Option.map(Option.scala:146)
-	at play.sbt.run.PlayReload$.taskFailureHandler(PlayReload.scala:28)
-	at play.sbt.run.PlayReload$.compileFailure(PlayReload.scala:24)
-	at play.sbt.run.PlayReload$.$anonfun$compile$3(PlayReload.scala:51)
-	at scala.util.Either$LeftProjection.map(Either.scala:573)
-	at play.sbt.run.PlayReload$.compile(PlayReload.scala:51)
-	at play.sbt.run.PlayRun$.$anonfun$playRunTask$4(PlayRun.scala:76)
-	at play.runsupport.Reloader.$anonfun$reload$1(Reloader.scala:413)
-	at play.runsupport.Reloader$$anon$5.run(Reloader.scala:51)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at play.runsupport.Reloader$.play$runsupport$Reloader$$withReloaderContextClassLoader(Reloader.scala:56)
-	at play.runsupport.Reloader.reload(Reloader.scala:413)
-	at play.core.server.DevServerStart$$anon$1.get(DevServerStart.scala:123)
-	at play.core.server.Server.getHandlerFor(Server.scala:63)
-	at play.core.server.Server.getHandlerFor$(Server.scala:48)
-	at play.core.server.AkkaHttpServer.getHandlerFor(AkkaHttpServer.scala:41)
-	at play.core.server.AkkaHttpServer.getHandler(AkkaHttpServer.scala:214)
-	at play.core.server.AkkaHttpServer.handleRequest(AkkaHttpServer.scala:194)
-	at play.core.server.AkkaHttpServer.$anonfun$createServerBinding$1(AkkaHttpServer.scala:106)
-	at akka.stream.impl.fusing.MapAsync$$anon$24.onPush(Ops.scala:1191)
-	at akka.stream.impl.fusing.GraphInterpreter.processPush(GraphInterpreter.scala:512)
-	at akka.stream.impl.fusing.GraphInterpreter.processEvent(GraphInterpreter.scala:475)
-	at akka.stream.impl.fusing.GraphInterpreter.execute(GraphInterpreter.scala:371)
-	at akka.stream.impl.fusing.GraphInterpreterShell.runBatch(ActorGraphInterpreter.scala:584)
-	at akka.stream.impl.fusing.GraphInterpreterShell$AsyncInput.execute(ActorGraphInterpreter.scala:468)
-	at akka.stream.impl.fusing.GraphInterpreterShell.processEvent(ActorGraphInterpreter.scala:559)
-	at akka.stream.impl.fusing.ActorGraphInterpreter.akka$stream$impl$fusing$ActorGraphInterpreter$$processEvent(ActorGraphInterpreter.scala:741)
-	at akka.stream.impl.fusing.ActorGraphInterpreter$$anonfun$receive$1.applyOrElse(ActorGraphInterpreter.scala:756)
-	at akka.actor.Actor.aroundReceive(Actor.scala:517)
-	at akka.actor.Actor.aroundReceive$(Actor.scala:515)
-	at akka.stream.impl.fusing.ActorGraphInterpreter.aroundReceive(ActorGraphInterpreter.scala:666)
-	at akka.actor.ActorCell.receiveMessage(ActorCell.scala:527)
-	at akka.actor.ActorCell.invoke(ActorCell.scala:496)
-	at akka.dispatch.Mailbox.processMailbox(Mailbox.scala:257)
-	at akka.dispatch.Mailbox.run(Mailbox.scala:224)
-	at akka.dispatch.Mailbox.exec(Mailbox.scala:234)
-	at akka.dispatch.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
-	at akka.dispatch.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
-	at akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
-	at akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
-2018-04-02 15:52:23,718 [ERROR] from application in play-dev-mode-akka.actor.default-dispatcher-33 - 
-
-! @77f2o8j74 - Internal server error, for (POST) [/registerSubmit] ->
- 
-play.sbt.PlayExceptions$CompilationException: Compilation error[ models.users.Member cannot be converted to models.users.Customer]
-	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:34)
-	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:34)
-	at scala.Option.map(Option.scala:146)
-	at play.sbt.run.PlayReload$.$anonfun$taskFailureHandler$1(PlayReload.scala:33)
-	at scala.Option.map(Option.scala:146)
-	at play.sbt.run.PlayReload$.taskFailureHandler(PlayReload.scala:28)
-	at play.sbt.run.PlayReload$.compileFailure(PlayReload.scala:24)
-	at play.sbt.run.PlayReload$.$anonfun$compile$3(PlayReload.scala:51)
-	at scala.util.Either$LeftProjection.map(Either.scala:573)
-	at play.sbt.run.PlayReload$.compile(PlayReload.scala:51)
-	at play.sbt.run.PlayRun$.$anonfun$playRunTask$4(PlayRun.scala:76)
-	at play.runsupport.Reloader.$anonfun$reload$1(Reloader.scala:413)
-	at play.runsupport.Reloader$$anon$5.run(Reloader.scala:51)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at play.runsupport.Reloader$.play$runsupport$Reloader$$withReloaderContextClassLoader(Reloader.scala:56)
-	at play.runsupport.Reloader.reload(Reloader.scala:413)
-	at play.core.server.DevServerStart$$anon$1.get(DevServerStart.scala:123)
-	at play.core.server.Server.getHandlerFor(Server.scala:63)
-	at play.core.server.Server.getHandlerFor$(Server.scala:48)
-	at play.core.server.AkkaHttpServer.getHandlerFor(AkkaHttpServer.scala:41)
-	at play.core.server.AkkaHttpServer.getHandler(AkkaHttpServer.scala:214)
-	at play.core.server.AkkaHttpServer.handleRequest(AkkaHttpServer.scala:194)
-	at play.core.server.AkkaHttpServer.$anonfun$createServerBinding$1(AkkaHttpServer.scala:106)
-	at akka.stream.impl.fusing.MapAsync$$anon$24.onPush(Ops.scala:1191)
-	at akka.stream.impl.fusing.GraphInterpreter.processPush(GraphInterpreter.scala:512)
-	at akka.stream.impl.fusing.GraphInterpreter.processEvent(GraphInterpreter.scala:475)
-	at akka.stream.impl.fusing.GraphInterpreter.execute(GraphInterpreter.scala:371)
-	at akka.stream.impl.fusing.GraphInterpreterShell.runBatch(ActorGraphInterpreter.scala:584)
-	at akka.stream.impl.fusing.GraphInterpreterShell$AsyncInput.execute(ActorGraphInterpreter.scala:468)
-	at akka.stream.impl.fusing.GraphInterpreterShell.processEvent(ActorGraphInterpreter.scala:559)
-	at akka.stream.impl.fusing.ActorGraphInterpreter.akka$stream$impl$fusing$ActorGraphInterpreter$$processEvent(ActorGraphInterpreter.scala:741)
-	at akka.stream.impl.fusing.ActorGraphInterpreter$$anonfun$receive$1.applyOrElse(ActorGraphInterpreter.scala:756)
-	at akka.actor.Actor.aroundReceive(Actor.scala:517)
-	at akka.actor.Actor.aroundReceive$(Actor.scala:515)
-	at akka.stream.impl.fusing.ActorGraphInterpreter.aroundReceive(ActorGraphInterpreter.scala:666)
-	at akka.actor.ActorCell.receiveMessage(ActorCell.scala:527)
-	at akka.actor.ActorCell.invoke(ActorCell.scala:496)
-	at akka.dispatch.Mailbox.processMailbox(Mailbox.scala:257)
-	at akka.dispatch.Mailbox.run(Mailbox.scala:224)
-	at akka.dispatch.Mailbox.exec(Mailbox.scala:234)
-	at akka.dispatch.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
-	at akka.dispatch.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
-	at akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
-	at akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
-2018-04-02 15:52:46,757 [ERROR] from application in play-dev-mode-akka.actor.default-dispatcher-33 - 
-
-! @77f2oa198 - Internal server error, for (POST) [/registerSubmit] ->
- 
-play.sbt.PlayExceptions$CompilationException: Compilation error[ play.data.Form<models.users.Customer> cannot be converted to play.data.Form<models.users.Member>]
-	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:34)
-	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:34)
-	at scala.Option.map(Option.scala:146)
-	at play.sbt.run.PlayReload$.$anonfun$taskFailureHandler$1(PlayReload.scala:33)
-	at scala.Option.map(Option.scala:146)
-	at play.sbt.run.PlayReload$.taskFailureHandler(PlayReload.scala:28)
-	at play.sbt.run.PlayReload$.compileFailure(PlayReload.scala:24)
-	at play.sbt.run.PlayReload$.$anonfun$compile$3(PlayReload.scala:51)
-	at scala.util.Either$LeftProjection.map(Either.scala:573)
-	at play.sbt.run.PlayReload$.compile(PlayReload.scala:51)
-	at play.sbt.run.PlayRun$.$anonfun$playRunTask$4(PlayRun.scala:76)
-	at play.runsupport.Reloader.$anonfun$reload$1(Reloader.scala:413)
-	at play.runsupport.Reloader$$anon$5.run(Reloader.scala:51)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at play.runsupport.Reloader$.play$runsupport$Reloader$$withReloaderContextClassLoader(Reloader.scala:56)
-	at play.runsupport.Reloader.reload(Reloader.scala:413)
-	at play.core.server.DevServerStart$$anon$1.get(DevServerStart.scala:123)
-	at play.core.server.Server.getHandlerFor(Server.scala:63)
-	at play.core.server.Server.getHandlerFor$(Server.scala:48)
-	at play.core.server.AkkaHttpServer.getHandlerFor(AkkaHttpServer.scala:41)
-	at play.core.server.AkkaHttpServer.getHandler(AkkaHttpServer.scala:214)
-	at play.core.server.AkkaHttpServer.handleRequest(AkkaHttpServer.scala:194)
-	at play.core.server.AkkaHttpServer.$anonfun$createServerBinding$1(AkkaHttpServer.scala:106)
-	at akka.stream.impl.fusing.MapAsync$$anon$24.onPush(Ops.scala:1191)
-	at akka.stream.impl.fusing.GraphInterpreter.processPush(GraphInterpreter.scala:512)
-	at akka.stream.impl.fusing.GraphInterpreter.processEvent(GraphInterpreter.scala:475)
-	at akka.stream.impl.fusing.GraphInterpreter.execute(GraphInterpreter.scala:371)
-	at akka.stream.impl.fusing.GraphInterpreterShell.runBatch(ActorGraphInterpreter.scala:584)
-	at akka.stream.impl.fusing.GraphInterpreterShell$AsyncInput.execute(ActorGraphInterpreter.scala:468)
-	at akka.stream.impl.fusing.GraphInterpreterShell.processEvent(ActorGraphInterpreter.scala:559)
-	at akka.stream.impl.fusing.ActorGraphInterpreter.akka$stream$impl$fusing$ActorGraphInterpreter$$processEvent(ActorGraphInterpreter.scala:741)
-	at akka.stream.impl.fusing.ActorGraphInterpreter$$anonfun$receive$1.applyOrElse(ActorGraphInterpreter.scala:756)
-	at akka.actor.Actor.aroundReceive(Actor.scala:517)
-	at akka.actor.Actor.aroundReceive$(Actor.scala:515)
-	at akka.stream.impl.fusing.ActorGraphInterpreter.aroundReceive(ActorGraphInterpreter.scala:666)
-	at akka.actor.ActorCell.receiveMessage(ActorCell.scala:527)
-	at akka.actor.ActorCell.invoke(ActorCell.scala:496)
-	at akka.dispatch.Mailbox.processMailbox(Mailbox.scala:257)
-	at akka.dispatch.Mailbox.run(Mailbox.scala:224)
-	at akka.dispatch.Mailbox.exec(Mailbox.scala:234)
-	at akka.dispatch.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
-	at akka.dispatch.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
-	at akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
-	at akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
-2018-04-02 15:53:26,996 [ERROR] from application in play-dev-mode-akka.actor.default-dispatcher-30 - 
-
-! @77f2oc8mo - Internal server error, for (POST) [/registerSubmit] ->
- 
-play.sbt.PlayExceptions$CompilationException: Compilation error[ models.users.Member cannot be converted to models.users.Customer]
-	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:34)
-	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:34)
-	at scala.Option.map(Option.scala:146)
-	at play.sbt.run.PlayReload$.$anonfun$taskFailureHandler$1(PlayReload.scala:33)
-	at scala.Option.map(Option.scala:146)
-	at play.sbt.run.PlayReload$.taskFailureHandler(PlayReload.scala:28)
-	at play.sbt.run.PlayReload$.compileFailure(PlayReload.scala:24)
-	at play.sbt.run.PlayReload$.$anonfun$compile$3(PlayReload.scala:51)
-	at scala.util.Either$LeftProjection.map(Either.scala:573)
-	at play.sbt.run.PlayReload$.compile(PlayReload.scala:51)
-	at play.sbt.run.PlayRun$.$anonfun$playRunTask$4(PlayRun.scala:76)
-	at play.runsupport.Reloader.$anonfun$reload$1(Reloader.scala:413)
-	at play.runsupport.Reloader$$anon$5.run(Reloader.scala:51)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at play.runsupport.Reloader$.play$runsupport$Reloader$$withReloaderContextClassLoader(Reloader.scala:56)
-	at play.runsupport.Reloader.reload(Reloader.scala:413)
-	at play.core.server.DevServerStart$$anon$1.get(DevServerStart.scala:123)
-	at play.core.server.Server.getHandlerFor(Server.scala:63)
-	at play.core.server.Server.getHandlerFor$(Server.scala:48)
-	at play.core.server.AkkaHttpServer.getHandlerFor(AkkaHttpServer.scala:41)
-	at play.core.server.AkkaHttpServer.getHandler(AkkaHttpServer.scala:214)
-	at play.core.server.AkkaHttpServer.handleRequest(AkkaHttpServer.scala:194)
-	at play.core.server.AkkaHttpServer.$anonfun$createServerBinding$1(AkkaHttpServer.scala:106)
-	at akka.stream.impl.fusing.MapAsync$$anon$24.onPush(Ops.scala:1191)
-	at akka.stream.impl.fusing.GraphInterpreter.processPush(GraphInterpreter.scala:512)
-	at akka.stream.impl.fusing.GraphInterpreter.processEvent(GraphInterpreter.scala:475)
-	at akka.stream.impl.fusing.GraphInterpreter.execute(GraphInterpreter.scala:371)
-	at akka.stream.impl.fusing.GraphInterpreterShell.runBatch(ActorGraphInterpreter.scala:584)
-	at akka.stream.impl.fusing.GraphInterpreterShell$AsyncInput.execute(ActorGraphInterpreter.scala:468)
-	at akka.stream.impl.fusing.GraphInterpreterShell.processEvent(ActorGraphInterpreter.scala:559)
-	at akka.stream.impl.fusing.ActorGraphInterpreter.akka$stream$impl$fusing$ActorGraphInterpreter$$processEvent(ActorGraphInterpreter.scala:741)
-	at akka.stream.impl.fusing.ActorGraphInterpreter$$anonfun$receive$1.applyOrElse(ActorGraphInterpreter.scala:756)
-	at akka.actor.Actor.aroundReceive(Actor.scala:517)
-	at akka.actor.Actor.aroundReceive$(Actor.scala:515)
-	at akka.stream.impl.fusing.ActorGraphInterpreter.aroundReceive(ActorGraphInterpreter.scala:666)
-	at akka.actor.ActorCell.receiveMessage(ActorCell.scala:527)
-	at akka.actor.ActorCell.invoke(ActorCell.scala:496)
-	at akka.dispatch.Mailbox.processMailbox(Mailbox.scala:257)
-	at akka.dispatch.Mailbox.run(Mailbox.scala:224)
-	at akka.dispatch.Mailbox.exec(Mailbox.scala:234)
-	at akka.dispatch.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
-	at akka.dispatch.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
-	at akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
-	at akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
-2018-04-02 15:54:13,413 [ERROR] from application in play-dev-mode-akka.actor.default-dispatcher-33 - 
-
-! @77f2oepe6 - Internal server error, for (POST) [/registerSubmit] ->
- 
-play.sbt.PlayExceptions$CompilationException: Compilation error[not enough arguments for method apply: (title: String, member: models.users.Member)(content: play.twirl.api.Html)play.twirl.api.HtmlFormat.Appendable in object main.
-Unspecified value parameter member.]
-	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:34)
-	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:34)
-	at scala.Option.map(Option.scala:146)
-	at play.sbt.run.PlayReload$.$anonfun$taskFailureHandler$1(PlayReload.scala:33)
-	at scala.Option.map(Option.scala:146)
-	at play.sbt.run.PlayReload$.taskFailureHandler(PlayReload.scala:28)
-	at play.sbt.run.PlayReload$.compileFailure(PlayReload.scala:24)
-	at play.sbt.run.PlayReload$.$anonfun$compile$3(PlayReload.scala:51)
-	at scala.util.Either$LeftProjection.map(Either.scala:573)
-	at play.sbt.run.PlayReload$.compile(PlayReload.scala:51)
-	at play.sbt.run.PlayRun$.$anonfun$playRunTask$4(PlayRun.scala:76)
-	at play.runsupport.Reloader.$anonfun$reload$1(Reloader.scala:413)
-	at play.runsupport.Reloader$$anon$5.run(Reloader.scala:51)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at play.runsupport.Reloader$.play$runsupport$Reloader$$withReloaderContextClassLoader(Reloader.scala:56)
-	at play.runsupport.Reloader.reload(Reloader.scala:413)
-	at play.core.server.DevServerStart$$anon$1.get(DevServerStart.scala:123)
-	at play.core.server.Server.getHandlerFor(Server.scala:63)
-	at play.core.server.Server.getHandlerFor$(Server.scala:48)
-	at play.core.server.AkkaHttpServer.getHandlerFor(AkkaHttpServer.scala:41)
-	at play.core.server.AkkaHttpServer.getHandler(AkkaHttpServer.scala:214)
-	at play.core.server.AkkaHttpServer.handleRequest(AkkaHttpServer.scala:194)
-	at play.core.server.AkkaHttpServer.$anonfun$createServerBinding$1(AkkaHttpServer.scala:106)
-	at akka.stream.impl.fusing.MapAsync$$anon$24.onPush(Ops.scala:1191)
-	at akka.stream.impl.fusing.GraphInterpreter.processPush(GraphInterpreter.scala:512)
-	at akka.stream.impl.fusing.GraphInterpreter.processEvent(GraphInterpreter.scala:475)
-	at akka.stream.impl.fusing.GraphInterpreter.execute(GraphInterpreter.scala:371)
-	at akka.stream.impl.fusing.GraphInterpreterShell.runBatch(ActorGraphInterpreter.scala:584)
-	at akka.stream.impl.fusing.GraphInterpreterShell$AsyncInput.execute(ActorGraphInterpreter.scala:468)
-	at akka.stream.impl.fusing.GraphInterpreterShell.processEvent(ActorGraphInterpreter.scala:559)
-	at akka.stream.impl.fusing.ActorGraphInterpreter.akka$stream$impl$fusing$ActorGraphInterpreter$$processEvent(ActorGraphInterpreter.scala:741)
-	at akka.stream.impl.fusing.ActorGraphInterpreter$$anonfun$receive$1.applyOrElse(ActorGraphInterpreter.scala:756)
-	at akka.actor.Actor.aroundReceive(Actor.scala:517)
-	at akka.actor.Actor.aroundReceive$(Actor.scala:515)
-	at akka.stream.impl.fusing.ActorGraphInterpreter.aroundReceive(ActorGraphInterpreter.scala:666)
-	at akka.actor.ActorCell.receiveMessage(ActorCell.scala:527)
-	at akka.actor.ActorCell.invoke(ActorCell.scala:496)
-	at akka.dispatch.Mailbox.processMailbox(Mailbox.scala:257)
-	at akka.dispatch.Mailbox.run(Mailbox.scala:224)
-	at akka.dispatch.Mailbox.exec(Mailbox.scala:234)
-	at akka.dispatch.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
-	at akka.dispatch.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
-	at akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
-	at akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
-2018-04-02 15:54:54,262 [ERROR] from application in play-dev-mode-akka.actor.default-dispatcher-30 - 
-
-! @77f2oh7p8 - Internal server error, for (POST) [/registerSubmit] ->
- 
-play.sbt.PlayExceptions$CompilationException: Compilation error[not enough arguments for method apply: (title: String, member: models.users.Member)(content: play.twirl.api.Html)play.twirl.api.HtmlFormat.Appendable in object main.
-Unspecified value parameter member.]
-	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:34)
-	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:34)
-	at scala.Option.map(Option.scala:146)
-	at play.sbt.run.PlayReload$.$anonfun$taskFailureHandler$1(PlayReload.scala:33)
-	at scala.Option.map(Option.scala:146)
-	at play.sbt.run.PlayReload$.taskFailureHandler(PlayReload.scala:28)
-	at play.sbt.run.PlayReload$.compileFailure(PlayReload.scala:24)
-	at play.sbt.run.PlayReload$.$anonfun$compile$3(PlayReload.scala:51)
-	at scala.util.Either$LeftProjection.map(Either.scala:573)
-	at play.sbt.run.PlayReload$.compile(PlayReload.scala:51)
-	at play.sbt.run.PlayRun$.$anonfun$playRunTask$4(PlayRun.scala:76)
-	at play.runsupport.Reloader.$anonfun$reload$1(Reloader.scala:413)
-	at play.runsupport.Reloader$$anon$5.run(Reloader.scala:51)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at play.runsupport.Reloader$.play$runsupport$Reloader$$withReloaderContextClassLoader(Reloader.scala:56)
-	at play.runsupport.Reloader.reload(Reloader.scala:413)
-	at play.core.server.DevServerStart$$anon$1.get(DevServerStart.scala:123)
-	at play.core.server.Server.getHandlerFor(Server.scala:63)
-	at play.core.server.Server.getHandlerFor$(Server.scala:48)
-	at play.core.server.AkkaHttpServer.getHandlerFor(AkkaHttpServer.scala:41)
-	at play.core.server.AkkaHttpServer.getHandler(AkkaHttpServer.scala:214)
-	at play.core.server.AkkaHttpServer.handleRequest(AkkaHttpServer.scala:194)
-	at play.core.server.AkkaHttpServer.$anonfun$createServerBinding$1(AkkaHttpServer.scala:106)
-	at akka.stream.impl.fusing.MapAsync$$anon$24.onPush(Ops.scala:1191)
-	at akka.stream.impl.fusing.GraphInterpreter.processPush(GraphInterpreter.scala:512)
-	at akka.stream.impl.fusing.GraphInterpreter.processEvent(GraphInterpreter.scala:475)
-	at akka.stream.impl.fusing.GraphInterpreter.execute(GraphInterpreter.scala:371)
-	at akka.stream.impl.fusing.GraphInterpreterShell.runBatch(ActorGraphInterpreter.scala:584)
-	at akka.stream.impl.fusing.GraphInterpreterShell$AsyncInput.execute(ActorGraphInterpreter.scala:468)
-	at akka.stream.impl.fusing.GraphInterpreterShell.processEvent(ActorGraphInterpreter.scala:559)
-	at akka.stream.impl.fusing.ActorGraphInterpreter.akka$stream$impl$fusing$ActorGraphInterpreter$$processEvent(ActorGraphInterpreter.scala:741)
-	at akka.stream.impl.fusing.ActorGraphInterpreter$$anonfun$receive$1.applyOrElse(ActorGraphInterpreter.scala:756)
-	at akka.actor.Actor.aroundReceive(Actor.scala:517)
-	at akka.actor.Actor.aroundReceive$(Actor.scala:515)
-	at akka.stream.impl.fusing.ActorGraphInterpreter.aroundReceive(ActorGraphInterpreter.scala:666)
-	at akka.actor.ActorCell.receiveMessage(ActorCell.scala:527)
-	at akka.actor.ActorCell.invoke(ActorCell.scala:496)
-	at akka.dispatch.Mailbox.processMailbox(Mailbox.scala:257)
-	at akka.dispatch.Mailbox.run(Mailbox.scala:224)
-	at akka.dispatch.Mailbox.exec(Mailbox.scala:234)
-	at akka.dispatch.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
-	at akka.dispatch.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
-	at akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
-	at akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
-2018-04-02 15:55:23,737 [ERROR] from application in play-dev-mode-akka.actor.default-dispatcher-29 - 
-
-! @77f2oipep - Internal server error, for (POST) [/registerSubmit] ->
- 
-play.sbt.PlayExceptions$CompilationException: Compilation error[not found: value member]
-	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:34)
-	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:34)
-	at scala.Option.map(Option.scala:146)
-	at play.sbt.run.PlayReload$.$anonfun$taskFailureHandler$1(PlayReload.scala:33)
-	at scala.Option.map(Option.scala:146)
-	at play.sbt.run.PlayReload$.taskFailureHandler(PlayReload.scala:28)
-	at play.sbt.run.PlayReload$.compileFailure(PlayReload.scala:24)
-	at play.sbt.run.PlayReload$.$anonfun$compile$3(PlayReload.scala:51)
-	at scala.util.Either$LeftProjection.map(Either.scala:573)
-	at play.sbt.run.PlayReload$.compile(PlayReload.scala:51)
-	at play.sbt.run.PlayRun$.$anonfun$playRunTask$4(PlayRun.scala:76)
-	at play.runsupport.Reloader.$anonfun$reload$1(Reloader.scala:413)
-	at play.runsupport.Reloader$$anon$5.run(Reloader.scala:51)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at play.runsupport.Reloader$.play$runsupport$Reloader$$withReloaderContextClassLoader(Reloader.scala:56)
-	at play.runsupport.Reloader.reload(Reloader.scala:413)
-	at play.core.server.DevServerStart$$anon$1.get(DevServerStart.scala:123)
-	at play.core.server.Server.getHandlerFor(Server.scala:63)
-	at play.core.server.Server.getHandlerFor$(Server.scala:48)
-	at play.core.server.AkkaHttpServer.getHandlerFor(AkkaHttpServer.scala:41)
-	at play.core.server.AkkaHttpServer.getHandler(AkkaHttpServer.scala:214)
-	at play.core.server.AkkaHttpServer.handleRequest(AkkaHttpServer.scala:194)
-	at play.core.server.AkkaHttpServer.$anonfun$createServerBinding$1(AkkaHttpServer.scala:106)
-	at akka.stream.impl.fusing.MapAsync$$anon$24.onPush(Ops.scala:1191)
-	at akka.stream.impl.fusing.GraphInterpreter.processPush(GraphInterpreter.scala:512)
-	at akka.stream.impl.fusing.GraphInterpreter.processEvent(GraphInterpreter.scala:475)
-	at akka.stream.impl.fusing.GraphInterpreter.execute(GraphInterpreter.scala:371)
-	at akka.stream.impl.fusing.GraphInterpreterShell.runBatch(ActorGraphInterpreter.scala:584)
-	at akka.stream.impl.fusing.GraphInterpreterShell$AsyncInput.execute(ActorGraphInterpreter.scala:468)
-	at akka.stream.impl.fusing.GraphInterpreterShell.processEvent(ActorGraphInterpreter.scala:559)
-	at akka.stream.impl.fusing.ActorGraphInterpreter.akka$stream$impl$fusing$ActorGraphInterpreter$$processEvent(ActorGraphInterpreter.scala:741)
-	at akka.stream.impl.fusing.ActorGraphInterpreter$$anonfun$receive$1.applyOrElse(ActorGraphInterpreter.scala:756)
-	at akka.actor.Actor.aroundReceive(Actor.scala:517)
-	at akka.actor.Actor.aroundReceive$(Actor.scala:515)
-	at akka.stream.impl.fusing.ActorGraphInterpreter.aroundReceive(ActorGraphInterpreter.scala:666)
-	at akka.actor.ActorCell.receiveMessage(ActorCell.scala:527)
-	at akka.actor.ActorCell.invoke(ActorCell.scala:496)
-	at akka.dispatch.Mailbox.processMailbox(Mailbox.scala:257)
-	at akka.dispatch.Mailbox.run(Mailbox.scala:224)
-	at akka.dispatch.Mailbox.exec(Mailbox.scala:234)
-	at akka.dispatch.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
-	at akka.dispatch.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
-	at akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
-	at akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
-2018-04-02 15:55:56,879 [ERROR] from application in play-dev-mode-akka.actor.default-dispatcher-29 - 
-
-! @77f2okmfh - Internal server error, for (POST) [/registerSubmit] ->
- 
-play.sbt.PlayExceptions$CompilationException: Compilation error[cannot find symbol
-  symbol:   variable register
-  location: class controllers.ProductCtrl]
-	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:34)
-	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:34)
-	at scala.Option.map(Option.scala:146)
-	at play.sbt.run.PlayReload$.$anonfun$taskFailureHandler$1(PlayReload.scala:33)
-	at scala.Option.map(Option.scala:146)
-	at play.sbt.run.PlayReload$.taskFailureHandler(PlayReload.scala:28)
-	at play.sbt.run.PlayReload$.compileFailure(PlayReload.scala:24)
-	at play.sbt.run.PlayReload$.$anonfun$compile$3(PlayReload.scala:51)
-	at scala.util.Either$LeftProjection.map(Either.scala:573)
-	at play.sbt.run.PlayReload$.compile(PlayReload.scala:51)
-	at play.sbt.run.PlayRun$.$anonfun$playRunTask$4(PlayRun.scala:76)
-	at play.runsupport.Reloader.$anonfun$reload$1(Reloader.scala:413)
-	at play.runsupport.Reloader$$anon$5.run(Reloader.scala:51)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at play.runsupport.Reloader$.play$runsupport$Reloader$$withReloaderContextClassLoader(Reloader.scala:56)
-	at play.runsupport.Reloader.reload(Reloader.scala:413)
-	at play.core.server.DevServerStart$$anon$1.get(DevServerStart.scala:123)
-	at play.core.server.Server.getHandlerFor(Server.scala:63)
-	at play.core.server.Server.getHandlerFor$(Server.scala:48)
-	at play.core.server.AkkaHttpServer.getHandlerFor(AkkaHttpServer.scala:41)
-	at play.core.server.AkkaHttpServer.getHandler(AkkaHttpServer.scala:214)
-	at play.core.server.AkkaHttpServer.handleRequest(AkkaHttpServer.scala:194)
-	at play.core.server.AkkaHttpServer.$anonfun$createServerBinding$1(AkkaHttpServer.scala:106)
-	at akka.stream.impl.fusing.MapAsync$$anon$24.onPush(Ops.scala:1191)
-	at akka.stream.impl.fusing.GraphInterpreter.processPush(GraphInterpreter.scala:512)
-	at akka.stream.impl.fusing.GraphInterpreter.processEvent(GraphInterpreter.scala:475)
-	at akka.stream.impl.fusing.GraphInterpreter.execute(GraphInterpreter.scala:371)
-	at akka.stream.impl.fusing.GraphInterpreterShell.runBatch(ActorGraphInterpreter.scala:584)
-	at akka.stream.impl.fusing.GraphInterpreterShell$AsyncInput.execute(ActorGraphInterpreter.scala:468)
-	at akka.stream.impl.fusing.GraphInterpreterShell.processEvent(ActorGraphInterpreter.scala:559)
-	at akka.stream.impl.fusing.ActorGraphInterpreter.akka$stream$impl$fusing$ActorGraphInterpreter$$processEvent(ActorGraphInterpreter.scala:741)
-	at akka.stream.impl.fusing.ActorGraphInterpreter$$anonfun$receive$1.applyOrElse(ActorGraphInterpreter.scala:756)
-	at akka.actor.Actor.aroundReceive(Actor.scala:517)
-	at akka.actor.Actor.aroundReceive$(Actor.scala:515)
-	at akka.stream.impl.fusing.ActorGraphInterpreter.aroundReceive(ActorGraphInterpreter.scala:666)
-	at akka.actor.ActorCell.receiveMessage(ActorCell.scala:527)
-	at akka.actor.ActorCell.invoke(ActorCell.scala:496)
-	at akka.dispatch.Mailbox.processMailbox(Mailbox.scala:257)
-	at akka.dispatch.Mailbox.run(Mailbox.scala:224)
-	at akka.dispatch.Mailbox.exec(Mailbox.scala:234)
-	at akka.dispatch.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
-	at akka.dispatch.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
-	at akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
-	at akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
-2018-04-02 15:56:41,786 [ERROR] from application in play-dev-mode-akka.actor.default-dispatcher-29 - 
-
-! @77f2onb0m - Internal server error, for (POST) [/registerSubmit] ->
- 
-play.sbt.PlayExceptions$CompilationException: Compilation error[method render in class views.html.Register.register cannot be applied to given types;
-  required: play.data.Form<models.users.Customer>
-  found: play.data.Form<models.users.Member>,models.users.Member
-  reason: actual and formal argument lists differ in length]
-	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:34)
-	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:34)
-	at scala.Option.map(Option.scala:146)
-	at play.sbt.run.PlayReload$.$anonfun$taskFailureHandler$1(PlayReload.scala:33)
-	at scala.Option.map(Option.scala:146)
-	at play.sbt.run.PlayReload$.taskFailureHandler(PlayReload.scala:28)
-	at play.sbt.run.PlayReload$.compileFailure(PlayReload.scala:24)
-	at play.sbt.run.PlayReload$.$anonfun$compile$3(PlayReload.scala:51)
-	at scala.util.Either$LeftProjection.map(Either.scala:573)
-	at play.sbt.run.PlayReload$.compile(PlayReload.scala:51)
-	at play.sbt.run.PlayRun$.$anonfun$playRunTask$4(PlayRun.scala:76)
-	at play.runsupport.Reloader.$anonfun$reload$1(Reloader.scala:413)
-	at play.runsupport.Reloader$$anon$5.run(Reloader.scala:51)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at play.runsupport.Reloader$.play$runsupport$Reloader$$withReloaderContextClassLoader(Reloader.scala:56)
-	at play.runsupport.Reloader.reload(Reloader.scala:413)
-	at play.core.server.DevServerStart$$anon$1.get(DevServerStart.scala:123)
-	at play.core.server.Server.getHandlerFor(Server.scala:63)
-	at play.core.server.Server.getHandlerFor$(Server.scala:48)
-	at play.core.server.AkkaHttpServer.getHandlerFor(AkkaHttpServer.scala:41)
-	at play.core.server.AkkaHttpServer.getHandler(AkkaHttpServer.scala:214)
-	at play.core.server.AkkaHttpServer.handleRequest(AkkaHttpServer.scala:194)
-	at play.core.server.AkkaHttpServer.$anonfun$createServerBinding$1(AkkaHttpServer.scala:106)
-	at akka.stream.impl.fusing.MapAsync$$anon$24.onPush(Ops.scala:1191)
-	at akka.stream.impl.fusing.GraphInterpreter.processPush(GraphInterpreter.scala:512)
-	at akka.stream.impl.fusing.GraphInterpreter.processEvent(GraphInterpreter.scala:475)
-	at akka.stream.impl.fusing.GraphInterpreter.execute(GraphInterpreter.scala:371)
-	at akka.stream.impl.fusing.GraphInterpreterShell.runBatch(ActorGraphInterpreter.scala:584)
-	at akka.stream.impl.fusing.GraphInterpreterShell$AsyncInput.execute(ActorGraphInterpreter.scala:468)
-	at akka.stream.impl.fusing.GraphInterpreterShell.processEvent(ActorGraphInterpreter.scala:559)
-	at akka.stream.impl.fusing.ActorGraphInterpreter.akka$stream$impl$fusing$ActorGraphInterpreter$$processEvent(ActorGraphInterpreter.scala:741)
-	at akka.stream.impl.fusing.ActorGraphInterpreter$$anonfun$receive$1.applyOrElse(ActorGraphInterpreter.scala:756)
-	at akka.actor.Actor.aroundReceive(Actor.scala:517)
-	at akka.actor.Actor.aroundReceive$(Actor.scala:515)
-	at akka.stream.impl.fusing.ActorGraphInterpreter.aroundReceive(ActorGraphInterpreter.scala:666)
-	at akka.actor.ActorCell.receiveMessage(ActorCell.scala:527)
-	at akka.actor.ActorCell.invoke(ActorCell.scala:496)
-	at akka.dispatch.Mailbox.processMailbox(Mailbox.scala:257)
-	at akka.dispatch.Mailbox.run(Mailbox.scala:224)
-	at akka.dispatch.Mailbox.exec(Mailbox.scala:234)
-	at akka.dispatch.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
-	at akka.dispatch.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
-	at akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
-	at akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
-2018-04-02 15:57:13,608 [ERROR] from application in play-dev-mode-akka.actor.default-dispatcher-33 - 
-
-! @77f2op62k - Internal server error, for (POST) [/registerSubmit] ->
- 
-play.sbt.PlayExceptions$CompilationException: Compilation error[ play.data.Form<models.users.Member> cannot be converted to play.data.Form<models.users.Customer>]
-	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:34)
-	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:34)
-	at scala.Option.map(Option.scala:146)
-	at play.sbt.run.PlayReload$.$anonfun$taskFailureHandler$1(PlayReload.scala:33)
-	at scala.Option.map(Option.scala:146)
-	at play.sbt.run.PlayReload$.taskFailureHandler(PlayReload.scala:28)
-	at play.sbt.run.PlayReload$.compileFailure(PlayReload.scala:24)
-	at play.sbt.run.PlayReload$.$anonfun$compile$3(PlayReload.scala:51)
-	at scala.util.Either$LeftProjection.map(Either.scala:573)
-	at play.sbt.run.PlayReload$.compile(PlayReload.scala:51)
-	at play.sbt.run.PlayRun$.$anonfun$playRunTask$4(PlayRun.scala:76)
-	at play.runsupport.Reloader.$anonfun$reload$1(Reloader.scala:413)
-	at play.runsupport.Reloader$$anon$5.run(Reloader.scala:51)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at play.runsupport.Reloader$.play$runsupport$Reloader$$withReloaderContextClassLoader(Reloader.scala:56)
-	at play.runsupport.Reloader.reload(Reloader.scala:413)
-	at play.core.server.DevServerStart$$anon$1.get(DevServerStart.scala:123)
-	at play.core.server.Server.getHandlerFor(Server.scala:63)
-	at play.core.server.Server.getHandlerFor$(Server.scala:48)
-	at play.core.server.AkkaHttpServer.getHandlerFor(AkkaHttpServer.scala:41)
-	at play.core.server.AkkaHttpServer.getHandler(AkkaHttpServer.scala:214)
-	at play.core.server.AkkaHttpServer.handleRequest(AkkaHttpServer.scala:194)
-	at play.core.server.AkkaHttpServer.$anonfun$createServerBinding$1(AkkaHttpServer.scala:106)
-	at akka.stream.impl.fusing.MapAsync$$anon$24.onPush(Ops.scala:1191)
-	at akka.stream.impl.fusing.GraphInterpreter.processPush(GraphInterpreter.scala:512)
-	at akka.stream.impl.fusing.GraphInterpreter.processEvent(GraphInterpreter.scala:475)
-	at akka.stream.impl.fusing.GraphInterpreter.execute(GraphInterpreter.scala:371)
-	at akka.stream.impl.fusing.GraphInterpreterShell.runBatch(ActorGraphInterpreter.scala:584)
-	at akka.stream.impl.fusing.GraphInterpreterShell$AsyncInput.execute(ActorGraphInterpreter.scala:468)
-	at akka.stream.impl.fusing.GraphInterpreterShell.processEvent(ActorGraphInterpreter.scala:559)
-	at akka.stream.impl.fusing.ActorGraphInterpreter.akka$stream$impl$fusing$ActorGraphInterpreter$$processEvent(ActorGraphInterpreter.scala:741)
-	at akka.stream.impl.fusing.ActorGraphInterpreter$$anonfun$receive$1.applyOrElse(ActorGraphInterpreter.scala:756)
-	at akka.actor.Actor.aroundReceive(Actor.scala:517)
-	at akka.actor.Actor.aroundReceive$(Actor.scala:515)
-	at akka.stream.impl.fusing.ActorGraphInterpreter.aroundReceive(ActorGraphInterpreter.scala:666)
-	at akka.actor.ActorCell.receiveMessage(ActorCell.scala:527)
-	at akka.actor.ActorCell.invoke(ActorCell.scala:496)
-	at akka.dispatch.Mailbox.processMailbox(Mailbox.scala:257)
-	at akka.dispatch.Mailbox.run(Mailbox.scala:224)
-	at akka.dispatch.Mailbox.exec(Mailbox.scala:234)
-	at akka.dispatch.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
-	at akka.dispatch.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
-	at akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
-	at akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
-2018-04-02 15:57:57,388 [ERROR] from application in play-dev-mode-akka.actor.default-dispatcher-30 - 
-
-! @77f2p1imh - Internal server error, for (POST) [/registerSubmit] ->
- 
-play.sbt.PlayExceptions$CompilationException: Compilation error[method render in class views.html.Register.register cannot be applied to given types;
-  required: play.data.Form<models.users.Member>
-  found: play.data.Form<models.users.Member>,models.users.Member
-  reason: actual and formal argument lists differ in length]
-	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:34)
-	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:34)
-	at scala.Option.map(Option.scala:146)
-	at play.sbt.run.PlayReload$.$anonfun$taskFailureHandler$1(PlayReload.scala:33)
-	at scala.Option.map(Option.scala:146)
-	at play.sbt.run.PlayReload$.taskFailureHandler(PlayReload.scala:28)
-	at play.sbt.run.PlayReload$.compileFailure(PlayReload.scala:24)
-	at play.sbt.run.PlayReload$.$anonfun$compile$3(PlayReload.scala:51)
-	at scala.util.Either$LeftProjection.map(Either.scala:573)
-	at play.sbt.run.PlayReload$.compile(PlayReload.scala:51)
-	at play.sbt.run.PlayRun$.$anonfun$playRunTask$4(PlayRun.scala:76)
-	at play.runsupport.Reloader.$anonfun$reload$1(Reloader.scala:413)
-	at play.runsupport.Reloader$$anon$5.run(Reloader.scala:51)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at play.runsupport.Reloader$.play$runsupport$Reloader$$withReloaderContextClassLoader(Reloader.scala:56)
-	at play.runsupport.Reloader.reload(Reloader.scala:413)
-	at play.core.server.DevServerStart$$anon$1.get(DevServerStart.scala:123)
-	at play.core.server.Server.getHandlerFor(Server.scala:63)
-	at play.core.server.Server.getHandlerFor$(Server.scala:48)
-	at play.core.server.AkkaHttpServer.getHandlerFor(AkkaHttpServer.scala:41)
-	at play.core.server.AkkaHttpServer.getHandler(AkkaHttpServer.scala:214)
-	at play.core.server.AkkaHttpServer.handleRequest(AkkaHttpServer.scala:194)
-	at play.core.server.AkkaHttpServer.$anonfun$createServerBinding$1(AkkaHttpServer.scala:106)
-	at akka.stream.impl.fusing.MapAsync$$anon$24.onPush(Ops.scala:1191)
-	at akka.stream.impl.fusing.GraphInterpreter.processPush(GraphInterpreter.scala:512)
-	at akka.stream.impl.fusing.GraphInterpreter.processEvent(GraphInterpreter.scala:475)
-	at akka.stream.impl.fusing.GraphInterpreter.execute(GraphInterpreter.scala:371)
-	at akka.stream.impl.fusing.GraphInterpreterShell.runBatch(ActorGraphInterpreter.scala:584)
-	at akka.stream.impl.fusing.GraphInterpreterShell$AsyncInput.execute(ActorGraphInterpreter.scala:468)
-	at akka.stream.impl.fusing.GraphInterpreterShell.processEvent(ActorGraphInterpreter.scala:559)
-	at akka.stream.impl.fusing.ActorGraphInterpreter.akka$stream$impl$fusing$ActorGraphInterpreter$$processEvent(ActorGraphInterpreter.scala:741)
-	at akka.stream.impl.fusing.ActorGraphInterpreter$$anonfun$receive$1.applyOrElse(ActorGraphInterpreter.scala:756)
-	at akka.actor.Actor.aroundReceive(Actor.scala:517)
-	at akka.actor.Actor.aroundReceive$(Actor.scala:515)
-	at akka.stream.impl.fusing.ActorGraphInterpreter.aroundReceive(ActorGraphInterpreter.scala:666)
-	at akka.actor.ActorCell.receiveMessage(ActorCell.scala:527)
-	at akka.actor.ActorCell.invoke(ActorCell.scala:496)
-	at akka.dispatch.Mailbox.processMailbox(Mailbox.scala:257)
-	at akka.dispatch.Mailbox.run(Mailbox.scala:224)
-	at akka.dispatch.Mailbox.exec(Mailbox.scala:234)
-	at akka.dispatch.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
-	at akka.dispatch.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
-	at akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
-	at akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
-2018-04-02 15:58:24,064 [INFO] from application in application-akka.actor.default-dispatcher-12 - Shutting down connection pool.
-2018-04-02 15:58:24,258 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-29 - Creating Pool for datasource 'default'
-2018-04-02 15:58:24,271 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-29 - Database [default] connected at jdbc:h2:file:./data/productsDB
-2018-04-02 15:58:24,475 [WARN] from org.hibernate.validator.messageinterpolation.ParameterMessageInterpolator in play-dev-mode-akka.actor.default-dispatcher-29 - HV000184: ParameterMessageInterpolator has been chosen, EL interpolation will not be supported
-2018-04-02 15:58:24,546 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-29 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+2018-04-03 16:48:25,215 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-10 - Application started (Dev)
+2018-04-03 16:49:21,313 [INFO] from application in application-akka.actor.default-dispatcher-9 - Shutting down connection pool.
+2018-04-03 16:49:21,612 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-40 - Creating Pool for datasource 'default'
+2018-04-03 16:49:21,657 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-40 - Database [default] connected at jdbc:h2:file:./data/productsDB
+2018-04-03 16:49:21,827 [WARN] from org.hibernate.validator.messageinterpolation.ParameterMessageInterpolator in play-dev-mode-akka.actor.default-dispatcher-40 - HV000184: ParameterMessageInterpolator has been chosen, EL interpolation will not be supported
+2018-04-03 16:49:21,924 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-40 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
 
     play.filters.csrf.CSRFFilter
     play.filters.headers.SecurityHeadersFilter
     play.filters.hosts.AllowedHostsFilter
 
-2018-04-02 15:58:24,547 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-29 - Application started (Dev)
-2018-04-02 16:00:27,902 [INFO] from application in application-akka.actor.default-dispatcher-7 - Shutting down connection pool.
-2018-04-02 16:00:28,215 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-39 - Creating Pool for datasource 'default'
-2018-04-02 16:00:28,238 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-39 - Database [default] connected at jdbc:h2:file:./data/productsDB
-2018-04-02 16:00:28,410 [WARN] from org.hibernate.validator.messageinterpolation.ParameterMessageInterpolator in play-dev-mode-akka.actor.default-dispatcher-39 - HV000184: ParameterMessageInterpolator has been chosen, EL interpolation will not be supported
-2018-04-02 16:00:28,481 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-39 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+2018-04-03 16:49:21,924 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-40 - Application started (Dev)
+2018-04-03 16:50:32,653 [INFO] from application in application-akka.actor.default-dispatcher-11 - Shutting down connection pool.
+2018-04-03 16:50:32,840 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-10 - Creating Pool for datasource 'default'
+2018-04-03 16:50:32,877 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-10 - Database [default] connected at jdbc:h2:file:./data/productsDB
+2018-04-03 16:50:33,020 [WARN] from org.hibernate.validator.messageinterpolation.ParameterMessageInterpolator in play-dev-mode-akka.actor.default-dispatcher-10 - HV000184: ParameterMessageInterpolator has been chosen, EL interpolation will not be supported
+2018-04-03 16:50:33,101 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-10 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
 
     play.filters.csrf.CSRFFilter
     play.filters.headers.SecurityHeadersFilter
     play.filters.hosts.AllowedHostsFilter
 
-2018-04-02 16:00:28,481 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-39 - Application started (Dev)
-2018-04-02 16:00:37,974 [ERROR] from application in application-akka.actor.default-dispatcher-3 - 
+2018-04-03 16:50:33,103 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-10 - Application started (Dev)
+2018-04-03 16:55:53,906 [INFO] from application in application-akka.actor.default-dispatcher-21 - Shutting down connection pool.
+2018-04-03 16:55:54,066 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-71 - Creating Pool for datasource 'default'
+2018-04-03 16:55:54,105 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-71 - Database [default] connected at jdbc:h2:file:./data/productsDB
+2018-04-03 16:55:54,259 [WARN] from org.hibernate.validator.messageinterpolation.ParameterMessageInterpolator in play-dev-mode-akka.actor.default-dispatcher-71 - HV000184: ParameterMessageInterpolator has been chosen, EL interpolation will not be supported
+2018-04-03 16:55:54,331 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-71 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
 
-! @77f2pamb1 - Internal server error, for (POST) [/registerSubmit] ->
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+
+2018-04-03 16:55:54,333 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-71 - Application started (Dev)
+2018-04-03 17:04:16,069 [INFO] from application in application-akka.actor.default-dispatcher-20 - Shutting down connection pool.
+2018-04-03 17:04:16,269 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-162 - Creating Pool for datasource 'default'
+2018-04-03 17:04:16,309 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-162 - Database [default] connected at jdbc:h2:file:./data/productsDB
+2018-04-03 17:04:16,477 [WARN] from org.hibernate.validator.messageinterpolation.ParameterMessageInterpolator in play-dev-mode-akka.actor.default-dispatcher-162 - HV000184: ParameterMessageInterpolator has been chosen, EL interpolation will not be supported
+2018-04-03 17:04:16,550 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-162 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+
+2018-04-03 17:04:16,553 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-162 - Application started (Dev)
+2018-04-03 17:04:38,111 [INFO] from application in application-akka.actor.default-dispatcher-3 - Shutting down connection pool.
+2018-04-03 17:04:38,298 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-160 - Creating Pool for datasource 'default'
+2018-04-03 17:04:38,344 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-160 - Database [default] connected at jdbc:h2:file:./data/productsDB
+2018-04-03 17:04:38,474 [WARN] from org.hibernate.validator.messageinterpolation.ParameterMessageInterpolator in play-dev-mode-akka.actor.default-dispatcher-160 - HV000184: ParameterMessageInterpolator has been chosen, EL interpolation will not be supported
+2018-04-03 17:04:38,542 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-160 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+
+2018-04-03 17:04:38,544 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-160 - Application started (Dev)
+2018-04-03 17:04:53,709 [INFO] from application in application-akka.actor.default-dispatcher-2 - Shutting down connection pool.
+2018-04-03 17:04:53,851 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-162 - Creating Pool for datasource 'default'
+2018-04-03 17:04:53,888 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-162 - Database [default] connected at jdbc:h2:file:./data/productsDB
+2018-04-03 17:04:54,019 [WARN] from org.hibernate.validator.messageinterpolation.ParameterMessageInterpolator in play-dev-mode-akka.actor.default-dispatcher-162 - HV000184: ParameterMessageInterpolator has been chosen, EL interpolation will not be supported
+2018-04-03 17:04:54,080 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-162 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+
+2018-04-03 17:04:54,088 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-162 - Application started (Dev)
+2018-04-03 17:28:31,151 [INFO] from application in application-akka.actor.default-dispatcher-9 - Shutting down connection pool.
+2018-04-03 17:28:31,270 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-191 - Creating Pool for datasource 'default'
+2018-04-03 17:28:31,293 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-191 - Database [default] connected at jdbc:h2:file:./data/productsDB
+2018-04-03 17:28:31,469 [WARN] from org.hibernate.validator.messageinterpolation.ParameterMessageInterpolator in play-dev-mode-akka.actor.default-dispatcher-191 - HV000184: ParameterMessageInterpolator has been chosen, EL interpolation will not be supported
+2018-04-03 17:28:31,527 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-191 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+
+2018-04-03 17:28:31,530 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-191 - Application started (Dev)
+2018-04-03 17:30:20,560 [INFO] from application in application-akka.actor.default-dispatcher-10 - Shutting down connection pool.
+2018-04-03 17:30:20,679 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-196 - Creating Pool for datasource 'default'
+2018-04-03 17:30:20,708 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-196 - Database [default] connected at jdbc:h2:file:./data/productsDB
+2018-04-03 17:30:20,861 [WARN] from org.hibernate.validator.messageinterpolation.ParameterMessageInterpolator in play-dev-mode-akka.actor.default-dispatcher-196 - HV000184: ParameterMessageInterpolator has been chosen, EL interpolation will not be supported
+2018-04-03 17:30:20,912 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-196 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+
+2018-04-03 17:30:20,917 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-196 - Application started (Dev)
+2018-04-03 17:30:48,956 [WARN] from application in application-akka.actor.default-dispatcher-8 - The "validate" method in class "models.users.Login" is deprecated since Play 2.6. To migrate to class-level constraints see https://www.playframework.com/documentation/2.6.x/Migration26#java-form-changes and https://www.playframework.com/documentation/2.6.x/JavaForms#Advanced-validation
+2018-04-03 17:32:12,948 [INFO] from application in application-akka.actor.default-dispatcher-10 - Shutting down connection pool.
+2018-04-03 17:32:13,097 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-194 - Creating Pool for datasource 'default'
+2018-04-03 17:32:13,117 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-194 - Database [default] connected at jdbc:h2:file:./data/productsDB
+2018-04-03 17:32:13,286 [WARN] from org.hibernate.validator.messageinterpolation.ParameterMessageInterpolator in play-dev-mode-akka.actor.default-dispatcher-194 - HV000184: ParameterMessageInterpolator has been chosen, EL interpolation will not be supported
+2018-04-03 17:32:13,374 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-194 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+
+2018-04-03 17:32:13,374 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-194 - Application started (Dev)
+2018-04-03 17:32:36,841 [INFO] from application in application-akka.actor.default-dispatcher-4 - Shutting down connection pool.
+2018-04-03 17:32:37,025 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-194 - Creating Pool for datasource 'default'
+2018-04-03 17:32:37,045 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-194 - Database [default] connected at jdbc:h2:file:./data/productsDB
+2018-04-03 17:32:37,167 [WARN] from org.hibernate.validator.messageinterpolation.ParameterMessageInterpolator in play-dev-mode-akka.actor.default-dispatcher-194 - HV000184: ParameterMessageInterpolator has been chosen, EL interpolation will not be supported
+2018-04-03 17:32:37,221 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-194 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+
+2018-04-03 17:32:37,221 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-194 - Application started (Dev)
+2018-04-03 17:41:58,151 [INFO] from application in application-akka.actor.default-dispatcher-20 - Shutting down connection pool.
+2018-04-03 17:41:58,271 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-288 - Creating Pool for datasource 'default'
+2018-04-03 17:41:58,300 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-288 - Database [default] connected at jdbc:h2:file:./data/productsDB
+2018-04-03 17:41:58,443 [WARN] from org.hibernate.validator.messageinterpolation.ParameterMessageInterpolator in play-dev-mode-akka.actor.default-dispatcher-288 - HV000184: ParameterMessageInterpolator has been chosen, EL interpolation will not be supported
+2018-04-03 17:41:58,498 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-288 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+
+2018-04-03 17:41:58,504 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-288 - Application started (Dev)
+2018-04-03 17:44:54,156 [INFO] from application in application-akka.actor.default-dispatcher-7 - Shutting down connection pool.
+2018-04-03 17:44:54,254 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-336 - Creating Pool for datasource 'default'
+2018-04-03 17:44:54,269 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-336 - Database [default] connected at jdbc:h2:file:./data/productsDB
+2018-04-03 17:44:54,408 [WARN] from org.hibernate.validator.messageinterpolation.ParameterMessageInterpolator in play-dev-mode-akka.actor.default-dispatcher-336 - HV000184: ParameterMessageInterpolator has been chosen, EL interpolation will not be supported
+2018-04-03 17:44:54,484 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-336 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+
+2018-04-03 17:44:54,496 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-336 - Application started (Dev)
+2018-04-03 17:46:37,479 [INFO] from application in application-akka.actor.default-dispatcher-4 - Shutting down connection pool.
+2018-04-03 17:46:37,632 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-324 - Creating Pool for datasource 'default'
+2018-04-03 17:46:37,639 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-324 - Database [default] connected at jdbc:h2:file:./data/productsDB
+2018-04-03 17:46:37,759 [WARN] from org.hibernate.validator.messageinterpolation.ParameterMessageInterpolator in play-dev-mode-akka.actor.default-dispatcher-324 - HV000184: ParameterMessageInterpolator has been chosen, EL interpolation will not be supported
+2018-04-03 17:46:37,799 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-324 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+
+2018-04-03 17:46:37,799 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-324 - Application started (Dev)
+2018-04-03 17:49:46,696 [INFO] from application in application-akka.actor.default-dispatcher-12 - Shutting down connection pool.
+2018-04-03 17:49:46,879 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-384 - Creating Pool for datasource 'default'
+2018-04-03 17:49:46,897 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-384 - Database [default] connected at jdbc:h2:file:./data/productsDB
+2018-04-03 17:49:47,028 [WARN] from org.hibernate.validator.messageinterpolation.ParameterMessageInterpolator in play-dev-mode-akka.actor.default-dispatcher-384 - HV000184: ParameterMessageInterpolator has been chosen, EL interpolation will not be supported
+2018-04-03 17:49:47,091 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-384 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+
+2018-04-03 17:49:47,101 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-384 - Application started (Dev)
+2018-04-03 17:50:00,448 [INFO] from application in application-akka.actor.default-dispatcher-9 - Shutting down connection pool.
+2018-04-03 17:50:00,570 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-384 - Creating Pool for datasource 'default'
+2018-04-03 17:50:00,578 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-384 - Database [default] connected at jdbc:h2:file:./data/productsDB
+2018-04-03 17:50:00,705 [WARN] from org.hibernate.validator.messageinterpolation.ParameterMessageInterpolator in play-dev-mode-akka.actor.default-dispatcher-384 - HV000184: ParameterMessageInterpolator has been chosen, EL interpolation will not be supported
+2018-04-03 17:50:00,767 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-384 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+
+2018-04-03 17:50:00,767 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-384 - Application started (Dev)
+2018-04-03 17:50:33,460 [ERROR] from application in application-akka.actor.default-dispatcher-2 - 
+
+! @77faknnia - Internal server error, for (POST) [/registerSubmit] ->
  
 play.api.http.HttpErrorHandlerExceptions$$anon$1: Execution exception[[PersistenceException: Error[Duplicate column name "ROLE"; SQL statement: insert into member (email, role, role, name, password) values (?,?,?,?,?) [42121-193]]]]
 	at play.api.http.HttpErrorHandlerExceptions$.throwableToUsefulException(HttpErrorHandler.scala:255)
@@ -1016,839 +277,169 @@ insert into member (email, role, role, name, password) values (?,?,?,?,?) [42121
 	at io.ebeaninternal.server.persist.dml.InsertHandler.bind(InsertHandler.java:94)
 	at io.ebeaninternal.server.persist.dml.DmlBeanPersister.execute(DmlBeanPersister.java:67)
 	... 55 common frames omitted
-2018-04-02 16:09:37,640 [WARN] from application in application-akka.actor.default-dispatcher-8 - The "validate" method in class "models.users.Login" is deprecated since Play 2.6. To migrate to class-level constraints see https://www.playframework.com/documentation/2.6.x/Migration26#java-form-changes and https://www.playframework.com/documentation/2.6.x/JavaForms#Advanced-validation
-2018-04-02 16:10:16,086 [INFO] from application in application-akka.actor.default-dispatcher-11 - Shutting down connection pool.
-2018-04-02 16:10:16,268 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-55 - Creating Pool for datasource 'default'
-2018-04-02 16:10:16,305 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-55 - Database [default] connected at jdbc:h2:file:./data/productsDB
-2018-04-02 16:10:16,469 [WARN] from org.hibernate.validator.messageinterpolation.ParameterMessageInterpolator in play-dev-mode-akka.actor.default-dispatcher-55 - HV000184: ParameterMessageInterpolator has been chosen, EL interpolation will not be supported
-2018-04-02 16:10:16,527 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-55 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+2018-04-03 17:51:11,309 [WARN] from application in application-akka.actor.default-dispatcher-11 - The "validate" method in class "models.users.Login" is deprecated since Play 2.6. To migrate to class-level constraints see https://www.playframework.com/documentation/2.6.x/Migration26#java-form-changes and https://www.playframework.com/documentation/2.6.x/JavaForms#Advanced-validation
+2018-04-03 17:51:54,709 [INFO] from application in application-akka.actor.default-dispatcher-12 - Shutting down connection pool.
+2018-04-03 17:51:54,868 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-393 - Creating Pool for datasource 'default'
+2018-04-03 17:51:54,886 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-393 - Database [default] connected at jdbc:h2:file:./data/productsDB
+2018-04-03 17:51:55,018 [WARN] from org.hibernate.validator.messageinterpolation.ParameterMessageInterpolator in play-dev-mode-akka.actor.default-dispatcher-393 - HV000184: ParameterMessageInterpolator has been chosen, EL interpolation will not be supported
+2018-04-03 17:51:55,077 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-393 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
 
     play.filters.csrf.CSRFFilter
     play.filters.headers.SecurityHeadersFilter
     play.filters.hosts.AllowedHostsFilter
 
-2018-04-02 16:10:16,529 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-55 - Application started (Dev)
-2018-04-02 16:11:50,340 [WARN] from application in application-akka.actor.default-dispatcher-4 - The "validate" method in class "models.users.Login" is deprecated since Play 2.6. To migrate to class-level constraints see https://www.playframework.com/documentation/2.6.x/Migration26#java-form-changes and https://www.playframework.com/documentation/2.6.x/JavaForms#Advanced-validation
-2018-04-02 16:11:54,354 [WARN] from application in application-akka.actor.default-dispatcher-11 - The "validate" method in class "models.users.Login" is deprecated since Play 2.6. To migrate to class-level constraints see https://www.playframework.com/documentation/2.6.x/Migration26#java-form-changes and https://www.playframework.com/documentation/2.6.x/JavaForms#Advanced-validation
-2018-04-02 16:11:55,908 [ERROR] from application in application-akka.actor.default-dispatcher-11 - 
-
-! @77f30nb7b - Internal server error, for (GET) [/viewOrder/0] ->
- 
-play.api.http.HttpErrorHandlerExceptions$$anon$1: Execution exception[[NullPointerException: null]]
-	at play.api.http.HttpErrorHandlerExceptions$.throwableToUsefulException(HttpErrorHandler.scala:255)
-	at play.api.http.DefaultHttpErrorHandler.onServerError(HttpErrorHandler.scala:182)
-	at play.core.server.AkkaHttpServer$$anonfun$2.applyOrElse(AkkaHttpServer.scala:310)
-	at play.core.server.AkkaHttpServer$$anonfun$2.applyOrElse(AkkaHttpServer.scala:308)
-	at scala.concurrent.Future.$anonfun$recoverWith$1(Future.scala:414)
-	at scala.concurrent.impl.Promise.$anonfun$transformWith$1(Promise.scala:37)
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:60)
-	at akka.dispatch.BatchingExecutor$AbstractBatch.processBatch(BatchingExecutor.scala:55)
-	at akka.dispatch.BatchingExecutor$BlockableBatch.$anonfun$run$1(BatchingExecutor.scala:91)
-	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:12)
-	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:81)
-	at akka.dispatch.BatchingExecutor$BlockableBatch.run(BatchingExecutor.scala:91)
-	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:40)
-	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(ForkJoinExecutorConfigurator.scala:43)
-	at akka.dispatch.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
-	at akka.dispatch.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
-	at akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
-	at akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
-Caused by: java.lang.NullPointerException: null
-	at views.html.orderConfirmed$.apply(orderConfirmed.template.scala:81)
-	at views.html.orderConfirmed$.render(orderConfirmed.template.scala:92)
-	at views.html.orderConfirmed.render(orderConfirmed.template.scala)
-	at controllers.ShopCartCtrl.viewOrder(ShopCartCtrl.java:105)
-	at router.Routes$$anonfun$routes$1.$anonfun$applyOrElse$38(Routes.scala:651)
-	at play.core.routing.HandlerInvokerFactory$$anon$3.resultCall(HandlerInvoker.scala:134)
-	at play.core.routing.HandlerInvokerFactory$$anon$3.resultCall(HandlerInvoker.scala:133)
-	at play.core.routing.HandlerInvokerFactory$JavaActionInvokerFactory$$anon$8$$anon$2$$anon$1.invocation(HandlerInvoker.scala:108)
-	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:88)
-	at play.http.DefaultActionCreator$1.call(DefaultActionCreator.java:31)
-	at controllers.security.IfCustomer.call(IfCustomer.java:17)
-	at play.mvc.Security$AuthenticatedAction.call(Security.java:69)
-	at play.core.j.JavaAction.$anonfun$apply$8(JavaAction.scala:138)
-	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:655)
-	at scala.util.Success.$anonfun$map$1(Try.scala:251)
-	at scala.util.Success.map(Try.scala:209)
-	at scala.concurrent.Future.$anonfun$map$1(Future.scala:289)
-	at scala.concurrent.impl.Promise.liftedTree1$1(Promise.scala:29)
-	at scala.concurrent.impl.Promise.$anonfun$transform$1(Promise.scala:29)
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:60)
-	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:56)
-	at play.api.libs.streams.Execution$trampoline$.execute(Execution.scala:70)
-	at play.core.j.HttpExecutionContext.execute(HttpExecutionContext.scala:48)
-	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:68)
-	at scala.concurrent.impl.Promise$KeptPromise$Kept.onComplete(Promise.scala:368)
-	at scala.concurrent.impl.Promise$KeptPromise$Kept.onComplete$(Promise.scala:367)
-	at scala.concurrent.impl.Promise$KeptPromise$Successful.onComplete(Promise.scala:375)
-	at scala.concurrent.impl.Promise.transform(Promise.scala:29)
-	at scala.concurrent.impl.Promise.transform$(Promise.scala:27)
-	at scala.concurrent.impl.Promise$KeptPromise$Successful.transform(Promise.scala:375)
-	at scala.concurrent.Future.map(Future.scala:289)
-	at scala.concurrent.Future.map$(Future.scala:289)
-	at scala.concurrent.impl.Promise$KeptPromise$Successful.map(Promise.scala:375)
-	at scala.concurrent.Future$.apply(Future.scala:655)
-	at play.core.j.JavaAction.apply(JavaAction.scala:138)
-	at play.api.mvc.Action.$anonfun$apply$2(Action.scala:96)
-	at play.api.libs.streams.StrictAccumulator.$anonfun$mapFuture$4(Accumulator.scala:174)
-	at scala.util.Try$.apply(Try.scala:209)
-	at play.api.libs.streams.StrictAccumulator.$anonfun$mapFuture$3(Accumulator.scala:174)
-	at scala.Function1.$anonfun$andThen$1(Function1.scala:52)
-	at scala.Function1.$anonfun$andThen$1(Function1.scala:52)
-	at scala.Function1.$anonfun$andThen$1(Function1.scala:52)
-	at play.api.libs.streams.StrictAccumulator.run(Accumulator.scala:207)
-	at play.core.server.AkkaHttpServer.$anonfun$runAction$4(AkkaHttpServer.scala:304)
-	at akka.http.scaladsl.util.FastFuture$.strictTransform$1(FastFuture.scala:41)
-	at akka.http.scaladsl.util.FastFuture$.$anonfun$transformWith$3(FastFuture.scala:51)
-	... 12 common frames omitted
-2018-04-02 16:12:11,679 [INFO] from application in application-akka.actor.default-dispatcher-10 - Shutting down connection pool.
-2018-04-02 16:12:11,862 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-63 - Creating Pool for datasource 'default'
-2018-04-02 16:12:11,899 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-63 - Database [default] connected at jdbc:h2:file:./data/productsDB
-2018-04-02 16:12:12,071 [WARN] from org.hibernate.validator.messageinterpolation.ParameterMessageInterpolator in play-dev-mode-akka.actor.default-dispatcher-63 - HV000184: ParameterMessageInterpolator has been chosen, EL interpolation will not be supported
-2018-04-02 16:12:12,128 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-63 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+2018-04-03 17:51:55,077 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-393 - Application started (Dev)
+2018-04-03 17:52:16,838 [WARN] from application in application-akka.actor.default-dispatcher-7 - The "validate" method in class "models.users.Login" is deprecated since Play 2.6. To migrate to class-level constraints see https://www.playframework.com/documentation/2.6.x/Migration26#java-form-changes and https://www.playframework.com/documentation/2.6.x/JavaForms#Advanced-validation
+2018-04-03 17:52:44,699 [INFO] from application in application-akka.actor.default-dispatcher-5 - Shutting down connection pool.
+2018-04-03 17:52:44,811 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-402 - Creating Pool for datasource 'default'
+2018-04-03 17:52:44,861 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-402 - Database [default] connected at jdbc:h2:file:./data/productsDB
+2018-04-03 17:52:44,976 [WARN] from org.hibernate.validator.messageinterpolation.ParameterMessageInterpolator in play-dev-mode-akka.actor.default-dispatcher-402 - HV000184: ParameterMessageInterpolator has been chosen, EL interpolation will not be supported
+2018-04-03 17:52:45,037 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-402 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
 
     play.filters.csrf.CSRFFilter
     play.filters.headers.SecurityHeadersFilter
     play.filters.hosts.AllowedHostsFilter
 
-2018-04-02 16:12:12,128 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-63 - Application started (Dev)
-2018-04-02 16:15:20,261 [ERROR] from application in application-akka.actor.default-dispatcher-5 - 
-
-! @77f3191f4 - Internal server error, for (GET) [/viewOrder/0] ->
- 
-play.api.http.HttpErrorHandlerExceptions$$anon$1: Execution exception[[NullPointerException: null]]
-	at play.api.http.HttpErrorHandlerExceptions$.throwableToUsefulException(HttpErrorHandler.scala:255)
-	at play.api.http.DefaultHttpErrorHandler.onServerError(HttpErrorHandler.scala:182)
-	at play.core.server.AkkaHttpServer$$anonfun$2.applyOrElse(AkkaHttpServer.scala:310)
-	at play.core.server.AkkaHttpServer$$anonfun$2.applyOrElse(AkkaHttpServer.scala:308)
-	at scala.concurrent.Future.$anonfun$recoverWith$1(Future.scala:414)
-	at scala.concurrent.impl.Promise.$anonfun$transformWith$1(Promise.scala:37)
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:60)
-	at akka.dispatch.BatchingExecutor$AbstractBatch.processBatch(BatchingExecutor.scala:55)
-	at akka.dispatch.BatchingExecutor$BlockableBatch.$anonfun$run$1(BatchingExecutor.scala:91)
-	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:12)
-	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:81)
-	at akka.dispatch.BatchingExecutor$BlockableBatch.run(BatchingExecutor.scala:91)
-	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:40)
-	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(ForkJoinExecutorConfigurator.scala:43)
-	at akka.dispatch.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
-	at akka.dispatch.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
-	at akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
-	at akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
-Caused by: java.lang.NullPointerException: null
-	at views.html.orderConfirmed$.apply(orderConfirmed.template.scala:81)
-	at views.html.orderConfirmed$.render(orderConfirmed.template.scala:92)
-	at views.html.orderConfirmed.render(orderConfirmed.template.scala)
-	at controllers.ShopCartCtrl.viewOrder(ShopCartCtrl.java:105)
-	at router.Routes$$anonfun$routes$1.$anonfun$applyOrElse$38(Routes.scala:651)
-	at play.core.routing.HandlerInvokerFactory$$anon$3.resultCall(HandlerInvoker.scala:134)
-	at play.core.routing.HandlerInvokerFactory$$anon$3.resultCall(HandlerInvoker.scala:133)
-	at play.core.routing.HandlerInvokerFactory$JavaActionInvokerFactory$$anon$8$$anon$2$$anon$1.invocation(HandlerInvoker.scala:108)
-	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:88)
-	at play.http.DefaultActionCreator$1.call(DefaultActionCreator.java:31)
-	at controllers.security.IfCustomer.call(IfCustomer.java:17)
-	at play.mvc.Security$AuthenticatedAction.call(Security.java:69)
-	at play.db.ebean.TransactionalAction.lambda$call$6(TransactionalAction.java:18)
-	at io.ebeaninternal.server.core.DefaultServer.execute(DefaultServer.java:670)
-	at io.ebeaninternal.server.core.DefaultServer.execute(DefaultServer.java:663)
-	at io.ebean.Ebean.execute(Ebean.java:1270)
-	at play.db.ebean.TransactionalAction.call(TransactionalAction.java:18)
-	at play.core.j.JavaAction.$anonfun$apply$8(JavaAction.scala:138)
-	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:655)
-	at scala.util.Success.$anonfun$map$1(Try.scala:251)
-	at scala.util.Success.map(Try.scala:209)
-	at scala.concurrent.Future.$anonfun$map$1(Future.scala:289)
-	at scala.concurrent.impl.Promise.liftedTree1$1(Promise.scala:29)
-	at scala.concurrent.impl.Promise.$anonfun$transform$1(Promise.scala:29)
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:60)
-	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:56)
-	at play.api.libs.streams.Execution$trampoline$.execute(Execution.scala:70)
-	at play.core.j.HttpExecutionContext.execute(HttpExecutionContext.scala:48)
-	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:68)
-	at scala.concurrent.impl.Promise$KeptPromise$Kept.onComplete(Promise.scala:368)
-	at scala.concurrent.impl.Promise$KeptPromise$Kept.onComplete$(Promise.scala:367)
-	at scala.concurrent.impl.Promise$KeptPromise$Successful.onComplete(Promise.scala:375)
-	at scala.concurrent.impl.Promise.transform(Promise.scala:29)
-	at scala.concurrent.impl.Promise.transform$(Promise.scala:27)
-	at scala.concurrent.impl.Promise$KeptPromise$Successful.transform(Promise.scala:375)
-	at scala.concurrent.Future.map(Future.scala:289)
-	at scala.concurrent.Future.map$(Future.scala:289)
-	at scala.concurrent.impl.Promise$KeptPromise$Successful.map(Promise.scala:375)
-	at scala.concurrent.Future$.apply(Future.scala:655)
-	at play.core.j.JavaAction.apply(JavaAction.scala:138)
-	at play.api.mvc.Action.$anonfun$apply$2(Action.scala:96)
-	at play.api.libs.streams.StrictAccumulator.$anonfun$mapFuture$4(Accumulator.scala:174)
-	at scala.util.Try$.apply(Try.scala:209)
-	at play.api.libs.streams.StrictAccumulator.$anonfun$mapFuture$3(Accumulator.scala:174)
-	at scala.Function1.$anonfun$andThen$1(Function1.scala:52)
-	at scala.Function1.$anonfun$andThen$1(Function1.scala:52)
-	at play.api.libs.streams.StrictAccumulator.run(Accumulator.scala:207)
-	at play.core.server.AkkaHttpServer.$anonfun$runAction$4(AkkaHttpServer.scala:304)
-	at akka.http.scaladsl.util.FastFuture$.strictTransform$1(FastFuture.scala:41)
-	at akka.http.scaladsl.util.FastFuture$.$anonfun$transformWith$3(FastFuture.scala:51)
-	... 12 common frames omitted
-2018-04-02 16:16:21,230 [ERROR] from application in play-dev-mode-akka.actor.default-dispatcher-76 - 
-
-! @77f31cdk3 - Internal server error, for (GET) [/viewOrder/0] ->
- 
-play.sbt.PlayExceptions$CompilationException: Compilation error[not enough arguments for method viewOrder: (id: Long)play.api.mvc.Call.
-Unspecified value parameter id.]
-	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:34)
-	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:34)
-	at scala.Option.map(Option.scala:146)
-	at play.sbt.run.PlayReload$.$anonfun$taskFailureHandler$1(PlayReload.scala:33)
-	at scala.Option.map(Option.scala:146)
-	at play.sbt.run.PlayReload$.taskFailureHandler(PlayReload.scala:28)
-	at play.sbt.run.PlayReload$.compileFailure(PlayReload.scala:24)
-	at play.sbt.run.PlayReload$.$anonfun$compile$3(PlayReload.scala:51)
-	at scala.util.Either$LeftProjection.map(Either.scala:573)
-	at play.sbt.run.PlayReload$.compile(PlayReload.scala:51)
-	at play.sbt.run.PlayRun$.$anonfun$playRunTask$4(PlayRun.scala:76)
-	at play.runsupport.Reloader.$anonfun$reload$1(Reloader.scala:413)
-	at play.runsupport.Reloader$$anon$5.run(Reloader.scala:51)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at play.runsupport.Reloader$.play$runsupport$Reloader$$withReloaderContextClassLoader(Reloader.scala:56)
-	at play.runsupport.Reloader.reload(Reloader.scala:413)
-	at play.core.server.DevServerStart$$anon$1.get(DevServerStart.scala:123)
-	at play.core.server.Server.getHandlerFor(Server.scala:63)
-	at play.core.server.Server.getHandlerFor$(Server.scala:48)
-	at play.core.server.AkkaHttpServer.getHandlerFor(AkkaHttpServer.scala:41)
-	at play.core.server.AkkaHttpServer.getHandler(AkkaHttpServer.scala:214)
-	at play.core.server.AkkaHttpServer.handleRequest(AkkaHttpServer.scala:194)
-	at play.core.server.AkkaHttpServer.$anonfun$createServerBinding$1(AkkaHttpServer.scala:106)
-	at akka.stream.impl.fusing.MapAsync$$anon$24.onPush(Ops.scala:1191)
-	at akka.stream.impl.fusing.GraphInterpreter.processPush(GraphInterpreter.scala:512)
-	at akka.stream.impl.fusing.GraphInterpreter.processEvent(GraphInterpreter.scala:475)
-	at akka.stream.impl.fusing.GraphInterpreter.execute(GraphInterpreter.scala:371)
-	at akka.stream.impl.fusing.GraphInterpreterShell.runBatch(ActorGraphInterpreter.scala:584)
-	at akka.stream.impl.fusing.GraphInterpreterShell$AsyncInput.execute(ActorGraphInterpreter.scala:468)
-	at akka.stream.impl.fusing.GraphInterpreterShell.processEvent(ActorGraphInterpreter.scala:559)
-	at akka.stream.impl.fusing.ActorGraphInterpreter.akka$stream$impl$fusing$ActorGraphInterpreter$$processEvent(ActorGraphInterpreter.scala:741)
-	at akka.stream.impl.fusing.ActorGraphInterpreter$$anonfun$receive$1.applyOrElse(ActorGraphInterpreter.scala:756)
-	at akka.actor.Actor.aroundReceive(Actor.scala:517)
-	at akka.actor.Actor.aroundReceive$(Actor.scala:515)
-	at akka.stream.impl.fusing.ActorGraphInterpreter.aroundReceive(ActorGraphInterpreter.scala:666)
-	at akka.actor.ActorCell.receiveMessage(ActorCell.scala:527)
-	at akka.actor.ActorCell.invoke(ActorCell.scala:496)
-	at akka.dispatch.Mailbox.processMailbox(Mailbox.scala:257)
-	at akka.dispatch.Mailbox.run(Mailbox.scala:224)
-	at akka.dispatch.Mailbox.exec(Mailbox.scala:234)
-	at akka.dispatch.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
-	at akka.dispatch.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
-	at akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
-	at akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
-2018-04-02 16:16:49,916 [ERROR] from application in play-dev-mode-akka.actor.default-dispatcher-76 - 
-
-! @77f31e45a - Internal server error, for (GET) [/viewOrder/0] ->
- 
-play.sbt.PlayExceptions$CompilationException: Compilation error[missing argument list for method viewOrder in class ShopCartCtrl
-Unapplied methods are only converted to functions when a function type is expected.
-You can make this conversion explicit by writing `viewOrder _` or `viewOrder(_)` instead of `viewOrder`.]
-	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:34)
-	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:34)
-	at scala.Option.map(Option.scala:146)
-	at play.sbt.run.PlayReload$.$anonfun$taskFailureHandler$1(PlayReload.scala:33)
-	at scala.Option.map(Option.scala:146)
-	at play.sbt.run.PlayReload$.taskFailureHandler(PlayReload.scala:28)
-	at play.sbt.run.PlayReload$.compileFailure(PlayReload.scala:24)
-	at play.sbt.run.PlayReload$.$anonfun$compile$3(PlayReload.scala:51)
-	at scala.util.Either$LeftProjection.map(Either.scala:573)
-	at play.sbt.run.PlayReload$.compile(PlayReload.scala:51)
-	at play.sbt.run.PlayRun$.$anonfun$playRunTask$4(PlayRun.scala:76)
-	at play.runsupport.Reloader.$anonfun$reload$1(Reloader.scala:413)
-	at play.runsupport.Reloader$$anon$5.run(Reloader.scala:51)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at play.runsupport.Reloader$.play$runsupport$Reloader$$withReloaderContextClassLoader(Reloader.scala:56)
-	at play.runsupport.Reloader.reload(Reloader.scala:413)
-	at play.core.server.DevServerStart$$anon$1.get(DevServerStart.scala:123)
-	at play.core.server.Server.getHandlerFor(Server.scala:63)
-	at play.core.server.Server.getHandlerFor$(Server.scala:48)
-	at play.core.server.AkkaHttpServer.getHandlerFor(AkkaHttpServer.scala:41)
-	at play.core.server.AkkaHttpServer.getHandler(AkkaHttpServer.scala:214)
-	at play.core.server.AkkaHttpServer.handleRequest(AkkaHttpServer.scala:194)
-	at play.core.server.AkkaHttpServer.$anonfun$createServerBinding$1(AkkaHttpServer.scala:106)
-	at akka.stream.impl.fusing.MapAsync$$anon$24.onPush(Ops.scala:1191)
-	at akka.stream.impl.fusing.GraphInterpreter.processPush(GraphInterpreter.scala:512)
-	at akka.stream.impl.fusing.GraphInterpreter.processEvent(GraphInterpreter.scala:475)
-	at akka.stream.impl.fusing.GraphInterpreter.execute(GraphInterpreter.scala:371)
-	at akka.stream.impl.fusing.GraphInterpreterShell.runBatch(ActorGraphInterpreter.scala:584)
-	at akka.stream.impl.fusing.GraphInterpreterShell$AsyncInput.execute(ActorGraphInterpreter.scala:468)
-	at akka.stream.impl.fusing.GraphInterpreterShell.processEvent(ActorGraphInterpreter.scala:559)
-	at akka.stream.impl.fusing.ActorGraphInterpreter.akka$stream$impl$fusing$ActorGraphInterpreter$$processEvent(ActorGraphInterpreter.scala:741)
-	at akka.stream.impl.fusing.ActorGraphInterpreter$$anonfun$receive$1.applyOrElse(ActorGraphInterpreter.scala:756)
-	at akka.actor.Actor.aroundReceive(Actor.scala:517)
-	at akka.actor.Actor.aroundReceive$(Actor.scala:515)
-	at akka.stream.impl.fusing.ActorGraphInterpreter.aroundReceive(ActorGraphInterpreter.scala:666)
-	at akka.actor.ActorCell.receiveMessage(ActorCell.scala:527)
-	at akka.actor.ActorCell.invoke(ActorCell.scala:496)
-	at akka.dispatch.Mailbox.processMailbox(Mailbox.scala:257)
-	at akka.dispatch.Mailbox.run(Mailbox.scala:224)
-	at akka.dispatch.Mailbox.exec(Mailbox.scala:234)
-	at akka.dispatch.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
-	at akka.dispatch.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
-	at akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
-	at akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
-2018-04-02 16:18:03,836 [ERROR] from application in play-dev-mode-akka.actor.default-dispatcher-76 - 
-
-! @77f31i9ec - Internal server error, for (GET) [/viewOrder/0] ->
- 
-play.sbt.PlayExceptions$CompilationException: Compilation error[method render in class views.html.viewOrder cannot be applied to given types;
-  required: java.util.List<models.shopping.OrderItem>,models.users.Member,play.api.Environment
-  found: models.users.Customer
-  reason: actual and formal argument lists differ in length]
-	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:34)
-	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:34)
-	at scala.Option.map(Option.scala:146)
-	at play.sbt.run.PlayReload$.$anonfun$taskFailureHandler$1(PlayReload.scala:33)
-	at scala.Option.map(Option.scala:146)
-	at play.sbt.run.PlayReload$.taskFailureHandler(PlayReload.scala:28)
-	at play.sbt.run.PlayReload$.compileFailure(PlayReload.scala:24)
-	at play.sbt.run.PlayReload$.$anonfun$compile$3(PlayReload.scala:51)
-	at scala.util.Either$LeftProjection.map(Either.scala:573)
-	at play.sbt.run.PlayReload$.compile(PlayReload.scala:51)
-	at play.sbt.run.PlayRun$.$anonfun$playRunTask$4(PlayRun.scala:76)
-	at play.runsupport.Reloader.$anonfun$reload$1(Reloader.scala:413)
-	at play.runsupport.Reloader$$anon$5.run(Reloader.scala:51)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at play.runsupport.Reloader$.play$runsupport$Reloader$$withReloaderContextClassLoader(Reloader.scala:56)
-	at play.runsupport.Reloader.reload(Reloader.scala:413)
-	at play.core.server.DevServerStart$$anon$1.get(DevServerStart.scala:123)
-	at play.core.server.Server.getHandlerFor(Server.scala:63)
-	at play.core.server.Server.getHandlerFor$(Server.scala:48)
-	at play.core.server.AkkaHttpServer.getHandlerFor(AkkaHttpServer.scala:41)
-	at play.core.server.AkkaHttpServer.getHandler(AkkaHttpServer.scala:214)
-	at play.core.server.AkkaHttpServer.handleRequest(AkkaHttpServer.scala:194)
-	at play.core.server.AkkaHttpServer.$anonfun$createServerBinding$1(AkkaHttpServer.scala:106)
-	at akka.stream.impl.fusing.MapAsync$$anon$24.onPush(Ops.scala:1191)
-	at akka.stream.impl.fusing.GraphInterpreter.processPush(GraphInterpreter.scala:512)
-	at akka.stream.impl.fusing.GraphInterpreter.processEvent(GraphInterpreter.scala:475)
-	at akka.stream.impl.fusing.GraphInterpreter.execute(GraphInterpreter.scala:371)
-	at akka.stream.impl.fusing.GraphInterpreterShell.runBatch(ActorGraphInterpreter.scala:584)
-	at akka.stream.impl.fusing.GraphInterpreterShell$AsyncInput.execute(ActorGraphInterpreter.scala:468)
-	at akka.stream.impl.fusing.GraphInterpreterShell.processEvent(ActorGraphInterpreter.scala:559)
-	at akka.stream.impl.fusing.ActorGraphInterpreter.akka$stream$impl$fusing$ActorGraphInterpreter$$processEvent(ActorGraphInterpreter.scala:741)
-	at akka.stream.impl.fusing.ActorGraphInterpreter$$anonfun$receive$1.applyOrElse(ActorGraphInterpreter.scala:756)
-	at akka.actor.Actor.aroundReceive(Actor.scala:517)
-	at akka.actor.Actor.aroundReceive$(Actor.scala:515)
-	at akka.stream.impl.fusing.ActorGraphInterpreter.aroundReceive(ActorGraphInterpreter.scala:666)
-	at akka.actor.ActorCell.receiveMessage(ActorCell.scala:527)
-	at akka.actor.ActorCell.invoke(ActorCell.scala:496)
-	at akka.dispatch.Mailbox.processMailbox(Mailbox.scala:257)
-	at akka.dispatch.Mailbox.run(Mailbox.scala:224)
-	at akka.dispatch.Mailbox.exec(Mailbox.scala:234)
-	at akka.dispatch.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
-	at akka.dispatch.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
-	at akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
-	at akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
-2018-04-02 16:19:15,152 [ERROR] from application in play-dev-mode-akka.actor.default-dispatcher-76 - 
-
-! @77f31mb1a - Internal server error, for (GET) [/viewOrder/0] ->
- 
-play.sbt.PlayExceptions$CompilationException: Compilation error[cannot find symbol
-  symbol:   variable id
-  location: class controllers.ShopCartCtrl]
-	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:34)
-	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:34)
-	at scala.Option.map(Option.scala:146)
-	at play.sbt.run.PlayReload$.$anonfun$taskFailureHandler$1(PlayReload.scala:33)
-	at scala.Option.map(Option.scala:146)
-	at play.sbt.run.PlayReload$.taskFailureHandler(PlayReload.scala:28)
-	at play.sbt.run.PlayReload$.compileFailure(PlayReload.scala:24)
-	at play.sbt.run.PlayReload$.$anonfun$compile$3(PlayReload.scala:51)
-	at scala.util.Either$LeftProjection.map(Either.scala:573)
-	at play.sbt.run.PlayReload$.compile(PlayReload.scala:51)
-	at play.sbt.run.PlayRun$.$anonfun$playRunTask$4(PlayRun.scala:76)
-	at play.runsupport.Reloader.$anonfun$reload$1(Reloader.scala:413)
-	at play.runsupport.Reloader$$anon$5.run(Reloader.scala:51)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at play.runsupport.Reloader$.play$runsupport$Reloader$$withReloaderContextClassLoader(Reloader.scala:56)
-	at play.runsupport.Reloader.reload(Reloader.scala:413)
-	at play.core.server.DevServerStart$$anon$1.get(DevServerStart.scala:123)
-	at play.core.server.Server.getHandlerFor(Server.scala:63)
-	at play.core.server.Server.getHandlerFor$(Server.scala:48)
-	at play.core.server.AkkaHttpServer.getHandlerFor(AkkaHttpServer.scala:41)
-	at play.core.server.AkkaHttpServer.getHandler(AkkaHttpServer.scala:214)
-	at play.core.server.AkkaHttpServer.handleRequest(AkkaHttpServer.scala:194)
-	at play.core.server.AkkaHttpServer.$anonfun$createServerBinding$1(AkkaHttpServer.scala:106)
-	at akka.stream.impl.fusing.MapAsync$$anon$24.onPush(Ops.scala:1191)
-	at akka.stream.impl.fusing.GraphInterpreter.processPush(GraphInterpreter.scala:512)
-	at akka.stream.impl.fusing.GraphInterpreter.processEvent(GraphInterpreter.scala:475)
-	at akka.stream.impl.fusing.GraphInterpreter.execute(GraphInterpreter.scala:371)
-	at akka.stream.impl.fusing.GraphInterpreterShell.runBatch(ActorGraphInterpreter.scala:584)
-	at akka.stream.impl.fusing.GraphInterpreterShell$AsyncInput.execute(ActorGraphInterpreter.scala:468)
-	at akka.stream.impl.fusing.GraphInterpreterShell.processEvent(ActorGraphInterpreter.scala:559)
-	at akka.stream.impl.fusing.ActorGraphInterpreter.akka$stream$impl$fusing$ActorGraphInterpreter$$processEvent(ActorGraphInterpreter.scala:741)
-	at akka.stream.impl.fusing.ActorGraphInterpreter$$anonfun$receive$1.applyOrElse(ActorGraphInterpreter.scala:756)
-	at akka.actor.Actor.aroundReceive(Actor.scala:517)
-	at akka.actor.Actor.aroundReceive$(Actor.scala:515)
-	at akka.stream.impl.fusing.ActorGraphInterpreter.aroundReceive(ActorGraphInterpreter.scala:666)
-	at akka.actor.ActorCell.receiveMessage(ActorCell.scala:527)
-	at akka.actor.ActorCell.invoke(ActorCell.scala:496)
-	at akka.dispatch.Mailbox.processMailbox(Mailbox.scala:257)
-	at akka.dispatch.Mailbox.run(Mailbox.scala:224)
-	at akka.dispatch.Mailbox.exec(Mailbox.scala:234)
-	at akka.dispatch.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
-	at akka.dispatch.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
-	at akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
-	at akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
-2018-04-02 16:19:37,380 [ERROR] from application in play-dev-mode-akka.actor.default-dispatcher-80 - 
-
-! @77f31nho9 - Internal server error, for (GET) [/viewOrder/0] ->
- 
-play.sbt.PlayExceptions$CompilationException: Compilation error[method render in class views.html.viewOrder cannot be applied to given types;
-  required: java.util.List<models.shopping.OrderItem>,models.users.Member,play.api.Environment
-  found: models.users.Customer
-  reason: actual and formal argument lists differ in length]
-	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:34)
-	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:34)
-	at scala.Option.map(Option.scala:146)
-	at play.sbt.run.PlayReload$.$anonfun$taskFailureHandler$1(PlayReload.scala:33)
-	at scala.Option.map(Option.scala:146)
-	at play.sbt.run.PlayReload$.taskFailureHandler(PlayReload.scala:28)
-	at play.sbt.run.PlayReload$.compileFailure(PlayReload.scala:24)
-	at play.sbt.run.PlayReload$.$anonfun$compile$3(PlayReload.scala:51)
-	at scala.util.Either$LeftProjection.map(Either.scala:573)
-	at play.sbt.run.PlayReload$.compile(PlayReload.scala:51)
-	at play.sbt.run.PlayRun$.$anonfun$playRunTask$4(PlayRun.scala:76)
-	at play.runsupport.Reloader.$anonfun$reload$1(Reloader.scala:413)
-	at play.runsupport.Reloader$$anon$5.run(Reloader.scala:51)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at play.runsupport.Reloader$.play$runsupport$Reloader$$withReloaderContextClassLoader(Reloader.scala:56)
-	at play.runsupport.Reloader.reload(Reloader.scala:413)
-	at play.core.server.DevServerStart$$anon$1.get(DevServerStart.scala:123)
-	at play.core.server.Server.getHandlerFor(Server.scala:63)
-	at play.core.server.Server.getHandlerFor$(Server.scala:48)
-	at play.core.server.AkkaHttpServer.getHandlerFor(AkkaHttpServer.scala:41)
-	at play.core.server.AkkaHttpServer.getHandler(AkkaHttpServer.scala:214)
-	at play.core.server.AkkaHttpServer.handleRequest(AkkaHttpServer.scala:194)
-	at play.core.server.AkkaHttpServer.$anonfun$createServerBinding$1(AkkaHttpServer.scala:106)
-	at akka.stream.impl.fusing.MapAsync$$anon$24.onPush(Ops.scala:1191)
-	at akka.stream.impl.fusing.GraphInterpreter.processPush(GraphInterpreter.scala:512)
-	at akka.stream.impl.fusing.GraphInterpreter.processEvent(GraphInterpreter.scala:475)
-	at akka.stream.impl.fusing.GraphInterpreter.execute(GraphInterpreter.scala:371)
-	at akka.stream.impl.fusing.GraphInterpreterShell.runBatch(ActorGraphInterpreter.scala:584)
-	at akka.stream.impl.fusing.GraphInterpreterShell$AsyncInput.execute(ActorGraphInterpreter.scala:468)
-	at akka.stream.impl.fusing.GraphInterpreterShell.processEvent(ActorGraphInterpreter.scala:559)
-	at akka.stream.impl.fusing.ActorGraphInterpreter.akka$stream$impl$fusing$ActorGraphInterpreter$$processEvent(ActorGraphInterpreter.scala:741)
-	at akka.stream.impl.fusing.ActorGraphInterpreter$$anonfun$receive$1.applyOrElse(ActorGraphInterpreter.scala:756)
-	at akka.actor.Actor.aroundReceive(Actor.scala:517)
-	at akka.actor.Actor.aroundReceive$(Actor.scala:515)
-	at akka.stream.impl.fusing.ActorGraphInterpreter.aroundReceive(ActorGraphInterpreter.scala:666)
-	at akka.actor.ActorCell.receiveMessage(ActorCell.scala:527)
-	at akka.actor.ActorCell.invoke(ActorCell.scala:496)
-	at akka.dispatch.Mailbox.processMailbox(Mailbox.scala:257)
-	at akka.dispatch.Mailbox.run(Mailbox.scala:224)
-	at akka.dispatch.Mailbox.exec(Mailbox.scala:234)
-	at akka.dispatch.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
-	at akka.dispatch.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
-	at akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
-	at akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
-2018-04-02 16:21:13,376 [ERROR] from application in play-dev-mode-akka.actor.default-dispatcher-86 - 
-
-! @77f3233ob - Internal server error, for (GET) [/viewOrder/0] ->
- 
-play.sbt.PlayExceptions$CompilationException: Compilation error[cannot find symbol
-  symbol:   class List
-  location: class controllers.ShopCartCtrl]
-	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:34)
-	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:34)
-	at scala.Option.map(Option.scala:146)
-	at play.sbt.run.PlayReload$.$anonfun$taskFailureHandler$1(PlayReload.scala:33)
-	at scala.Option.map(Option.scala:146)
-	at play.sbt.run.PlayReload$.taskFailureHandler(PlayReload.scala:28)
-	at play.sbt.run.PlayReload$.compileFailure(PlayReload.scala:24)
-	at play.sbt.run.PlayReload$.$anonfun$compile$3(PlayReload.scala:51)
-	at scala.util.Either$LeftProjection.map(Either.scala:573)
-	at play.sbt.run.PlayReload$.compile(PlayReload.scala:51)
-	at play.sbt.run.PlayRun$.$anonfun$playRunTask$4(PlayRun.scala:76)
-	at play.runsupport.Reloader.$anonfun$reload$1(Reloader.scala:413)
-	at play.runsupport.Reloader$$anon$5.run(Reloader.scala:51)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at play.runsupport.Reloader$.play$runsupport$Reloader$$withReloaderContextClassLoader(Reloader.scala:56)
-	at play.runsupport.Reloader.reload(Reloader.scala:413)
-	at play.core.server.DevServerStart$$anon$1.get(DevServerStart.scala:123)
-	at play.core.server.Server.getHandlerFor(Server.scala:63)
-	at play.core.server.Server.getHandlerFor$(Server.scala:48)
-	at play.core.server.AkkaHttpServer.getHandlerFor(AkkaHttpServer.scala:41)
-	at play.core.server.AkkaHttpServer.getHandler(AkkaHttpServer.scala:214)
-	at play.core.server.AkkaHttpServer.handleRequest(AkkaHttpServer.scala:194)
-	at play.core.server.AkkaHttpServer.$anonfun$createServerBinding$1(AkkaHttpServer.scala:106)
-	at akka.stream.impl.fusing.MapAsync$$anon$24.onPush(Ops.scala:1191)
-	at akka.stream.impl.fusing.GraphInterpreter.processPush(GraphInterpreter.scala:512)
-	at akka.stream.impl.fusing.GraphInterpreter.processEvent(GraphInterpreter.scala:475)
-	at akka.stream.impl.fusing.GraphInterpreter.execute(GraphInterpreter.scala:371)
-	at akka.stream.impl.fusing.GraphInterpreterShell.runBatch(ActorGraphInterpreter.scala:584)
-	at akka.stream.impl.fusing.GraphInterpreterShell$AsyncInput.execute(ActorGraphInterpreter.scala:468)
-	at akka.stream.impl.fusing.GraphInterpreterShell.processEvent(ActorGraphInterpreter.scala:559)
-	at akka.stream.impl.fusing.ActorGraphInterpreter.akka$stream$impl$fusing$ActorGraphInterpreter$$processEvent(ActorGraphInterpreter.scala:741)
-	at akka.stream.impl.fusing.ActorGraphInterpreter$$anonfun$receive$1.applyOrElse(ActorGraphInterpreter.scala:756)
-	at akka.actor.Actor.aroundReceive(Actor.scala:517)
-	at akka.actor.Actor.aroundReceive$(Actor.scala:515)
-	at akka.stream.impl.fusing.ActorGraphInterpreter.aroundReceive(ActorGraphInterpreter.scala:666)
-	at akka.actor.ActorCell.receiveMessage(ActorCell.scala:527)
-	at akka.actor.ActorCell.invoke(ActorCell.scala:496)
-	at akka.dispatch.Mailbox.processMailbox(Mailbox.scala:257)
-	at akka.dispatch.Mailbox.run(Mailbox.scala:224)
-	at akka.dispatch.Mailbox.exec(Mailbox.scala:234)
-	at akka.dispatch.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
-	at akka.dispatch.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
-	at akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
-	at akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
-2018-04-02 16:22:32,693 [ERROR] from application in play-dev-mode-akka.actor.default-dispatcher-76 - 
-
-! @77f327h74 - Internal server error, for (GET) [/] ->
- 
-play.sbt.PlayExceptions$CompilationException: Compilation error[cannot find symbol
-  symbol:   class List
-  location: class controllers.ShopCartCtrl]
-	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:34)
-	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:34)
-	at scala.Option.map(Option.scala:146)
-	at play.sbt.run.PlayReload$.$anonfun$taskFailureHandler$1(PlayReload.scala:33)
-	at scala.Option.map(Option.scala:146)
-	at play.sbt.run.PlayReload$.taskFailureHandler(PlayReload.scala:28)
-	at play.sbt.run.PlayReload$.compileFailure(PlayReload.scala:24)
-	at play.sbt.run.PlayReload$.$anonfun$compile$3(PlayReload.scala:51)
-	at scala.util.Either$LeftProjection.map(Either.scala:573)
-	at play.sbt.run.PlayReload$.compile(PlayReload.scala:51)
-	at play.sbt.run.PlayRun$.$anonfun$playRunTask$4(PlayRun.scala:76)
-	at play.runsupport.Reloader.$anonfun$reload$1(Reloader.scala:413)
-	at play.runsupport.Reloader$$anon$5.run(Reloader.scala:51)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at play.runsupport.Reloader$.play$runsupport$Reloader$$withReloaderContextClassLoader(Reloader.scala:56)
-	at play.runsupport.Reloader.reload(Reloader.scala:413)
-	at play.core.server.DevServerStart$$anon$1.get(DevServerStart.scala:123)
-	at play.core.server.Server.getHandlerFor(Server.scala:63)
-	at play.core.server.Server.getHandlerFor$(Server.scala:48)
-	at play.core.server.AkkaHttpServer.getHandlerFor(AkkaHttpServer.scala:41)
-	at play.core.server.AkkaHttpServer.getHandler(AkkaHttpServer.scala:214)
-	at play.core.server.AkkaHttpServer.handleRequest(AkkaHttpServer.scala:194)
-	at play.core.server.AkkaHttpServer.$anonfun$createServerBinding$1(AkkaHttpServer.scala:106)
-	at akka.stream.impl.fusing.MapAsync$$anon$24.onPush(Ops.scala:1191)
-	at akka.stream.impl.fusing.GraphInterpreter.processPush(GraphInterpreter.scala:512)
-	at akka.stream.impl.fusing.GraphInterpreter.processEvent(GraphInterpreter.scala:475)
-	at akka.stream.impl.fusing.GraphInterpreter.execute(GraphInterpreter.scala:371)
-	at akka.stream.impl.fusing.GraphInterpreterShell.runBatch(ActorGraphInterpreter.scala:584)
-	at akka.stream.impl.fusing.GraphInterpreterShell$AsyncInput.execute(ActorGraphInterpreter.scala:468)
-	at akka.stream.impl.fusing.GraphInterpreterShell.processEvent(ActorGraphInterpreter.scala:559)
-	at akka.stream.impl.fusing.ActorGraphInterpreter.akka$stream$impl$fusing$ActorGraphInterpreter$$processEvent(ActorGraphInterpreter.scala:741)
-	at akka.stream.impl.fusing.ActorGraphInterpreter$$anonfun$receive$1.applyOrElse(ActorGraphInterpreter.scala:756)
-	at akka.actor.Actor.aroundReceive(Actor.scala:517)
-	at akka.actor.Actor.aroundReceive$(Actor.scala:515)
-	at akka.stream.impl.fusing.ActorGraphInterpreter.aroundReceive(ActorGraphInterpreter.scala:666)
-	at akka.actor.ActorCell.receiveMessage(ActorCell.scala:527)
-	at akka.actor.ActorCell.invoke(ActorCell.scala:496)
-	at akka.dispatch.Mailbox.processMailbox(Mailbox.scala:257)
-	at akka.dispatch.Mailbox.run(Mailbox.scala:224)
-	at akka.dispatch.Mailbox.exec(Mailbox.scala:234)
-	at akka.dispatch.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
-	at akka.dispatch.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
-	at akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
-	at akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
-2018-04-02 16:22:59,951 [ERROR] from application in play-dev-mode-akka.actor.default-dispatcher-91 - 
-
-! @77f3295fe - Internal server error, for (GET) [/viewOrder/0] ->
- 
-play.sbt.PlayExceptions$CompilationException: Compilation error[`;' expected but identifier found.]
-	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:34)
-	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:34)
-	at scala.Option.map(Option.scala:146)
-	at play.sbt.run.PlayReload$.$anonfun$taskFailureHandler$1(PlayReload.scala:33)
-	at scala.Option.map(Option.scala:146)
-	at play.sbt.run.PlayReload$.taskFailureHandler(PlayReload.scala:28)
-	at play.sbt.run.PlayReload$.compileFailure(PlayReload.scala:24)
-	at play.sbt.run.PlayReload$.$anonfun$compile$3(PlayReload.scala:51)
-	at scala.util.Either$LeftProjection.map(Either.scala:573)
-	at play.sbt.run.PlayReload$.compile(PlayReload.scala:51)
-	at play.sbt.run.PlayRun$.$anonfun$playRunTask$4(PlayRun.scala:76)
-	at play.runsupport.Reloader.$anonfun$reload$1(Reloader.scala:413)
-	at play.runsupport.Reloader$$anon$5.run(Reloader.scala:51)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at play.runsupport.Reloader$.play$runsupport$Reloader$$withReloaderContextClassLoader(Reloader.scala:56)
-	at play.runsupport.Reloader.reload(Reloader.scala:413)
-	at play.core.server.DevServerStart$$anon$1.get(DevServerStart.scala:123)
-	at play.core.server.Server.getHandlerFor(Server.scala:63)
-	at play.core.server.Server.getHandlerFor$(Server.scala:48)
-	at play.core.server.AkkaHttpServer.getHandlerFor(AkkaHttpServer.scala:41)
-	at play.core.server.AkkaHttpServer.getHandler(AkkaHttpServer.scala:214)
-	at play.core.server.AkkaHttpServer.handleRequest(AkkaHttpServer.scala:194)
-	at play.core.server.AkkaHttpServer.$anonfun$createServerBinding$1(AkkaHttpServer.scala:106)
-	at akka.stream.impl.fusing.MapAsync$$anon$24.onPush(Ops.scala:1191)
-	at akka.stream.impl.fusing.GraphInterpreter.processPush(GraphInterpreter.scala:512)
-	at akka.stream.impl.fusing.GraphInterpreter.processEvent(GraphInterpreter.scala:475)
-	at akka.stream.impl.fusing.GraphInterpreter.execute(GraphInterpreter.scala:371)
-	at akka.stream.impl.fusing.GraphInterpreterShell.runBatch(ActorGraphInterpreter.scala:584)
-	at akka.stream.impl.fusing.GraphInterpreterShell$AsyncInput.execute(ActorGraphInterpreter.scala:468)
-	at akka.stream.impl.fusing.GraphInterpreterShell.processEvent(ActorGraphInterpreter.scala:559)
-	at akka.stream.impl.fusing.ActorGraphInterpreter.akka$stream$impl$fusing$ActorGraphInterpreter$$processEvent(ActorGraphInterpreter.scala:741)
-	at akka.stream.impl.fusing.ActorGraphInterpreter$$anonfun$receive$1.applyOrElse(ActorGraphInterpreter.scala:756)
-	at akka.actor.Actor.aroundReceive(Actor.scala:517)
-	at akka.actor.Actor.aroundReceive$(Actor.scala:515)
-	at akka.stream.impl.fusing.ActorGraphInterpreter.aroundReceive(ActorGraphInterpreter.scala:666)
-	at akka.actor.ActorCell.receiveMessage(ActorCell.scala:527)
-	at akka.actor.ActorCell.invoke(ActorCell.scala:496)
-	at akka.dispatch.Mailbox.processMailbox(Mailbox.scala:257)
-	at akka.dispatch.Mailbox.run(Mailbox.scala:224)
-	at akka.dispatch.Mailbox.exec(Mailbox.scala:234)
-	at akka.dispatch.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
-	at akka.dispatch.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
-	at akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
-	at akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
-2018-04-02 16:23:25,582 [ERROR] from application in play-dev-mode-akka.actor.default-dispatcher-91 - 
-
-! @77f32ahd9 - Internal server error, for (GET) [/viewOrder/0] ->
- 
-play.sbt.PlayExceptions$CompilationException: Compilation error[method render in class views.html.viewOrder cannot be applied to given types;
-  required: java.util.List<models.shopping.OrderItem>,models.users.Member,play.api.Environment
-  found: models.users.Customer,java.util.List<models.shopping.OrderItem>
-  reason: actual and formal argument lists differ in length]
-	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:34)
-	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:34)
-	at scala.Option.map(Option.scala:146)
-	at play.sbt.run.PlayReload$.$anonfun$taskFailureHandler$1(PlayReload.scala:33)
-	at scala.Option.map(Option.scala:146)
-	at play.sbt.run.PlayReload$.taskFailureHandler(PlayReload.scala:28)
-	at play.sbt.run.PlayReload$.compileFailure(PlayReload.scala:24)
-	at play.sbt.run.PlayReload$.$anonfun$compile$3(PlayReload.scala:51)
-	at scala.util.Either$LeftProjection.map(Either.scala:573)
-	at play.sbt.run.PlayReload$.compile(PlayReload.scala:51)
-	at play.sbt.run.PlayRun$.$anonfun$playRunTask$4(PlayRun.scala:76)
-	at play.runsupport.Reloader.$anonfun$reload$1(Reloader.scala:413)
-	at play.runsupport.Reloader$$anon$5.run(Reloader.scala:51)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at play.runsupport.Reloader$.play$runsupport$Reloader$$withReloaderContextClassLoader(Reloader.scala:56)
-	at play.runsupport.Reloader.reload(Reloader.scala:413)
-	at play.core.server.DevServerStart$$anon$1.get(DevServerStart.scala:123)
-	at play.core.server.Server.getHandlerFor(Server.scala:63)
-	at play.core.server.Server.getHandlerFor$(Server.scala:48)
-	at play.core.server.AkkaHttpServer.getHandlerFor(AkkaHttpServer.scala:41)
-	at play.core.server.AkkaHttpServer.getHandler(AkkaHttpServer.scala:214)
-	at play.core.server.AkkaHttpServer.handleRequest(AkkaHttpServer.scala:194)
-	at play.core.server.AkkaHttpServer.$anonfun$createServerBinding$1(AkkaHttpServer.scala:106)
-	at akka.stream.impl.fusing.MapAsync$$anon$24.onPush(Ops.scala:1191)
-	at akka.stream.impl.fusing.GraphInterpreter.processPush(GraphInterpreter.scala:512)
-	at akka.stream.impl.fusing.GraphInterpreter.processEvent(GraphInterpreter.scala:475)
-	at akka.stream.impl.fusing.GraphInterpreter.execute(GraphInterpreter.scala:371)
-	at akka.stream.impl.fusing.GraphInterpreterShell.runBatch(ActorGraphInterpreter.scala:584)
-	at akka.stream.impl.fusing.GraphInterpreterShell$AsyncInput.execute(ActorGraphInterpreter.scala:468)
-	at akka.stream.impl.fusing.GraphInterpreterShell.processEvent(ActorGraphInterpreter.scala:559)
-	at akka.stream.impl.fusing.ActorGraphInterpreter.akka$stream$impl$fusing$ActorGraphInterpreter$$processEvent(ActorGraphInterpreter.scala:741)
-	at akka.stream.impl.fusing.ActorGraphInterpreter$$anonfun$receive$1.applyOrElse(ActorGraphInterpreter.scala:756)
-	at akka.actor.Actor.aroundReceive(Actor.scala:517)
-	at akka.actor.Actor.aroundReceive$(Actor.scala:515)
-	at akka.stream.impl.fusing.ActorGraphInterpreter.aroundReceive(ActorGraphInterpreter.scala:666)
-	at akka.actor.ActorCell.receiveMessage(ActorCell.scala:527)
-	at akka.actor.ActorCell.invoke(ActorCell.scala:496)
-	at akka.dispatch.Mailbox.processMailbox(Mailbox.scala:257)
-	at akka.dispatch.Mailbox.run(Mailbox.scala:224)
-	at akka.dispatch.Mailbox.exec(Mailbox.scala:234)
-	at akka.dispatch.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
-	at akka.dispatch.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
-	at akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
-	at akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
-2018-04-02 16:23:58,087 [ERROR] from application in play-dev-mode-akka.actor.default-dispatcher-89 - 
-
-! @77f32cdfd - Internal server error, for (GET) [/viewOrder/0] ->
- 
-play.sbt.PlayExceptions$CompilationException: Compilation error[cannot find symbol
-  symbol:   variable e
-  location: class controllers.ShopCartCtrl]
-	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:34)
-	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:34)
-	at scala.Option.map(Option.scala:146)
-	at play.sbt.run.PlayReload$.$anonfun$taskFailureHandler$1(PlayReload.scala:33)
-	at scala.Option.map(Option.scala:146)
-	at play.sbt.run.PlayReload$.taskFailureHandler(PlayReload.scala:28)
-	at play.sbt.run.PlayReload$.compileFailure(PlayReload.scala:24)
-	at play.sbt.run.PlayReload$.$anonfun$compile$3(PlayReload.scala:51)
-	at scala.util.Either$LeftProjection.map(Either.scala:573)
-	at play.sbt.run.PlayReload$.compile(PlayReload.scala:51)
-	at play.sbt.run.PlayRun$.$anonfun$playRunTask$4(PlayRun.scala:76)
-	at play.runsupport.Reloader.$anonfun$reload$1(Reloader.scala:413)
-	at play.runsupport.Reloader$$anon$5.run(Reloader.scala:51)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at play.runsupport.Reloader$.play$runsupport$Reloader$$withReloaderContextClassLoader(Reloader.scala:56)
-	at play.runsupport.Reloader.reload(Reloader.scala:413)
-	at play.core.server.DevServerStart$$anon$1.get(DevServerStart.scala:123)
-	at play.core.server.Server.getHandlerFor(Server.scala:63)
-	at play.core.server.Server.getHandlerFor$(Server.scala:48)
-	at play.core.server.AkkaHttpServer.getHandlerFor(AkkaHttpServer.scala:41)
-	at play.core.server.AkkaHttpServer.getHandler(AkkaHttpServer.scala:214)
-	at play.core.server.AkkaHttpServer.handleRequest(AkkaHttpServer.scala:194)
-	at play.core.server.AkkaHttpServer.$anonfun$createServerBinding$1(AkkaHttpServer.scala:106)
-	at akka.stream.impl.fusing.MapAsync$$anon$24.onPush(Ops.scala:1191)
-	at akka.stream.impl.fusing.GraphInterpreter.processPush(GraphInterpreter.scala:512)
-	at akka.stream.impl.fusing.GraphInterpreter.processEvent(GraphInterpreter.scala:475)
-	at akka.stream.impl.fusing.GraphInterpreter.execute(GraphInterpreter.scala:371)
-	at akka.stream.impl.fusing.GraphInterpreterShell.runBatch(ActorGraphInterpreter.scala:584)
-	at akka.stream.impl.fusing.GraphInterpreterShell$AsyncInput.execute(ActorGraphInterpreter.scala:468)
-	at akka.stream.impl.fusing.GraphInterpreterShell.processEvent(ActorGraphInterpreter.scala:559)
-	at akka.stream.impl.fusing.ActorGraphInterpreter.akka$stream$impl$fusing$ActorGraphInterpreter$$processEvent(ActorGraphInterpreter.scala:741)
-	at akka.stream.impl.fusing.ActorGraphInterpreter$$anonfun$receive$1.applyOrElse(ActorGraphInterpreter.scala:756)
-	at akka.actor.Actor.aroundReceive(Actor.scala:517)
-	at akka.actor.Actor.aroundReceive$(Actor.scala:515)
-	at akka.stream.impl.fusing.ActorGraphInterpreter.aroundReceive(ActorGraphInterpreter.scala:666)
-	at akka.actor.ActorCell.receiveMessage(ActorCell.scala:527)
-	at akka.actor.ActorCell.invoke(ActorCell.scala:496)
-	at akka.dispatch.Mailbox.processMailbox(Mailbox.scala:257)
-	at akka.dispatch.Mailbox.run(Mailbox.scala:224)
-	at akka.dispatch.Mailbox.exec(Mailbox.scala:234)
-	at akka.dispatch.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
-	at akka.dispatch.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
-	at akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
-	at akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
-2018-04-02 16:24:10,236 [ERROR] from application in play-dev-mode-akka.actor.default-dispatcher-76 - 
-
-! @77f32d5el - Internal server error, for (GET) [/viewOrder/0] ->
- 
-play.sbt.PlayExceptions$CompilationException: Compilation error[ models.users.Customer cannot be converted to java.util.List<models.shopping.OrderItem>]
-	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:34)
-	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:34)
-	at scala.Option.map(Option.scala:146)
-	at play.sbt.run.PlayReload$.$anonfun$taskFailureHandler$1(PlayReload.scala:33)
-	at scala.Option.map(Option.scala:146)
-	at play.sbt.run.PlayReload$.taskFailureHandler(PlayReload.scala:28)
-	at play.sbt.run.PlayReload$.compileFailure(PlayReload.scala:24)
-	at play.sbt.run.PlayReload$.$anonfun$compile$3(PlayReload.scala:51)
-	at scala.util.Either$LeftProjection.map(Either.scala:573)
-	at play.sbt.run.PlayReload$.compile(PlayReload.scala:51)
-	at play.sbt.run.PlayRun$.$anonfun$playRunTask$4(PlayRun.scala:76)
-	at play.runsupport.Reloader.$anonfun$reload$1(Reloader.scala:413)
-	at play.runsupport.Reloader$$anon$5.run(Reloader.scala:51)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at play.runsupport.Reloader$.play$runsupport$Reloader$$withReloaderContextClassLoader(Reloader.scala:56)
-	at play.runsupport.Reloader.reload(Reloader.scala:413)
-	at play.core.server.DevServerStart$$anon$1.get(DevServerStart.scala:123)
-	at play.core.server.Server.getHandlerFor(Server.scala:63)
-	at play.core.server.Server.getHandlerFor$(Server.scala:48)
-	at play.core.server.AkkaHttpServer.getHandlerFor(AkkaHttpServer.scala:41)
-	at play.core.server.AkkaHttpServer.getHandler(AkkaHttpServer.scala:214)
-	at play.core.server.AkkaHttpServer.handleRequest(AkkaHttpServer.scala:194)
-	at play.core.server.AkkaHttpServer.$anonfun$createServerBinding$1(AkkaHttpServer.scala:106)
-	at akka.stream.impl.fusing.MapAsync$$anon$24.onPush(Ops.scala:1191)
-	at akka.stream.impl.fusing.GraphInterpreter.processPush(GraphInterpreter.scala:512)
-	at akka.stream.impl.fusing.GraphInterpreter.processEvent(GraphInterpreter.scala:475)
-	at akka.stream.impl.fusing.GraphInterpreter.execute(GraphInterpreter.scala:371)
-	at akka.stream.impl.fusing.GraphInterpreterShell.runBatch(ActorGraphInterpreter.scala:584)
-	at akka.stream.impl.fusing.GraphInterpreterShell$AsyncInput.execute(ActorGraphInterpreter.scala:468)
-	at akka.stream.impl.fusing.GraphInterpreterShell.processEvent(ActorGraphInterpreter.scala:559)
-	at akka.stream.impl.fusing.ActorGraphInterpreter.akka$stream$impl$fusing$ActorGraphInterpreter$$processEvent(ActorGraphInterpreter.scala:741)
-	at akka.stream.impl.fusing.ActorGraphInterpreter$$anonfun$receive$1.applyOrElse(ActorGraphInterpreter.scala:756)
-	at akka.actor.Actor.aroundReceive(Actor.scala:517)
-	at akka.actor.Actor.aroundReceive$(Actor.scala:515)
-	at akka.stream.impl.fusing.ActorGraphInterpreter.aroundReceive(ActorGraphInterpreter.scala:666)
-	at akka.actor.ActorCell.receiveMessage(ActorCell.scala:527)
-	at akka.actor.ActorCell.invoke(ActorCell.scala:496)
-	at akka.dispatch.Mailbox.processMailbox(Mailbox.scala:257)
-	at akka.dispatch.Mailbox.run(Mailbox.scala:224)
-	at akka.dispatch.Mailbox.exec(Mailbox.scala:234)
-	at akka.dispatch.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
-	at akka.dispatch.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
-	at akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
-	at akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
-2018-04-02 16:24:38,211 [ERROR] from application in play-dev-mode-akka.actor.default-dispatcher-96 - 
-
-! @77f32ekok - Internal server error, for (GET) [/viewOrder/0] ->
- 
-play.sbt.PlayExceptions$CompilationException: Compilation error[no arguments allowed for nullary method viewOrder: ()play.api.mvc.Call]
-	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:34)
-	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:34)
-	at scala.Option.map(Option.scala:146)
-	at play.sbt.run.PlayReload$.$anonfun$taskFailureHandler$1(PlayReload.scala:33)
-	at scala.Option.map(Option.scala:146)
-	at play.sbt.run.PlayReload$.taskFailureHandler(PlayReload.scala:28)
-	at play.sbt.run.PlayReload$.compileFailure(PlayReload.scala:24)
-	at play.sbt.run.PlayReload$.$anonfun$compile$3(PlayReload.scala:51)
-	at scala.util.Either$LeftProjection.map(Either.scala:573)
-	at play.sbt.run.PlayReload$.compile(PlayReload.scala:51)
-	at play.sbt.run.PlayRun$.$anonfun$playRunTask$4(PlayRun.scala:76)
-	at play.runsupport.Reloader.$anonfun$reload$1(Reloader.scala:413)
-	at play.runsupport.Reloader$$anon$5.run(Reloader.scala:51)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at play.runsupport.Reloader$.play$runsupport$Reloader$$withReloaderContextClassLoader(Reloader.scala:56)
-	at play.runsupport.Reloader.reload(Reloader.scala:413)
-	at play.core.server.DevServerStart$$anon$1.get(DevServerStart.scala:123)
-	at play.core.server.Server.getHandlerFor(Server.scala:63)
-	at play.core.server.Server.getHandlerFor$(Server.scala:48)
-	at play.core.server.AkkaHttpServer.getHandlerFor(AkkaHttpServer.scala:41)
-	at play.core.server.AkkaHttpServer.getHandler(AkkaHttpServer.scala:214)
-	at play.core.server.AkkaHttpServer.handleRequest(AkkaHttpServer.scala:194)
-	at play.core.server.AkkaHttpServer.$anonfun$createServerBinding$1(AkkaHttpServer.scala:106)
-	at akka.stream.impl.fusing.MapAsync$$anon$24.onPush(Ops.scala:1191)
-	at akka.stream.impl.fusing.GraphInterpreter.processPush(GraphInterpreter.scala:512)
-	at akka.stream.impl.fusing.GraphInterpreter.processEvent(GraphInterpreter.scala:475)
-	at akka.stream.impl.fusing.GraphInterpreter.execute(GraphInterpreter.scala:371)
-	at akka.stream.impl.fusing.GraphInterpreterShell.runBatch(ActorGraphInterpreter.scala:584)
-	at akka.stream.impl.fusing.GraphInterpreterShell$AsyncInput.execute(ActorGraphInterpreter.scala:468)
-	at akka.stream.impl.fusing.GraphInterpreterShell.processEvent(ActorGraphInterpreter.scala:559)
-	at akka.stream.impl.fusing.ActorGraphInterpreter.akka$stream$impl$fusing$ActorGraphInterpreter$$processEvent(ActorGraphInterpreter.scala:741)
-	at akka.stream.impl.fusing.ActorGraphInterpreter$$anonfun$receive$1.applyOrElse(ActorGraphInterpreter.scala:756)
-	at akka.actor.Actor.aroundReceive(Actor.scala:517)
-	at akka.actor.Actor.aroundReceive$(Actor.scala:515)
-	at akka.stream.impl.fusing.ActorGraphInterpreter.aroundReceive(ActorGraphInterpreter.scala:666)
-	at akka.actor.ActorCell.receiveMessage(ActorCell.scala:527)
-	at akka.actor.ActorCell.invoke(ActorCell.scala:496)
-	at akka.dispatch.Mailbox.processMailbox(Mailbox.scala:257)
-	at akka.dispatch.Mailbox.run(Mailbox.scala:224)
-	at akka.dispatch.Mailbox.exec(Mailbox.scala:234)
-	at akka.dispatch.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
-	at akka.dispatch.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
-	at akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
-	at akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
-2018-04-02 16:25:03,937 [INFO] from application in application-akka.actor.default-dispatcher-8 - Shutting down connection pool.
-2018-04-02 16:25:04,076 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-89 - Creating Pool for datasource 'default'
-2018-04-02 16:25:04,093 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-89 - Database [default] connected at jdbc:h2:file:./data/productsDB
-2018-04-02 16:25:04,265 [WARN] from org.hibernate.validator.messageinterpolation.ParameterMessageInterpolator in play-dev-mode-akka.actor.default-dispatcher-89 - HV000184: ParameterMessageInterpolator has been chosen, EL interpolation will not be supported
-2018-04-02 16:25:04,326 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-89 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+2018-04-03 17:52:45,038 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-402 - Application started (Dev)
+2018-04-03 17:52:55,497 [INFO] from application in application-akka.actor.default-dispatcher-7 - Shutting down connection pool.
+2018-04-03 17:52:55,624 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-394 - Creating Pool for datasource 'default'
+2018-04-03 17:52:55,657 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-394 - Database [default] connected at jdbc:h2:file:./data/productsDB
+2018-04-03 17:52:55,812 [WARN] from org.hibernate.validator.messageinterpolation.ParameterMessageInterpolator in play-dev-mode-akka.actor.default-dispatcher-394 - HV000184: ParameterMessageInterpolator has been chosen, EL interpolation will not be supported
+2018-04-03 17:52:55,855 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-394 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
 
     play.filters.csrf.CSRFFilter
     play.filters.headers.SecurityHeadersFilter
     play.filters.hosts.AllowedHostsFilter
 
-2018-04-02 16:25:04,326 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-89 - Application started (Dev)
-2018-04-02 16:28:32,661 [INFO] from application in application-akka.actor.default-dispatcher-2 - Shutting down connection pool.
-2018-04-02 16:28:32,808 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-104 - Creating Pool for datasource 'default'
-2018-04-02 16:28:32,828 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-104 - Database [default] connected at jdbc:h2:file:./data/productsDB
-2018-04-02 16:28:32,953 [WARN] from org.hibernate.validator.messageinterpolation.ParameterMessageInterpolator in play-dev-mode-akka.actor.default-dispatcher-104 - HV000184: ParameterMessageInterpolator has been chosen, EL interpolation will not be supported
-2018-04-02 16:28:33,012 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-104 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+2018-04-03 17:52:55,855 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-394 - Application started (Dev)
+2018-04-03 17:53:14,255 [INFO] from application in application-akka.actor.default-dispatcher-10 - Shutting down connection pool.
+2018-04-03 17:53:14,362 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-403 - Creating Pool for datasource 'default'
+2018-04-03 17:53:14,382 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-403 - Database [default] connected at jdbc:h2:file:./data/productsDB
+2018-04-03 17:53:14,499 [WARN] from org.hibernate.validator.messageinterpolation.ParameterMessageInterpolator in play-dev-mode-akka.actor.default-dispatcher-403 - HV000184: ParameterMessageInterpolator has been chosen, EL interpolation will not be supported
+2018-04-03 17:53:14,568 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-403 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
 
     play.filters.csrf.CSRFFilter
     play.filters.headers.SecurityHeadersFilter
     play.filters.hosts.AllowedHostsFilter
 
-2018-04-02 16:28:33,013 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-104 - Application started (Dev)
-2018-04-02 16:33:05,694 [INFO] from application in application-akka.actor.default-dispatcher-2 - Shutting down connection pool.
-2018-04-02 16:33:05,859 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-110 - Creating Pool for datasource 'default'
-2018-04-02 16:33:05,871 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-110 - Database [default] connected at jdbc:h2:file:./data/productsDB
-2018-04-02 16:33:05,991 [WARN] from org.hibernate.validator.messageinterpolation.ParameterMessageInterpolator in play-dev-mode-akka.actor.default-dispatcher-110 - HV000184: ParameterMessageInterpolator has been chosen, EL interpolation will not be supported
-2018-04-02 16:33:06,056 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-110 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+2018-04-03 17:53:14,568 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-403 - Application started (Dev)
+2018-04-03 17:53:32,469 [INFO] from application in application-akka.actor.default-dispatcher-5 - Shutting down connection pool.
+2018-04-03 17:53:32,589 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-393 - Creating Pool for datasource 'default'
+2018-04-03 17:53:32,623 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-393 - Database [default] connected at jdbc:h2:file:./data/productsDB
+2018-04-03 17:53:32,723 [WARN] from org.hibernate.validator.messageinterpolation.ParameterMessageInterpolator in play-dev-mode-akka.actor.default-dispatcher-393 - HV000184: ParameterMessageInterpolator has been chosen, EL interpolation will not be supported
+2018-04-03 17:53:32,801 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-393 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
 
     play.filters.csrf.CSRFFilter
     play.filters.headers.SecurityHeadersFilter
     play.filters.hosts.AllowedHostsFilter
 
-2018-04-02 16:33:06,056 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-110 - Application started (Dev)
-2018-04-02 16:34:05,237 [INFO] from application in application-akka.actor.default-dispatcher-9 - Shutting down connection pool.
-2018-04-02 16:34:05,351 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-112 - Creating Pool for datasource 'default'
-2018-04-02 16:34:05,369 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-112 - Database [default] connected at jdbc:h2:file:./data/productsDB
-2018-04-02 16:34:05,490 [WARN] from org.hibernate.validator.messageinterpolation.ParameterMessageInterpolator in play-dev-mode-akka.actor.default-dispatcher-112 - HV000184: ParameterMessageInterpolator has been chosen, EL interpolation will not be supported
-2018-04-02 16:34:05,567 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-112 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+2018-04-03 17:53:32,802 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-393 - Application started (Dev)
+2018-04-03 18:09:38,509 [INFO] from application in application-akka.actor.default-dispatcher-27 - Shutting down connection pool.
+2018-04-03 18:09:38,648 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-443 - Creating Pool for datasource 'default'
+2018-04-03 18:09:38,693 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-443 - Database [default] connected at jdbc:h2:file:./data/productsDB
+2018-04-03 18:09:38,848 [WARN] from org.hibernate.validator.messageinterpolation.ParameterMessageInterpolator in play-dev-mode-akka.actor.default-dispatcher-443 - HV000184: ParameterMessageInterpolator has been chosen, EL interpolation will not be supported
+2018-04-03 18:09:38,883 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-443 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
 
     play.filters.csrf.CSRFFilter
     play.filters.headers.SecurityHeadersFilter
     play.filters.hosts.AllowedHostsFilter
 
-2018-04-02 16:34:05,567 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-112 - Application started (Dev)
-2018-04-02 16:34:30,843 [INFO] from application in application-akka.actor.default-dispatcher-6 - Shutting down connection pool.
-2018-04-02 16:34:30,973 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-113 - Creating Pool for datasource 'default'
-2018-04-02 16:34:30,988 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-113 - Database [default] connected at jdbc:h2:file:./data/productsDB
-2018-04-02 16:34:31,102 [WARN] from org.hibernate.validator.messageinterpolation.ParameterMessageInterpolator in play-dev-mode-akka.actor.default-dispatcher-113 - HV000184: ParameterMessageInterpolator has been chosen, EL interpolation will not be supported
-2018-04-02 16:34:31,173 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-113 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+2018-04-03 18:09:38,884 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-443 - Application started (Dev)
+2018-04-03 18:09:51,935 [WARN] from application in application-akka.actor.default-dispatcher-7 - The "validate" method in class "models.users.Login" is deprecated since Play 2.6. To migrate to class-level constraints see https://www.playframework.com/documentation/2.6.x/Migration26#java-form-changes and https://www.playframework.com/documentation/2.6.x/JavaForms#Advanced-validation
+2018-04-03 18:10:21,116 [WARN] from play in application-akka.actor.default-dispatcher-11 - You are using status code '200' with flashing, which should only be used with a redirect status!
+2018-04-03 18:13:21,693 [ERROR] from application in play-dev-mode-akka.actor.default-dispatcher-465 - 
+
+! @77fannjhh - Internal server error, for (GET) [/listProducts?cat=1] ->
+ 
+play.sbt.PlayExceptions$CompilationException: Compilation error[illegal start of simple expression]
+	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:34)
+	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:34)
+	at scala.Option.map(Option.scala:146)
+	at play.sbt.run.PlayReload$.$anonfun$taskFailureHandler$1(PlayReload.scala:33)
+	at scala.Option.map(Option.scala:146)
+	at play.sbt.run.PlayReload$.taskFailureHandler(PlayReload.scala:28)
+	at play.sbt.run.PlayReload$.compileFailure(PlayReload.scala:24)
+	at play.sbt.run.PlayReload$.$anonfun$compile$3(PlayReload.scala:51)
+	at scala.util.Either$LeftProjection.map(Either.scala:573)
+	at play.sbt.run.PlayReload$.compile(PlayReload.scala:51)
+	at play.sbt.run.PlayRun$.$anonfun$playRunTask$4(PlayRun.scala:76)
+	at play.runsupport.Reloader.$anonfun$reload$1(Reloader.scala:413)
+	at play.runsupport.Reloader$$anon$5.run(Reloader.scala:51)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at play.runsupport.Reloader$.play$runsupport$Reloader$$withReloaderContextClassLoader(Reloader.scala:56)
+	at play.runsupport.Reloader.reload(Reloader.scala:413)
+	at play.core.server.DevServerStart$$anon$1.get(DevServerStart.scala:123)
+	at play.core.server.Server.getHandlerFor(Server.scala:63)
+	at play.core.server.Server.getHandlerFor$(Server.scala:48)
+	at play.core.server.AkkaHttpServer.getHandlerFor(AkkaHttpServer.scala:41)
+	at play.core.server.AkkaHttpServer.getHandler(AkkaHttpServer.scala:214)
+	at play.core.server.AkkaHttpServer.handleRequest(AkkaHttpServer.scala:194)
+	at play.core.server.AkkaHttpServer.$anonfun$createServerBinding$1(AkkaHttpServer.scala:106)
+	at akka.stream.impl.fusing.MapAsync$$anon$24.onPush(Ops.scala:1191)
+	at akka.stream.impl.fusing.GraphInterpreter.processPush(GraphInterpreter.scala:512)
+	at akka.stream.impl.fusing.GraphInterpreter.processEvent(GraphInterpreter.scala:475)
+	at akka.stream.impl.fusing.GraphInterpreter.execute(GraphInterpreter.scala:371)
+	at akka.stream.impl.fusing.GraphInterpreterShell.runBatch(ActorGraphInterpreter.scala:584)
+	at akka.stream.impl.fusing.GraphInterpreterShell$AsyncInput.execute(ActorGraphInterpreter.scala:468)
+	at akka.stream.impl.fusing.GraphInterpreterShell.processEvent(ActorGraphInterpreter.scala:559)
+	at akka.stream.impl.fusing.ActorGraphInterpreter.akka$stream$impl$fusing$ActorGraphInterpreter$$processEvent(ActorGraphInterpreter.scala:741)
+	at akka.stream.impl.fusing.ActorGraphInterpreter$$anonfun$receive$1.applyOrElse(ActorGraphInterpreter.scala:756)
+	at akka.actor.Actor.aroundReceive(Actor.scala:517)
+	at akka.actor.Actor.aroundReceive$(Actor.scala:515)
+	at akka.stream.impl.fusing.ActorGraphInterpreter.aroundReceive(ActorGraphInterpreter.scala:666)
+	at akka.actor.ActorCell.receiveMessage(ActorCell.scala:527)
+	at akka.actor.ActorCell.invoke(ActorCell.scala:496)
+	at akka.dispatch.Mailbox.processMailbox(Mailbox.scala:257)
+	at akka.dispatch.Mailbox.run(Mailbox.scala:224)
+	at akka.dispatch.Mailbox.exec(Mailbox.scala:234)
+	at akka.dispatch.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
+	at akka.dispatch.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
+	at akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+	at akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+2018-04-03 18:14:02,493 [INFO] from application in application-akka.actor.default-dispatcher-14 - Shutting down connection pool.
+2018-04-03 18:14:02,599 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-465 - Creating Pool for datasource 'default'
+2018-04-03 18:14:02,609 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-465 - Database [default] connected at jdbc:h2:file:./data/productsDB
+2018-04-03 18:14:02,729 [WARN] from org.hibernate.validator.messageinterpolation.ParameterMessageInterpolator in play-dev-mode-akka.actor.default-dispatcher-465 - HV000184: ParameterMessageInterpolator has been chosen, EL interpolation will not be supported
+2018-04-03 18:14:02,803 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-465 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
 
     play.filters.csrf.CSRFFilter
     play.filters.headers.SecurityHeadersFilter
     play.filters.hosts.AllowedHostsFilter
 
-2018-04-02 16:34:31,173 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-113 - Application started (Dev)
-2018-04-02 16:35:15,535 [INFO] from play.core.server.AkkaHttpServer in pool-5-thread-1 - Stopping server...
-2018-04-02 16:35:15,551 [INFO] from application in application-akka.actor.default-dispatcher-2 - Shutting down connection pool.
+2018-04-03 18:14:02,803 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-465 - Application started (Dev)
+2018-04-03 18:14:10,820 [WARN] from application in application-akka.actor.default-dispatcher-2 - The "validate" method in class "models.users.Login" is deprecated since Play 2.6. To migrate to class-level constraints see https://www.playframework.com/documentation/2.6.x/Migration26#java-form-changes and https://www.playframework.com/documentation/2.6.x/JavaForms#Advanced-validation
+2018-04-03 18:15:16,875 [INFO] from application in application-akka.actor.default-dispatcher-6 - Shutting down connection pool.
+2018-04-03 18:15:16,982 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-473 - Creating Pool for datasource 'default'
+2018-04-03 18:15:17,015 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-473 - Database [default] connected at jdbc:h2:file:./data/productsDB
+2018-04-03 18:15:17,133 [WARN] from org.hibernate.validator.messageinterpolation.ParameterMessageInterpolator in play-dev-mode-akka.actor.default-dispatcher-473 - HV000184: ParameterMessageInterpolator has been chosen, EL interpolation will not be supported
+2018-04-03 18:15:17,191 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-473 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+
+2018-04-03 18:15:17,192 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-473 - Application started (Dev)
+2018-04-03 18:15:34,794 [INFO] from application in application-akka.actor.default-dispatcher-3 - Shutting down connection pool.
+2018-04-03 18:15:34,911 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-465 - Creating Pool for datasource 'default'
+2018-04-03 18:15:34,935 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-465 - Database [default] connected at jdbc:h2:file:./data/productsDB
+2018-04-03 18:15:35,058 [WARN] from org.hibernate.validator.messageinterpolation.ParameterMessageInterpolator in play-dev-mode-akka.actor.default-dispatcher-465 - HV000184: ParameterMessageInterpolator has been chosen, EL interpolation will not be supported
+2018-04-03 18:15:35,112 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-465 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+
+2018-04-03 18:15:35,112 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-465 - Application started (Dev)
+2018-04-03 18:15:55,932 [INFO] from application in application-akka.actor.default-dispatcher-6 - Shutting down connection pool.
+2018-04-03 18:15:56,016 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-477 - Creating Pool for datasource 'default'
+2018-04-03 18:15:56,030 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-477 - Database [default] connected at jdbc:h2:file:./data/productsDB
+2018-04-03 18:15:56,137 [WARN] from org.hibernate.validator.messageinterpolation.ParameterMessageInterpolator in play-dev-mode-akka.actor.default-dispatcher-477 - HV000184: ParameterMessageInterpolator has been chosen, EL interpolation will not be supported
+2018-04-03 18:15:56,188 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-477 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+
+2018-04-03 18:15:56,189 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-477 - Application started (Dev)
+2018-04-03 18:16:19,827 [INFO] from play.core.server.AkkaHttpServer in pool-5-thread-2 - Stopping server...
+2018-04-03 18:16:19,841 [INFO] from application in application-akka.actor.default-dispatcher-10 - Shutting down connection pool.

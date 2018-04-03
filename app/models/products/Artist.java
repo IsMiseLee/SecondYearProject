@@ -99,12 +99,12 @@ public class Artist extends  Model{
         return options;
     }
                
-                public static boolean inArtist(Long artist, Long product) {
-                    return find.query().where()
-                        .eq("products.id", product)
-                        .eq("id", artist)
-                        .findCount() > 0;
-                }
+    public static boolean inArtist(Long artist, Long product) {
+    return find.query().where()
+     .eq("products.id", product)
+     .eq("id", artist)
+     .findCount() > 0;
+      }
     
     
     

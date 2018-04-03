@@ -40,25 +40,43 @@ Seq[Any](format.raw/*4.74*/("""
 """),_display_(/*8.2*/main("Add Project",member)/*8.28*/{_display_(Seq[Any](format.raw/*8.29*/(""" 
     """),format.raw/*9.5*/("""<p class="lead">Add Product</p>
     
-    """),_display_(/*11.6*/form(action=routes.AdminProductCtrl.addProductSubmit(), 'class -> "form-horizontal", 'role -> "form",'enctype -> "multipart/form-data")/*11.141*/{_display_(Seq[Any](format.raw/*11.142*/("""
+    """),_display_(/*11.6*/form(action=routes.AdminProductCtrl.addProductSubmit(), 'class -> "form-vertical", 'role -> "form",'enctype -> "multipart/form-data")/*11.139*/{_display_(Seq[Any](format.raw/*11.140*/("""
       """),format.raw/*12.7*/("""<div class="container">
           
         
     """),_display_(/*15.6*/CSRF/*15.10*/.formField),format.raw/*15.20*/("""
     
-    """),_display_(/*17.6*/inputText(productForm("album_name"),'_label -> "Album name", 'class -> "form-control")),format.raw/*17.92*/("""
+    """),format.raw/*17.5*/("""<div class="form-group">
+        """),_display_(/*18.10*/inputText(productForm("album_name"), '_label -> "", 
+        'class -> "form-control input-xs", 'placeholder -> "Album name")),format.raw/*19.73*/("""
+    """),format.raw/*20.5*/("""</div>
 
-    """),_display_(/*19.6*/for((value, genre) <- Artist.options) yield /*19.43*/ {_display_(Seq[Any](format.raw/*19.45*/("""
-      """),format.raw/*20.7*/("""<input type="checkbox" name="artSelect[]" value=""""),_display_(/*20.57*/value),format.raw/*20.62*/(""""
+    """),_display_(/*22.6*/for((value, genre) <- Artist.options) yield /*22.43*/ {_display_(Seq[Any](format.raw/*22.45*/("""
+      """),format.raw/*23.7*/("""<input type="checkbox" name="artSelect[]" value=""""),_display_(/*23.57*/value),format.raw/*23.62*/(""""
       
-      />"""),_display_(/*22.10*/genre),format.raw/*22.15*/("""<br>        
-  """)))}),format.raw/*23.4*/("""
-    """),_display_(/*24.6*/inputText(productForm("year"),'_label -> "Year", 'class -> "form-control")),format.raw/*24.80*/("""
-    """),_display_(/*25.6*/inputText(productForm("art_name"),'_label -> "Artist", 'class -> "form-control")),format.raw/*25.86*/("""
-    """),_display_(/*26.6*/inputText(productForm("price"),'_label -> "Price", 'class -> "form-control")),format.raw/*26.82*/("""
-    """),_display_(/*27.6*/inputText(productForm("stock"),'_label -> "Stock", 'class -> "form-control")),format.raw/*27.82*/("""
+      />"""),_display_(/*25.10*/genre),format.raw/*25.15*/("""<br>        
+  """)))}),format.raw/*26.4*/("""
+  """),format.raw/*27.3*/("""<div class="form-group">
+      """),_display_(/*28.8*/inputText(productForm("year"), '_label -> "", 
+      'class -> "form-control input-xs", 'placeholder -> "Year")),format.raw/*29.65*/("""
+  """),format.raw/*30.3*/("""</div>
+  
+    <div class="form-group">
+        """),_display_(/*33.10*/inputText(productForm("art_name"), '_label -> "", 
+        'class -> "form-control input-xs", 'placeholder -> "Artist")),format.raw/*34.69*/("""
+    """),format.raw/*35.5*/("""</div>
+    <div class="form-group">
+        """),_display_(/*37.10*/inputText(productForm("price"), '_label -> "", 
+        'class -> "form-control input-xs", 'placeholder -> "Price")),format.raw/*38.68*/("""
+    """),format.raw/*39.5*/("""</div>
+
+    <div class="form-group">
+        """),_display_(/*42.10*/inputText(productForm("stock"), '_label -> "", 
+        'class -> "form-control input-xs", 'placeholder -> "Stock")),format.raw/*43.68*/("""
+    """),format.raw/*44.5*/("""</div>
+  
     
-    """),format.raw/*29.5*/("""<label>Image Upload</label>
+    <label>Image Upload</label>
     <input class="btn-sm btn-default" type="file" name="upload">
     <br><br>
   
@@ -66,7 +84,7 @@ Seq[Any](format.raw/*4.74*/("""
     
     <div class="action"> 
       <input type="submit" value="Add Product" class="btn btn-primary">
-      <a href=""""),_display_(/*37.17*/routes/*37.23*/.AdminProductCtrl.listProduct(0)),format.raw/*37.55*/(""""> 
+      <a href=""""),_display_(/*55.17*/routes/*55.23*/.AdminProductCtrl.listProduct(0)),format.raw/*55.55*/(""""> 
         <button type="button" class="btn btn-warning">Cancel</button>
       </a>
     </div>
@@ -74,7 +92,7 @@ Seq[Any](format.raw/*4.74*/("""
       </body>
     
     
-    """)))}),format.raw/*45.6*/("""
+    """)))}),format.raw/*63.6*/("""
     """)))}))
       }
     }
@@ -91,11 +109,11 @@ Seq[Any](format.raw/*4.74*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Fri Mar 30 20:58:39 IST 2018
+                  DATE: Tue Apr 03 18:15:32 IST 2018
                   SOURCE: /home/wdd/webapps/SecondYearProject/app/views/adminProduct/addProduct.scala.html
-                  HASH: 555be2c5dd48758252b5e888d8b6702c6c64dcfa
-                  MATRIX: 664->1|701->32|739->64|1118->92|1263->167|1308->164|1336->183|1363->185|1397->211|1435->212|1467->218|1535->260|1680->395|1720->396|1754->403|1829->452|1842->456|1873->466|1910->477|2017->563|2050->570|2103->607|2143->609|2177->616|2254->666|2280->671|2325->689|2351->694|2397->710|2429->716|2524->790|2556->796|2657->876|2689->882|2786->958|2818->964|2915->1040|2952->1050|3212->1283|3227->1289|3280->1321|3446->1457
-                  LINES: 24->1|25->2|26->3|31->4|34->6|37->4|39->7|40->8|40->8|40->8|41->9|43->11|43->11|43->11|44->12|47->15|47->15|47->15|49->17|49->17|51->19|51->19|51->19|52->20|52->20|52->20|54->22|54->22|55->23|56->24|56->24|57->25|57->25|58->26|58->26|59->27|59->27|61->29|69->37|69->37|69->37|77->45
+                  HASH: 29bfa303b349c3aaad8a8801ef3e209a6a1af179
+                  MATRIX: 664->1|701->32|739->64|1118->92|1263->167|1308->164|1336->183|1363->185|1397->211|1435->212|1467->218|1535->260|1678->393|1718->394|1752->401|1827->450|1840->454|1871->464|1908->474|1969->508|2115->633|2147->638|2186->651|2239->688|2279->690|2313->697|2390->747|2416->752|2461->770|2487->775|2533->791|2563->794|2621->826|2753->937|2783->940|2858->988|2998->1107|3030->1112|3102->1157|3238->1272|3270->1277|3343->1323|3479->1438|3511->1443|3790->1695|3805->1701|3858->1733|4024->1869
+                  LINES: 24->1|25->2|26->3|31->4|34->6|37->4|39->7|40->8|40->8|40->8|41->9|43->11|43->11|43->11|44->12|47->15|47->15|47->15|49->17|50->18|51->19|52->20|54->22|54->22|54->22|55->23|55->23|55->23|57->25|57->25|58->26|59->27|60->28|61->29|62->30|65->33|66->34|67->35|69->37|70->38|71->39|74->42|75->43|76->44|87->55|87->55|87->55|95->63
                   -- GENERATED --
               */
           

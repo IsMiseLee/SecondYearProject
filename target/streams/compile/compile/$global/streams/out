@@ -1,7 +1,7 @@
-[0m[[0m[31merror[0m] [0m[0m/home/wdd/webapps/SecondYearProject/app/views/Register/main.scala.html:46:65: no arguments allowed for nullary method viewOrder: ()play.api.mvc.Call[0m
-[0m[[0m[31merror[0m] [0m[0m                    <li><a href="@routes.ShopCartCtrl.viewOrder(0)">view Orders</a></li>[0m
-[0m[[0m[31merror[0m] [0m[0m                                                                ^[0m
-[0m[[0m[31merror[0m] [0m[0m/home/wdd/webapps/SecondYearProject/app/views/adminProduct/main.scala.html:43:65: no arguments allowed for nullary method viewOrder: ()play.api.mvc.Call[0m
-[0m[[0m[31merror[0m] [0m[0m                    <li><a href="@routes.ShopCartCtrl.viewOrder(0)">view Orders</a></li>[0m
-[0m[[0m[31merror[0m] [0m[0m                                                                ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wdd/webapps/SecondYearProject/app/views/adminProduct/updateProduct.scala.html:21:13: illegal start of simple expression[0m
+[0m[[0m[31merror[0m] [0m[0m            class -> "form-control input-xs", 'placeholder -> "Year")[0m
+[0m[[0m[31merror[0m] [0m[0m            ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wdd/webapps/SecondYearProject/app/views/adminProduct/updateProduct.scala.html:60:2: ')' expected but '}' found.[0m
+[0m[[0m[31merror[0m] [0m[0m}[0m
+[0m[[0m[31merror[0m] [0m[0m ^[0m
 [0m[[0m[31merror[0m] [0m[0mtwo errors found[0m

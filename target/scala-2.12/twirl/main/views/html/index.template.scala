@@ -34,9 +34,12 @@ Seq[Any](format.raw/*1.32*/("""
 
 """),_display_(/*3.2*/main("Welcome to Play",member)/*3.32*/ {_display_(Seq[Any](format.raw/*3.34*/("""
 
+    
+        
   
-  
-""")))}),format.raw/*7.2*/("""
+        """),format.raw/*8.9*/("""<h1>Welcome to Aural Soul</h1>
+ 
+""")))}),format.raw/*10.2*/("""
 """))
       }
     }
@@ -53,11 +56,11 @@ Seq[Any](format.raw/*1.32*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Fri Mar 30 20:58:38 IST 2018
+                  DATE: Tue Apr 03 17:30:17 IST 2018
                   SOURCE: /home/wdd/webapps/SecondYearProject/app/views/index.scala.html
-                  HASH: 635e81c4e0626143b7952269e31d79c2a8d8f043
-                  MATRIX: 961->1|1086->31|1114->34|1152->64|1191->66|1229->75
-                  LINES: 28->1|33->1|35->3|35->3|35->3|39->7
+                  HASH: fca0c094a67324f55e08504c65525ad754a601e2
+                  MATRIX: 961->1|1086->31|1114->34|1152->64|1191->66|1244->93|1308->127
+                  LINES: 28->1|33->1|35->3|35->3|35->3|40->8|42->10
                   -- GENERATED --
               */
           

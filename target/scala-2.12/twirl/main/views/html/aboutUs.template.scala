@@ -32,7 +32,7 @@ object aboutUs extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.Ht
 
 Seq[Any](format.raw/*1.32*/("""
 
-"""),_display_(/*3.2*/main("Welcome to Play",member)/*3.32*/ {_display_(Seq[Any](format.raw/*3.34*/("""
+"""),_display_(/*3.2*/main("About Us",member)/*3.25*/ {_display_(Seq[Any](format.raw/*3.27*/("""
   """),format.raw/*4.3*/("""<h1>Welcome to Aural Soul</h1>
 
   
@@ -52,10 +52,10 @@ Seq[Any](format.raw/*1.32*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Fri Mar 30 20:58:38 IST 2018
+                  DATE: Tue Apr 03 17:28:28 IST 2018
                   SOURCE: /home/wdd/webapps/SecondYearProject/app/views/aboutUs.scala.html
-                  HASH: 1952571da61f751289f337397fefe61d9ea2806f
-                  MATRIX: 963->1|1088->31|1116->34|1154->64|1193->66|1222->69
+                  HASH: 53543ba51750895db4414c40a093ee1a79090b7f
+                  MATRIX: 963->1|1088->31|1116->34|1147->57|1186->59|1215->62
                   LINES: 28->1|33->1|35->3|35->3|35->3|36->4
                   -- GENERATED --
               */

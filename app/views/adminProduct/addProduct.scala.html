@@ -8,23 +8,41 @@
 @main("Add Project",member){ 
     <p class="lead">Add Product</p>
     
-    @form(action=routes.AdminProductCtrl.addProductSubmit(), 'class -> "form-horizontal", 'role -> "form",'enctype -> "multipart/form-data"){
+    @form(action=routes.AdminProductCtrl.addProductSubmit(), 'class -> "form-vertical", 'role -> "form",'enctype -> "multipart/form-data"){
       <div class="container">
           
         
     @CSRF.formField
     
-    @inputText(productForm("album_name"),'_label -> "Album name", 'class -> "form-control")
+    <div class="form-group">
+        @inputText(productForm("album_name"), '_label -> "", 
+        'class -> "form-control input-xs", 'placeholder -> "Album name")
+    </div>
 
     @for((value, genre) <- Artist.options) {
       <input type="checkbox" name="artSelect[]" value="@value"
       
       />@genre<br>        
   }
-    @inputText(productForm("year"),'_label -> "Year", 'class -> "form-control")
-    @inputText(productForm("art_name"),'_label -> "Artist", 'class -> "form-control")
-    @inputText(productForm("price"),'_label -> "Price", 'class -> "form-control")
-    @inputText(productForm("stock"),'_label -> "Stock", 'class -> "form-control")
+  <div class="form-group">
+      @inputText(productForm("year"), '_label -> "", 
+      'class -> "form-control input-xs", 'placeholder -> "Year")
+  </div>
+  
+    <div class="form-group">
+        @inputText(productForm("art_name"), '_label -> "", 
+        'class -> "form-control input-xs", 'placeholder -> "Artist")
+    </div>
+    <div class="form-group">
+        @inputText(productForm("price"), '_label -> "", 
+        'class -> "form-control input-xs", 'placeholder -> "Price")
+    </div>
+
+    <div class="form-group">
+        @inputText(productForm("stock"), '_label -> "", 
+        'class -> "form-control input-xs", 'placeholder -> "Stock")
+    </div>
+  
     
     <label>Image Upload</label>
     <input class="btn-sm btn-default" type="file" name="upload">
