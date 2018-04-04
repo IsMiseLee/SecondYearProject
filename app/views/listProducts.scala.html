@@ -6,13 +6,13 @@
 
 
 @main("ListPRoducts",member) {
-  <h1>List of Products</h1>
+  <h1>List of Albums</h1>
   <br>
   <div class="row">
     <div class="col-sm-2">
-      <h4>Artist</h4>
+      <h4>Genres</h4>
       <div class="list-group">
-        <a href="@routes.ProductCtrl.listProducts(0, filter)" class="list-group-item">All Artists</a>
+        <a href="@routes.ProductCtrl.listProducts(0, filter)" class="list-group-item">All Genres</a>
         @for(a <- artists) {
           <a href="@routes.ProductCtrl.listProducts(a.getId, filter)" class="list-group-item">@a.getGenre
             <span class="badge">@a.getProducts.size()</span>
@@ -30,7 +30,7 @@
         
         <div id="actions">
           <form action="@routes.ProductCtrl.listProducts(artId)" method="GET">
-           <input type="search" id="searchbox" name="filter" value="@filter" placeholder="Filter by product name...">
+           <input type="search" id="searchbox" name="filter" value="@filter" placeholder="Filter by album name...">
            <input type="submit" id="searchsubmit" value="Filter by name" class="btn-md btn-primary">
           </form>
          </div>

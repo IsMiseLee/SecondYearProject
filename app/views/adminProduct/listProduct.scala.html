@@ -5,13 +5,13 @@
 @(products: List[Product], artists: List[Artist], member: Member,env: play.api.Environment)
 
 @main("ListPRoducts",member) {
-  <h1>List of Products</h1>
+  <h1>List of Albums</h1>
   <br>
   <div class="row">
     <div class="col-sm-3">
-      <h4>Categories</h4>
+      <h4>Genres</h4>
       <div class="list-group">
-        <a href="@routes.AdminProductCtrl.listProduct(0)" class="list-group-item">All Artists</a>
+        <a href="@routes.AdminProductCtrl.listProduct(0)" class="list-group-item">All Genres</a>
         @for(a <- artists) {
           <a href="@routes.AdminProductCtrl.listProduct(a.getId)" class="list-group-item">@a.getGenre
             <span class="badge">@a.getProducts.size()</span>

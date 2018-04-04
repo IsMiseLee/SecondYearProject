@@ -1,7 +1,30 @@
 @( member: models.users.Member)
 
 @main("About Us",member) {
-  <h1>Welcome to Aural Soul</h1>
+  
 
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-4">
+        <h1>About us </h1>
+      <p>We are the newest music marketplace. We strive to give the best music shopping experience around</p>
+      <p>We hope you enjoy your stay </p>
+<br><br>
+      <p>Contact us : 09478746527645</p>
+      <br><br>
+      <br><br>
+      <p>
+        <a href="@routes.ProductCtrl.listProducts()"> 
+          <button class="btn btn-primary">Click to view Albums</button>
+        </a>
+      </p>
+    </div>
+      <div class="col-sm-8">
+
+      <img src="/assets/images/aboutus.png" >
+
+    </div>
+    </div>
+  </div>
   
 }
