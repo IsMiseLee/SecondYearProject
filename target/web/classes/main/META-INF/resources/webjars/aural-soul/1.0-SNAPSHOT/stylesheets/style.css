@@ -1,0 +1,40 @@
+p { 
+    margin-right:20px;
+}
+
+container{ 
+    color: black;
+}
+
+body  { 
+    background-size: 1980px 1080px;
+}
+body h1 { 
+
+   text-align: center;
+    color:white;
+}
+
+table th{ 
+    color:white;
+}
+
+table td{ 
+    color:white;
+}
+
+.row h4 { 
+    padding-left:2px;
+    color:white;
+}
+.col-xs-5 h3{ 
+    color :white;
+}
+.lead { 
+    padding-left :15px;
+    color :white;
+}
+
+.row p { 
+    color:white;
+}

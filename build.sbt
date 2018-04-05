@@ -1,4 +1,4 @@
-name := """Play Frame Work"""
+name := """Aural Soul"""
 organization := "com.example"
 
 version := "1.0-SNAPSHOT"
