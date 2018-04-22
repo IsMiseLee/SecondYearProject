@@ -41,7 +41,12 @@ table td{
 
 label{ 
     color:white;
+  
 }
 .lead button{ 
+    padding-right: 5px;
+}
+
+.button { 
     padding-right: 5px;
 }
