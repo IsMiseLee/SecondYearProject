@@ -13,22 +13,22 @@
             @CSRF.formField
 
             <div class="form-group">
-                @inputText(registerForm("email"), '_label -> "", 
-                'class -> "form-control input-xs", 'placeholder -> "Email")
+                @inputText(registerForm("email"), '_label -> "Email", 
+                'class -> "form-control input-xs", 'placeholder -> "")
             </div>
             <div class="form-group">
-                @inputPassword(registerForm("password"), '_label -> "", 
-                'class -> "form-control input-xs", 'placeholder -> "Password")
-            </div>
-
-            <div class="form-group">
-                @inputText(registerForm("role"), '_label -> "", 
-                'class -> "form-control input-xs", 'placeholder -> "role")
+                @inputPassword(registerForm("password"), '_label -> "Password", 
+                'class -> "form-control input-xs", 'placeholder -> "")
             </div>
 
             <div class="form-group">
-                @inputText(registerForm("name"), '_label -> "", 
-                'class -> "form-control input-xs", 'placeholder -> "name")
+                @inputText(registerForm("role"), '_label -> "Role", 
+                'class -> "form-control input-xs", 'placeholder -> "")
+            </div>
+
+            <div class="form-group">
+                @inputText(registerForm("name"), '_label -> "Name", 
+                'class -> "form-control input-xs", 'placeholder -> "")
             </div>
             
           

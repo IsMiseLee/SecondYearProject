@@ -73,3 +73,11 @@ run
 exit
 run
 exit
+run
+clean
+compile
+run
+clean
+compile
+run
+exit

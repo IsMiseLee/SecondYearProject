@@ -22,7 +22,7 @@
         @* And here's where we render the `Html` object containing
          * the page content. *@
 
-         <nav class="navbar navbar-default">
+         <nav class="navbar navbar-inverse">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
                 <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
@@ -31,16 +31,15 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a href="@routes.ProductCtrl.index()" class="navbar-brand">Aural Soul</a>
+                <a href="" class="navbar-brand">Aural Soul</a>
             </div>
             <!-- Collection of nav links and other content for toggling -->
             <div id="navbarCollapse" class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="#">Home</a></li>
-                    <li><a href="@routes.ProductCtrl.aboutUs()">About us</a></li>
-                    <li><a href="@routes.ProductCtrl.viewAlbums()">Artists</a></li>
+                  
                     <li><a href="@routes.AdminProductCtrl.listProduct(0)">Products</a></li>
-                    <li><a href="@routes.ShopCartCtrl.viewOrder()">view Orders</a></li>
+                  
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li @if(title=="Login"){class="active"}>

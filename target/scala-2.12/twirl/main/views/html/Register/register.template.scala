@@ -45,22 +45,22 @@ Seq[Any](format.raw/*1.43*/("""
             """),_display_(/*13.14*/CSRF/*13.18*/.formField),format.raw/*13.28*/("""
 
             """),format.raw/*15.13*/("""<div class="form-group">
-                """),_display_(/*16.18*/inputText(registerForm("email"), '_label -> "", 
-                'class -> "form-control input-xs", 'placeholder -> "Email")),format.raw/*17.76*/("""
+                """),_display_(/*16.18*/inputText(registerForm("email"), '_label -> "Email", 
+                'class -> "form-control input-xs", 'placeholder -> "")),format.raw/*17.71*/("""
             """),format.raw/*18.13*/("""</div>
             <div class="form-group">
-                """),_display_(/*20.18*/inputPassword(registerForm("password"), '_label -> "", 
-                'class -> "form-control input-xs", 'placeholder -> "Password")),format.raw/*21.79*/("""
+                """),_display_(/*20.18*/inputPassword(registerForm("password"), '_label -> "Password", 
+                'class -> "form-control input-xs", 'placeholder -> "")),format.raw/*21.71*/("""
             """),format.raw/*22.13*/("""</div>
 
             <div class="form-group">
-                """),_display_(/*25.18*/inputText(registerForm("role"), '_label -> "", 
-                'class -> "form-control input-xs", 'placeholder -> "role")),format.raw/*26.75*/("""
+                """),_display_(/*25.18*/inputText(registerForm("role"), '_label -> "Role", 
+                'class -> "form-control input-xs", 'placeholder -> "")),format.raw/*26.71*/("""
             """),format.raw/*27.13*/("""</div>
 
             <div class="form-group">
-                """),_display_(/*30.18*/inputText(registerForm("name"), '_label -> "", 
-                'class -> "form-control input-xs", 'placeholder -> "name")),format.raw/*31.75*/("""
+                """),_display_(/*30.18*/inputText(registerForm("name"), '_label -> "Name", 
+                'class -> "form-control input-xs", 'placeholder -> "")),format.raw/*31.71*/("""
             """),format.raw/*32.13*/("""</div>
             
           
@@ -97,9 +97,9 @@ Seq[Any](format.raw/*1.43*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Thu Apr 05 20:45:24 IST 2018
+                  DATE: Sun Apr 22 18:34:41 IST 2018
                   SOURCE: /home/wdd/webapps/SecondYearProject/app/views/Register/register.scala.html
-                  HASH: b5278c593b0f0231e094f992e89ce14a2394060f
+                  HASH: 35ba4bfd8aa0603d1d1bb97660239830dc92ffbd
                   MATRIX: 979->1|1093->45|1138->42|1166->61|1193->63|1217->79|1255->80|1287->86|1361->135|1464->229|1503->230|1536->237|1631->305|1644->309|1675->319|1717->333|1786->375|1931->499|1972->512|2060->573|2215->707|2256->720|2345->782|2488->904|2529->917|2618->979|2761->1101|2802->1114|2873->1154|2925->1179|3059->1286|3074->1292|3127->1324
                   LINES: 28->1|31->3|34->1|36->4|37->5|37->5|37->5|38->6|40->8|40->8|40->8|41->9|45->13|45->13|45->13|47->15|48->16|49->17|50->18|52->20|53->21|54->22|57->25|58->26|59->27|62->30|63->31|64->32|67->35|73->41|75->43|75->43|75->43
                   -- GENERATED --

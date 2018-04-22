@@ -83,7 +83,7 @@ public class AdminProductCtrl extends Controller {
         flash("success", "Prodcut " + newProduct.getAlbum_name() + " has been created/updated " + saveImageMsg);
         saveImageMsg = saveFile(newProduct.getId(), image);
 
-        return ok(views.html.index.render(Member.getLoggedIn(session().get("email"))));
+        return redirect(controllers.routes.AdminProductCtrl.listProduct(0));
     }
 
 

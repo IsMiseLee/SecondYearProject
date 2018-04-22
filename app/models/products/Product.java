@@ -28,7 +28,7 @@ public class Product extends  Model{
     @Constraints.Required
     private int stock;
 
-
+     List<Product> topSellers= new ArrayList<Product>();
    
     @ManyToMany(cascade = CascadeType.ALL,mappedBy="products")
     public List<Artist> artists;
@@ -110,6 +110,24 @@ public class Product extends  Model{
                 stock = stock-1;
             }
             return allowed;
+        }
+
+        public int topSeller(){
+            int a=0;
+            for(int i =0; i< topSellers.size(); i++){ 
+              
+                if(a<topSellers.get(i).getStock()){ 
+                    a=topSellers.get(i).getStock();
+            
+                // Iterator itr = topSellers.listIterator(i + 1 ); 
+                // while(itr.hasNext()){
+                //    if(a>topSellers.get(i).getStock()){ 
+                //     a=topSellers.get(i).getStock();
+                //    }
+                }
+               
+            }
+            return a;
         }
 
         public void incrementStock(int q){          

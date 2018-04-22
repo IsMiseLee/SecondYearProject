@@ -53,7 +53,7 @@ Seq[Any](format.raw/*1.32*/("""
     </div>
       <div class="col-sm-8">
 
-      <img src="/assets/images/aboutus.png" >
+      <img src="/assets/images/musicImages/aboutus.png" >
 
     </div>
     </div>
@@ -75,9 +75,9 @@ Seq[Any](format.raw/*1.32*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Thu Apr 05 20:45:24 IST 2018
+                  DATE: Sun Apr 22 18:34:41 IST 2018
                   SOURCE: /home/wdd/webapps/SecondYearProject/app/views/aboutUs.scala.html
-                  HASH: bd3f481c75b73a4aaeeea6d3bfd33f0a37a5ef95
+                  HASH: 6df2394825194b53823a8197a3ba2db830ff1f60
                   MATRIX: 963->1|1088->31|1116->34|1147->57|1186->59|1219->66|1608->428|1623->434|1671->461
                   LINES: 28->1|33->1|35->3|35->3|35->3|38->6|49->17|49->17|49->17
                   -- GENERATED --

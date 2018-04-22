@@ -17,7 +17,8 @@
         <tr>
           <th>Image</th> 
           <th>ID</th>
-          <th>Test</th> 
+          <th>Music</th> 
+          
         </tr>
       </thead>
 
@@ -34,7 +35,7 @@
             @if(env.resource("public/audio/"+ p.getId + ".mp3").isDefined){
               <td> <audio controls src="/assets/audio/@(p.getId + ".mp3 ")" type="audio/mpeg"></audio></td>
             } else {
-              <td><h2>Not avalibale</h2></td>
+              <td><h2>Not available</h2></td>
           }   
             
             

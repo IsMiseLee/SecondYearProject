@@ -38,3 +38,10 @@ table td{
 .row p { 
     color:white;
 }
+
+label{ 
+    color:white;
+}
+.lead button{ 
+    padding-right: 5px;
+}

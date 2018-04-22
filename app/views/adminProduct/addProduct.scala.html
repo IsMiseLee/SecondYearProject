@@ -15,32 +15,34 @@
     @CSRF.formField
     
     <div class="form-group">
-        @inputText(productForm("album_name"), '_label -> "", 
-        'class -> "form-control input-xs", 'placeholder -> "Album name")
+        @inputText(productForm("album_name"), '_label -> "Album Name", 
+        'class -> "form-control input-xs", 'placeholder -> "")
     </div>
 
+    <label>Genre</label>
+    <br>
     @for((value, genre) <- Artist.options) {
       <input type="checkbox" name="artSelect[]" value="@value"
       
       />@genre<br>        
   }
   <div class="form-group">
-      @inputText(productForm("year"), '_label -> "", 
-      'class -> "form-control input-xs", 'placeholder -> "Year")
+      @inputText(productForm("year"), '_label -> "Year", 
+      'class -> "form-control input-xs", 'placeholder -> "")
   </div>
   
     <div class="form-group">
-        @inputText(productForm("art_name"), '_label -> "", 
-        'class -> "form-control input-xs", 'placeholder -> "Artist")
+        @inputText(productForm("art_name"), '_label -> "Artist Name", 
+        'class -> "form-control input-xs", 'placeholder -> "")
     </div>
     <div class="form-group">
-        @inputText(productForm("price"), '_label -> "", 
-        'class -> "form-control input-xs", 'placeholder -> "Price")
+        @inputText(productForm("price"), '_label -> "Price", 
+        'class -> "form-control input-xs", 'placeholder -> "")
     </div>
 
     <div class="form-group">
-        @inputText(productForm("stock"), '_label -> "", 
-        'class -> "form-control input-xs", 'placeholder -> "Stock")
+        @inputText(productForm("stock"), '_label -> "Stock", 
+        'class -> "form-control input-xs", 'placeholder -> "")
     </div>
   
     

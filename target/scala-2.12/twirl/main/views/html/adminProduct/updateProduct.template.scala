@@ -40,42 +40,47 @@ Seq[Any](format.raw/*4.83*/("""
 
 """),_display_(/*9.2*/form(action=routes.AdminProductCtrl.updateProductSubmit(id), 'class -> "form-vertical", 
 'role -> "form",'enctype -> "multipart/form-data")/*10.51*/ {_display_(Seq[Any](format.raw/*10.53*/("""
-    """),format.raw/*11.33*/("""
-    """),_display_(/*12.6*/CSRF/*12.10*/.formField),format.raw/*12.20*/("""
 
-    """),format.raw/*14.5*/("""<div class="form-group">
-            """),_display_(/*15.14*/inputText(productForm("album_name"), '_label -> "", 
-            'class -> "form-control input-xs", 'placeholder -> "Album name")),format.raw/*16.77*/("""
-        """),format.raw/*17.9*/("""</div>
+    """),format.raw/*12.33*/("""
+
+    """),_display_(/*14.6*/CSRF/*14.10*/.formField),format.raw/*14.20*/("""
+
+  
+    """),format.raw/*17.5*/("""<div class="form-group">
+            """),_display_(/*18.14*/inputText(productForm("album_name"), '_label -> "Album name", 
+            'class -> "form-control input-xs", 'placeholder -> "")),format.raw/*19.67*/("""
+        """),format.raw/*20.9*/("""</div>
+ 
+    <div class="form-group">
+            """),_display_(/*23.14*/inputText(productForm("year"), '_label -> "Year", 
+            'class -> "form-control input-xs", 'placeholder -> "")),format.raw/*24.67*/("""
+       """),format.raw/*25.8*/("""</div>
+
+       <label>Genre</label>
+       <br>
+    """),_display_(/*29.6*/for((value, genre) <- Artist.options) yield /*29.43*/ {_display_(Seq[Any](format.raw/*29.45*/("""
+        """),format.raw/*30.9*/("""<input type="checkbox" genre="artSelect[]" value=""""),_display_(/*30.60*/value),format.raw/*30.65*/(""""
+        """),_display_(/*31.10*/if(Artist.inArtist(value.toLong, id))/*31.47*/ {_display_(Seq[Any](format.raw/*31.49*/("""
+            """),format.raw/*32.13*/("""checked
+        """)))}),format.raw/*33.10*/("""
+        """),format.raw/*34.9*/("""/>"""),_display_(/*34.12*/genre),format.raw/*34.17*/("""<br>        
+    """)))}),format.raw/*35.6*/("""  
+    
+    """),format.raw/*37.5*/("""<div class="form-group">
+            """),_display_(/*38.14*/inputText(productForm("art_name"), '_label -> "Artist Name", 
+            'class -> "form-control input-xs", 'placeholder -> "")),format.raw/*39.67*/("""
+        """),format.raw/*40.9*/("""</div>
+
 
     <div class="form-group">
-            """),_display_(/*20.14*/inputText(productForm("year"), '_label -> "", 
-            'class -> "form-control input-xs", 'placeholder -> "Year")),format.raw/*21.71*/("""
-       """),format.raw/*22.8*/("""</div>
-
-    """),_display_(/*24.6*/for((value, genre) <- Artist.options) yield /*24.43*/ {_display_(Seq[Any](format.raw/*24.45*/("""
-        """),format.raw/*25.9*/("""<input type="checkbox" genre="artSelect[]" value=""""),_display_(/*25.60*/value),format.raw/*25.65*/(""""
-        """),_display_(/*26.10*/if(Artist.inArtist(value.toLong, id))/*26.47*/ {_display_(Seq[Any](format.raw/*26.49*/("""
-            """),format.raw/*27.13*/("""checked
-        """)))}),format.raw/*28.10*/("""
-        """),format.raw/*29.9*/("""/>"""),_display_(/*29.12*/genre),format.raw/*29.17*/("""<br>        
-    """)))}),format.raw/*30.6*/("""  
-
-    """),format.raw/*32.5*/("""<div class="form-group">
-            """),_display_(/*33.14*/inputText(productForm("art_name"), '_label -> "", 
-            'class -> "form-control input-xs", 'placeholder -> "Artist")),format.raw/*34.73*/("""
-        """),format.raw/*35.9*/("""</div>
-
-
-    <div class="form-group">
-                """),_display_(/*39.18*/inputText(productForm("price"), '_label -> "", 
-                'class -> "form-control input-xs", 'placeholder -> "Price")),format.raw/*40.76*/("""
-            """),format.raw/*41.13*/("""</div>
+                """),_display_(/*44.18*/inputText(productForm("price"), '_label -> "Price", 
+                'class -> "form-control input-xs", 'placeholder -> "")),format.raw/*45.71*/("""
+            """),format.raw/*46.13*/("""</div>
         
     <div class="form-group">
-                """),_display_(/*44.18*/inputText(productForm("stock"), '_label -> "", 
-                'class -> "form-control input-xs", 'placeholder -> "Stock")),format.raw/*45.76*/("""
-            """),format.raw/*46.13*/("""</div>
+                """),_display_(/*49.18*/inputText(productForm("stock"), '_label -> "Stock", 
+                'class -> "form-control input-xs", 'placeholder -> "")),format.raw/*50.71*/("""
+            """),format.raw/*51.13*/("""</div>
 
     <label>Image Upload</label>
     <input class="btn-sm btn-default" type="file" name="upload">
@@ -84,12 +89,12 @@ Seq[Any](format.raw/*4.83*/("""
 
     <div class="actions">
         <input type="submit" value="Update Product" class="btn btn-primary">
-        <a href=""""),_display_(/*55.19*/routes/*55.25*/.AdminProductCtrl.listProduct(0)),format.raw/*55.57*/("""">
+        <a href=""""),_display_(/*60.19*/routes/*60.25*/.AdminProductCtrl.listProduct(0)),format.raw/*60.57*/("""">
             <button type="button" class="btn btn-warning">Cancel</button>
         </a>
     </div>
- """)))}),format.raw/*59.3*/("""
-""")))}),format.raw/*60.2*/("""
+ """)))}),format.raw/*64.3*/("""
+""")))}),format.raw/*65.2*/("""
 """))
       }
     }
@@ -106,11 +111,11 @@ Seq[Any](format.raw/*4.83*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Thu Apr 05 20:45:24 IST 2018
+                  DATE: Sun Apr 22 18:34:41 IST 2018
                   SOURCE: /home/wdd/webapps/SecondYearProject/app/views/adminProduct/updateProduct.scala.html
-                  HASH: 28bb1cd56a7fcd077bf2cdbf0dadcf9669761959
-                  MATRIX: 664->1|702->33|739->64|1126->92|1280->175|1325->173|1352->192|1390->222|1428->223|1455->224|1518->262|1666->401|1706->403|1739->436|1771->442|1784->446|1815->456|1848->462|1913->500|2063->629|2099->638|2176->688|2314->805|2349->813|2388->826|2441->863|2481->865|2517->874|2595->925|2621->930|2659->941|2705->978|2745->980|2786->993|2834->1010|2870->1019|2900->1022|2926->1027|2974->1045|3009->1053|3074->1091|3218->1214|3254->1223|3336->1278|3480->1401|3521->1414|3610->1476|3754->1599|3795->1612|4065->1855|4080->1861|4133->1893|4266->1996|4298->1998
-                  LINES: 24->1|25->2|26->3|31->4|34->5|37->4|38->6|38->6|38->6|39->7|41->9|42->10|42->10|43->11|44->12|44->12|44->12|46->14|47->15|48->16|49->17|52->20|53->21|54->22|56->24|56->24|56->24|57->25|57->25|57->25|58->26|58->26|58->26|59->27|60->28|61->29|61->29|61->29|62->30|64->32|65->33|66->34|67->35|71->39|72->40|73->41|76->44|77->45|78->46|87->55|87->55|87->55|91->59|92->60
+                  HASH: 82ef35d9a2c4754df2f46bc19cbfea426fcc087d
+                  MATRIX: 664->1|702->33|739->64|1126->92|1280->175|1325->173|1352->192|1390->222|1428->223|1455->224|1518->262|1666->401|1706->403|1740->437|1773->444|1786->448|1817->458|1853->467|1918->505|2068->634|2104->643|2182->694|2320->811|2355->819|2434->872|2487->909|2527->911|2563->920|2641->971|2667->976|2705->987|2751->1024|2791->1026|2832->1039|2880->1056|2916->1065|2946->1068|2972->1073|3020->1091|3059->1103|3124->1141|3273->1269|3309->1278|3391->1333|3535->1456|3576->1469|3665->1531|3809->1654|3850->1667|4120->1910|4135->1916|4188->1948|4321->2051|4353->2053
+                  LINES: 24->1|25->2|26->3|31->4|34->5|37->4|38->6|38->6|38->6|39->7|41->9|42->10|42->10|44->12|46->14|46->14|46->14|49->17|50->18|51->19|52->20|55->23|56->24|57->25|61->29|61->29|61->29|62->30|62->30|62->30|63->31|63->31|63->31|64->32|65->33|66->34|66->34|66->34|67->35|69->37|70->38|71->39|72->40|76->44|77->45|78->46|81->49|82->50|83->51|92->60|92->60|92->60|96->64|97->65
                   -- GENERATED --
               */
           
